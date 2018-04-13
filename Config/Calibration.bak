@@ -1,0 +1,586 @@
+[Lights]
+###############################################################################
+#LIGHTS CONFIGURATION PARAMETERS
+#  BackLightOffset
+#    Offset for back light.
+#  RingLightOffset
+#    Offset for ring light.
+#  AuxLightOffset
+#    Offset for aux light.
+#  GridLightOffset
+#    Offset for grid light.
+#  BackLightPresent
+#     0 = back light is not present.
+#     1 = back light is present.
+#  RingLightPresent
+#     0 = ring light is not present.
+#     1 = ring light is present.
+#  AuxLightPresent
+#     0 = aux light is not present.
+#     1 = aux light is present.
+#  SmartRingPresent
+#     0 = smart ring is not present.
+#     1 = smart ring is present.
+#  BackLightPortBits
+#  RingLightPortBits
+#  AuxLightPortBits
+#  GridLightPortBits
+#    Bit Value Default Channel Description
+#     0    1   BACK DSP Triac 0
+#     1    2   RING DSP Triac 1
+#     2    4   AUX N QUAD DSP Triac 2
+#     3    8       E QUAD DSP Triac 3
+#     4   16       S QUAD DSP Triac 4
+#     5   32       W QUAD DSP Triac 5
+#                    Quads = QSEE / IQ Retrofits
+#     6   64   N/A DSP Triac 6 SPARE
+#  
+#     7  128   RING White Light Switcher DAC 1 @ DWI W6 0x10
+#     8  256   AUX White Light Switcher DAC 2 @ DWI W6 0x14
+#  
+#     9  512   BACK Second White Light Switcher @ DWI W6 0x28
+#    10 1024   VRL Inner Ring Function / Second White light switcher @ DWI W6 0x24
+#  
+#    11 2048   BACK LED Driver StockerYale / LumiLED @ DWI W6 0x04
+#    12 4096   LED Driver FOSTEC @ DWI W6 0x08
+#  
+#    13  8192  BACK VIPER LED BAR @ DWI W6 0x18
+#		14 16384  GRID	LED grid
+#		15 32768  AUX	5W LED driver
+#  
+#    16-31 Spares
+#  
+#    BackLightPortBits	Default: 10753	= 1+512+2048+8192
+#    RingLightPortBits	Default: 1154	= 2+128+1024
+#    AuxLightPortBits	Default: 260	= 4+256
+#    GridLightPortBits	Default: 16384
+#    
+#    To assign the grid light to one of the three available ports, you have to add GridLightPortBits to the corresponding bits for the port.
+#    For example: AuxLightPortBits = AuxLightPortBits + GridLightPortBits
+#    
+#    LightsBaudRate
+#      0 - 38400  1 - 19200  2 - 9600
+#      3 -  4800  4 -  2400  5 - 1200
+#  WhiteLedRingPresent
+#     0 = no
+#     1 = yes
+#  
+#  RingKnobToLedRing
+#     0 - Normal do not map the SRL / VRL to the ring knob on the joystick
+#     1 - Use the Ring light knob on the joystick to control ring one of the SRL / VRL
+#     2 - Controls the first two rings of the SRL / VRL
+#     3 - Controls the first three rings of the SRL / VRL
+#     4 - Controls the first four rings of the SRL / VRL
+#     5 - Controls the first five rings of the SRL / VRL
+#     6 - Controls the first six rings of the SRL / VRL
+#     7 - Controls the first seven rings of the SRL / VRL
+#     8 - Controls all eight rings of the SRL / VRL
+#  
+#  RingLightType
+#     0 = SRL - Smart Ring Light (default)
+#     1 = PRL - Programmable Ring Light
+#  
+#  LightsOffAtEndOfRun
+#     0 = All Lights stay at their existing levels
+#     1 = All lights shall be turned off just before presenting 'All features completed' dialog box.
+#     (default=0)
+#  
+#  LightsWattWatcherTimeout
+#     0 = Lights Watt Watcher disabled. (default)
+#     NON-ZERO = Number of seconds of inactivity that cause the lights to go out.
+#                (inactivity = no stage motion and no light setting changes.)
+#
+###############################################################################
+BACK_LIGHT_OFFSET=0
+RING_LIGHT_OFFSET=13
+AUX_LIGHT_OFFSET=61
+GRID_LIGHT_OFFSET=0
+BACK_LIGHT_PRESENT=1
+RING_LIGHT_PRESENT=1
+AUX_LIGHT_PRESENT=1
+SMART_RING_PRESENT=1
+BACK_LIGHT_PORT_BITS=10753
+RING_LIGHT_PORT_BITS=1154
+AUX_LIGHT_PORT_BITS=32768
+GRID_LIGHT_PORT_BITS=16384
+LIGHTS_BAUD_RATE=1
+WHITE_LED_RING_PRESENT=0
+RING_KNOB_TO_LED_RING=8
+RING_LIGHT_TYPE=0
+LIGHTS_OFF_AT_END_OF_RUN=0
+LIGHTS_WATT_WATCHER_TIMEOUT=0
+
+[Video]
+###############################################################################
+#VIDEO CONFIGURATION PARAMETERS
+#  InputType
+#    
+#  PanXOffset
+#    
+#  PanYOffset
+#    
+#  VividPALStartX
+#    
+#  VividPALStartY
+#    ViVid only, where the Pixels start being digitized on the cameras Pixel
+#    array (PAL Format).  Setting this to -1 centers the digitized pixels
+#    default X:-1, Y:-1
+#    
+#  VividNTSCStartX
+#    
+#  VividNTSCStartY
+#    ViVid only, where the Pixels start being digitized on the cameras Pixel
+#    array (NTSC Format).  Setting this to -1 centers the digitized pixels
+#    default X:-1, Y:-1
+#    NOTE to service: When upgrading from Mutech 410, use X:12, Y:21
+#    When upgrading from Mutech 450/460, use X:8, Y:20
+#    These values should then be modified to fine tune coaxial alignment
+#    
+#  Width
+#    
+#  Heigth
+#    
+#  Brightness
+#    Percent (0-100)
+#    
+#  Contrast
+#    
+#  Hue
+#    
+#  Saturation
+#    
+#  EdgeCalibrated
+#    
+#  EdgeXOffset
+#    
+#  EdgeYOffset
+#    
+#  IV400LightOffset
+#    
+#  IV400LightGain
+#    
+#  OutputImageData
+#    0 = no image data output, 1 = output image data
+#    
+#  OutputImageType
+#    0 = TGA, 1 = BMP, 2 = TIF, 3 = JPG, 4 = GIF
+#    
+#    
+#  IV450_BOTTOM_REG
+#    default 2
+#    
+#  IV450_TOP_REG
+#    default 41
+#    
+#  IV460_BOTTOM_REG
+#    default 107
+#    
+#  IV460_TOP_REG
+#    default 241
+#    
+#  IV460_CLAMPING
+#    default 93
+#    These parameters are used to set the voltage for the A-D
+#    converter in the 450 or 460 board.
+#    
+#  IV460_PIXEL_CLOCK_INVERT
+#    default 0 range 0|1
+#    
+#  IV460_PIXEL_CLOCK_PHASE
+#    default 1 range 0-255
+#    These parameters are for configuring the Mutech 460
+#    External Clock
+#    
+#  PRINTER_PORT
+#    0 = red, 1 = green, 2 = blue
+#    
+#  DRIVE_TO_CLICK_LOCATION
+#    0 = don't drive to location (default)
+#    1 = drive to location
+#    
+#  CENTER_PIXEL_X
+#    Pixel that is treated as video center in the x axis
+#    
+#  CENTER_PIXEL_Y
+#    Pixel that is treated as video center in the y axis
+#    
+#  FREEZE_AND_FLY
+#    The image and target is retained in the image window after each
+#    measurement until the next image is ready for measurement
+#    0 = Disable
+#    1 = Enable (default)
+#    
+#  ENABLE_VIDEO_FLAGS
+#    The flags indicating what video effects are enabled.
+#    0 = Color Off (B&W)
+#    1 = Saturation (Color)
+#    2 = Pseudo color
+#    4 = Sharpen
+#    default: 0
+#    
+#	COLOR_ON
+#	  This parameter is valid for Color cameras only and ENABLE_VIDEO_FLAGS > 0
+#	  0 - Color Disabled (B&W image color)
+#	  1 - Color Enabled (Default)
+#	SAVE_VIDEO_ACCORDING_FLAGS
+#	  This parameter shows whether video is saved with additional processings and filters (sharpen, ...)
+#	  0 - Original camera video saved (Default)
+#	  1 - Camera video saved with processing determined by ENABLE_VIDEO_FLAGS
+###############################################################################
+VIDEO_INPUT_TYPE=1
+PAN_VIDEO_X=0
+PAN_VIDEO_Y=0
+VIVID_PAL_START_X=-1
+VIVID_PAL_START_Y=-1
+VIVID_NTSC_START_X=-1
+VIVID_NTSC_START_Y=-1
+VIDEO_WIDTH=640
+VIDEO_HEIGHT=480
+IMAGE_BRIGHTNESS=50
+IMAGE_CONTRAST=50
+IMAGE_HUE=50
+IMAGE_SATURATION=50
+EDGE_IS_CALIBRATED=1
+EDGE_X_OFFSET=0.000000
+EDGE_Y_OFFSET=0.000000
+IV400_LIGHT_OFFSET=9.500000
+IV400_LIGHT_GAIN=1.156400
+OUTPUT_IMAGE_DATA=0
+OUTPUT_IMAGE_TYPE=3
+IV450_BOTTOM_REG=2
+IV450_TOP_REG=41
+IV460_BOTTOM_REG=107
+IV460_TOP_REG=241
+IV460_CLAMPING=93
+IV460_PIXEL_CLOCK_INVERT=0
+IV460_PIXEL_CLOCK_PHASE=1
+PRINTER_PORT=0
+DRIVE_TO_CLICK_LOCATION=0
+CENTER_PIXEL_X=320
+CENTER_PIXEL_Y=240
+FREEZE_AND_FLY=1
+ENABLE_VIDEO_FLAGS=1
+COLOR_ON=0
+SAVE_VIDEO_ACCORDING_FLAGS=0
+
+[Non Linear]
+###############################################################################
+#NON LINEAR CONFIGURATION PARAMETERS
+#  
+#	CALIBRATION_FILE
+#    Grid File
+#  
+#  GRID_TYPE
+#		1 - Stripes (Default), 2 - Crosses, 3 - Dots
+#  
+#  GridLineWidth
+#    inches
+#  XToleranceLocation
+#    inches
+#  YToleranceLocation
+#    inches
+#  PositionRepeatability
+#    microns
+#  DistanceUncertainty
+#    millimeters
+#  ToleranceSpecification
+#    1 - XY Tolerance specification
+#    2 - U95 Tolerance specification
+#    3 - XY and U95
+#  REVERSED_IMAGE
+#    1 - Yes - Horizontal flip
+#    0 - No (Default)
+#  BI-DIRECTIONAL_VERIFICATION
+#    1 - Enabled
+#    0 - Disabled (Default)
+###############################################################################
+CALIBRATION_FILE=C:\QVI\Snap-X\Config\Grid_XX_001.dat
+GRID_TYPE=2
+GRID_LINE_WIDTH=0.0067525
+X_LOCATION_TOLERANCE=0.00024
+Y_LOCATION_TOLERANCE=0.00024
+POSITION_REPEATABILITY=4.0
+DISTANCE_UNCERTAINTY=100
+WHICH_TOLERANCE_SPEC=3
+REVERSED_IMAGE=0
+BI-DIRECTIONAL_VERIFICATION=0
+
+[Accucentric]
+###############################################################################
+#ACCUCENTRIC CONFIGURATION PARAMETERS
+#  AVANT_LED_INSTALLED
+#    0 not installed
+#    1 installed using strong edge detection for AccuCentric
+#    2 installed using weak edge detection for AccuCentric
+#    3 installed using centroid (LIGHT) detection for AccuCentric
+#    4 installed using centroid (DARK) detection for AccuCentric
+#    (default 1)
+#  AVANT_GOAL_LED_LEVEL
+#    The target average peak light meter reading for setting the
+#    LED intensity during FOV and ZOOM calibrations in percents. (default is 90%)
+#  AVANT_MAX_CENTER_CORRECTION
+#    The greatest allowable value to correct the X,Y scale values to in pixels.
+#    When you are performing a coaxial alignment, you do not want to see the
+#    image deviate more than this amount in pixels when you zoom from high mag
+#    to low mag (low mag to high mag is not the same). If the image does move
+#    by more than this amount, you will get an error message at zoom calibration
+#    time that the camera coaxial alignment must be redone. (default 5.0)
+#  AVANT_LED_CALIBRATION_CONTRAST
+#    This is the minimum contrast threshold used by the edge detection
+#    routine at the time of calibrating the Field of View and the Zoom.
+#    You may have to lower this value if a 2x extension tube is installed
+#    from the default of 0.5 to 0.25 or even something smaller depending
+#    on the situation
+#    Or you may have to raise the value if AGC is turned on for the camera
+#    and the calibration is attempting to find edges on the camera noise
+#    where you would want to try 1.0 or 1.5.
+#    Default is 0.5
+#  AVANT_FOV_CALIBRATION_CONTRAST
+#    This is the same as LedContrast, but it is the value used for edge detection
+#    of the corner reticle on the stage.  See recommendations above...
+#    Default 0.5
+#  AVANT_CAMERA_TYPE
+#    Type of camera installed.
+#    0 - Analog Camera (Default)
+#    1 - Digital Camera
+#    2 - Dual Camera
+#    3 - CH Dual Camera
+#    4 - Dual Digital Camera (Wormhole)
+#  AVANT_OPTICS_TYPE
+#    Ignore the auto-sensing hardware and use this value to determine the type of
+#    optics installed (0 is the default).
+#    0 - use hardware to sense optics type
+#    1 - fixed lens system with large interchangeable front lenses
+#    2 - zoom lens system with small add-on front lenses
+#    3 - zoom lens system with large interchangeable front lenses
+#    4 - Telecentric fixed lens system
+#    5 - Telecentric zoom lens system
+#    6 - Telecentric 2 zoom lens system
+#    7 - Unassigned
+#    8 - Dual Camera
+#    9 - SNAP optics
+#   10 - Ch optics.
+#   11 - Digital Zoom
+#   12 - Highspeed Zoom
+#   12 - Wormhole Optics
+#  ZOOM_LENS_TYPE
+#    Type of zoom lens installed.
+#    0 - no zoom lens
+#    1 - 6.5:1 zoom lens
+#    2 - 7.0:1 zoom lens
+#    3 - 10:1 zoom lens
+#    4 - 12:1 zoom lens
+#  AVANT_LENS_POSITIONS
+#    Number of calibrated positions along the range of the zoom lens.
+#    minimum is 10, maximum is 50, default is 25
+#    In order change this value you must do the following:
+#     -> Change the number below for AVANT_LENS_POSITIONS
+#     -> exit out of the AVANT software
+#     -> start up the AVANT software again
+#     -> re-calibrate the Field of View (Calibrate...Field of View)
+#     -> re-calibrate the zoom (Calibrate...Zoom Lens)
+#    Set to 1 for a fixed lens system
+# 
+#  SUPER_ZOOM_POSITION
+#    0 -> Super Zoom is disabled (Default)
+#   >0 -> The position where super zoom starts
+# 
+#  FRONT_LENS_INSTALLED
+#    NOTE:  ONLY VALID FOR OPTICS TYPES 1 AND 3. (0 is the default)
+#    0 use hardware to sense lens
+#    1  Zoom small front element no add-on
+#    2  Zoom small front element 0.5x add-on
+#    3  Zoom small front element 0.75x add-on
+#    4  Zoom small front element 1.5x add-on
+#    5  Zoom small front element 2.0x add-on
+#    6  NO LENS INSTALLED
+#    7  Large front 0.5x lens zoom or fixed
+#    8  Large front 1.0x lens zoom or fixed
+#    9  Large front 2.5x lens zoom or fixed
+#    10  Large front 5.0x lens zoom or fixed
+#    11  Large front 10.0x lens zoom or fixed
+#    12  Large front 25.0x lens zoom or fixed
+#    13  Large front 50.0x lens zoom or fixed
+#    14  TOUCH PROBE
+#    15  Large front 2.0x lens zoom or fixed
+#    16  Telecentric Zoom 0.5x front lens
+#    17  Telecentric Zoom 2.0x front lens
+#    18  Telecentric Zoom 4.0x front lens
+#    19  Telecentric Zoom 8.0x front lens
+#    20  Telecentric Zoom 20.0x front lens
+#    21  Telecentric Zoom 40.0x front lens
+#    22  Telecentric Zoom Standard front lens
+#    23  Telecentric Multi-Mag 0.25x front lens
+#    24  Telecentric Multi-Mag 0.5x front lens
+#    25  Telecentric Multi-Mag 1.0x front lens
+#    26  Telecentric Multi-Mag 2.0x front lens
+#    27  Telecentric Multi-Mag 4.0x front lens
+#    28  Telecentric Multi-Mag 8.0x front lens
+#    29  Telecentric Multi-Mag 16.0x front lens
+#    30  Telecentric Multi-Mag 32.0x front lens
+#    31  200 mm Mag sense hardware code
+#    32  125 mm Mag sense hardware code
+#    33  80 mm Mag sense hardware code
+#    34  Telecentric Zoom 0.45 front lens
+#    35  300 mm Mag sense hardware code
+#    36  Fixed front 0.67x lens
+#    37  Fixed front 0.8x lens
+#    38  Large front 6.5x lens zoom or fixed
+#    39  Large front 7x lens zoom or fixed
+#    40  Large front 10x lens zoom or fixed
+#   
+#  ZOOM_CAL_TYPE
+#    Type of zoom lens calibration. (0 is the default)
+#    0 - automatic
+#    1 - manual
+#  ZOOM_FREEZE
+#    Freeze the zoom during magnification change (BX/GX only)
+#    0 - do not freeze the zoom (default)
+#    1 - freeze the zoom
+#  AVANT_CALIBRATE_PARFOCAL
+#  Turn the parfocal offset calibration on(1) or off(0), default to on
+#  
+#  AVANT_USE_PARFOCAL
+#  Use the calibrated parfocal offset.  use(1) or don't use(0), default to use
+#  
+#  AVANT_NUM_PARFOCAL_AVERAGES
+#  Number of averages used in calculating the parfocal offset, default to 1
+#  Set to 1 will run a single reset focus followed by a slow scan focus
+#      (*This should only be used when the focus is not working)
+#  
+#  AVANT_TZ_ATTACHMENT_LENS_CODE 
+#  This code determines what attachment lens the software thinks is installed
+#  NOTE:  ONLY VALID FOR OPTICS TYPES 6 with AVANT_LENS_CODE set to 21.
+#  0 = None
+#  1 = 2.0 X
+#  Default: 0 
+#  
+#  AVANT_ZOOM_POSITION_FILE
+#  This parameter should point to ini file that holds the look up table
+#  for the motor counts and digital zoom scale value per zoom position
+#  
+#  AVANT_WORMHOLE_PATH_0
+#  AVANT_WORMHOLE_PATH_1
+#    0 - No Path Enabled
+#    1 - WH High Mag Path
+#    2 - WH Mid Mag Path
+#    3 - WH Low Mag Path
+#  
+#  ACCUCENTRIC_INIT_REFERENCES
+#		0 = During optics calibration only
+#		1 = At every mag change  (Default)
+#		2 = At startup only
+#		3 = Before Run only
+#		4 = At First Mag Change during Run
+#  ACCUCENTRIC_METHOD
+#		0 = Absolute (Default)
+#		1 = Relative
+#  
+#  
+#  AVANT_RING_CAL_BOUNDS 50
+#  AVANT_RING_CAL_EXTENT 30
+#  AVANT_RING_CAL_MIN_QUALITY 17
+#  AVANT_RING_CAL_LOW_ZM_MIN_QUALITY 50
+#  AVANT_RING_CAL_CONTRAST 70
+#  AVANT_RING_CAL_WEIGHT_NOMINAL 0
+#  AVANT_RING_CAL_WEIGHT_CONTRAST 10 << actually maxes out at 10 and is clipped, current code usually sets this to 70
+#  AVANT_RING_CAL_WEIGHT_FIRST 7
+#  AVANT_RING_CAL_WEIGHT_LAST 7
+#  AVANT_RING_CAL_WEIGHT_SECOND 0
+#  AVANT_RING_CAL_WEIGHT_2LAST 0
+#  AVANT_RING_CAL_DFLT_STD 10
+#  
+###############################################################################
+AVANT_LED_INSTALLED=2
+AVANT_GOAL_LED_LEVEL=200
+AVANT_MAX_CENTER_CORRECTION=5.000000
+AVANT_LED_CALIBRATION_CONTRAST=1.500000
+AVANT_FOV_CALIBRATION_CONTRAST=0.500000
+AVANT_CAMERA_TYPE=1
+AVANT_OPTICS_TYPE=9
+ZOOM_LENS_TYPE=0
+AVANT_LENS_POSITIONS=6
+SUPER_ZOOM_POSITION=0
+FRONT_LENS_INSTALLED=1
+ZOOM_CAL_TYPE=0
+ZOOM_FREEZE=0
+AVANT_CALIBRATE_PARFOCAL=0
+AVANT_USE_PARFOCAL=0
+AVANT_NUM_PARFOCAL_AVERAGES=0
+AVANT_TZ_ATTACHMENT_LENS_CODE=0
+AVANT_ZOOM_POSITION_FILE=ZoomLookUp.ini
+AVANT_WORMHOLE_PATH_0=3
+AVANT_WORMHOLE_PATH_1=1
+ACCUCENTRIC_INIT_REFERENCES=2
+ACCUCENTRIC_METHOD=0
+AVANT_RING_CAL_BOUNDS=50
+AVANT_RING_CAL_EXTENT=30
+AVANT_RING_CAL_MIN_QUALITY=17
+AVANT_RING_CAL_LOW_ZM_MIN_QUALITY=50
+AVANT_RING_CAL_CONTRAST=70
+AVANT_RING_CAL_WEIGHT_NOMINAL=0
+AVANT_RING_CAL_WEIGHT_CONTRAST=10
+AVANT_RING_CAL_WEIGHT_FIRST=7
+AVANT_RING_CAL_WEIGHT_LAST=7
+AVANT_RING_CAL_WEIGHT_SECOND=0
+AVANT_RING_CAL_WEIGHT_2LAST=0
+AVANT_RING_CAL_DFLT_STD=10
+
+[Linear]
+###############################################################################
+#LINEAR CONFIGURATION PARAMETERS
+#  XScaleFactor - for DSP systems only
+#  YScaleFactor - for DSP systems only
+#  ZScaleFactor
+#    x/y/z scale micron to inch conversion factor
+#  Z_SCALE_OFFSET
+#    Z scale offset in inches.
+#    Default: 0.8 (~20mm)
+#
+#  XYSquarenessFactor
+#    
+#  XSecondScaleFactor
+#  YSecondScaleFactor
+###############################################################################
+X_SCALE_FACTOR=1.000000000000
+Y_SCALE_FACTOR=1.000000000000
+Z_SCALE_FACTOR=0.000641100000
+Z_SCALE_OFFSET=0.000000000000
+
+[Astigmatism]
+###############################################################################
+#ASTIGMATISM CONFIGURATION PARAMETERS
+#  Calibration
+#    0 - Turn calibration off
+#    1 - Turn calibration on
+#  Correction
+#    0 - Turn corrections off
+#    1 - Turn corrections on
+#  SingleCycle
+#    0 - Double cycle correction only
+#    1 - Double and single cycle correction
+#  Averages
+#    n - Number of focus averages to do during calibration.
+#        Min = 1, Max = 10, Default = 5
+#  Degrees
+#    n - Number of degrees to increment during calibration
+#        Min = 5, Max = 45, Default = 15
+#  MaxHighMagLimit
+#    n - Maximum allowable correction at HIGH mag in microns
+#        Default = 38.1
+#  MaxLowMagLimit
+#    n - Maximum allowable correction at LOW mag in microns
+#        Default = 177.8
+#  Threshold
+#    n - Threshold level to determine if a correction is needed at ll
+#        Default = .4
+###############################################################################
+Calibration=0
+Correction=0
+SingleCycle=0
+Averages=5
+Degrees=15
+MaxHighMagLimit=38.100000
+MaxLowMagLimit=177.800000
+Threshold=0.400000
+

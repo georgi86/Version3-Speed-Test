@@ -1,0 +1,359 @@
+[EMX General]
+###############################################################################
+# EMX CONFIGURATION PARAMETERS
+# DROBackground
+#   0x80000000 - Invalid color
+#   0x40000000 - System color
+#   0x4f000000 - System color - COLOR_3DFACE
+#   default = 0x80000000 (Invalid Color - Default for MX (black))
+# StatusBackground
+#   default = 0x4f0000000 (COLOR_3DFACE)
+# StatusTextColor
+#   default = 0x00ff0000 (Blue)
+# StatusFontName
+#   default =  (Same as DRO)
+# StatusFontSize
+#   default = 18
+# MagnificationBackground
+#   default = 0x80000000 (Invalid Color - Same as DRO)
+# InfWinBackground
+#   default = 0x4f0000000 (COLOR_3DFACE)
+# InfWinTextcolor
+#   default = 0x00ff0000 (Blue)
+# InfWinFontName
+#   default = 
+# InfWinFontSize
+#   default = 12
+# EMX_LightLevelOffsetX - offset from left of Target window
+#   default = 22
+# EMX_LightLevelOffsetY - offset from bottom of Target window
+#   default = 30
+# EMX_ProgrammingLayout - different layouts for programming window
+#   default = 0
+# ======= Enhanced Editor
+# EMX_ListingEditor - globally enable/disable EPRE
+#   default = true
+# EMX_ListingEnableEditing - lock/unlock listing for editing
+#   default = false
+# ======= Auto Save Images
+# EMX_AutoSaveImage - enable/disable auto save
+#   default = false
+# EMX_MaxNumImages - the maximal number of stored images
+#   default = 1000
+# EMX_ArchiveDirectory - the path where the images will be stored
+#======== 
+# EMX_ModelEditStep
+#   0 (default) - 	“single click” for ClassicView and “double click” for both Single and Dual monitor views
+#   1 - Single Click
+#   2 - Double Click
+#======== 
+# EMX_DROEnterPoint - show/hide EnterPoint button in DRO View
+#   0 - Hidden (default for MX and BX
+#   1 - Visible (default for GX)
+#======== 
+# EMX_EnableFocusTarget - enable/disable Focus Target
+#   0 - Disabled
+#   1 - Enabled (Default)
+#======== 
+# EMX_EnableSmartReportPlus - enable/disable Smart Report Plus Button
+#   0 - Disabled (Default)
+#   1 - Enabled
+#======== 
+# GenerateOutputsAtTheEndOfRun - Generate all outputs (print, statistics, report)
+# once at the end of the routine Run
+#   0 - Disabled (Default)
+#   1 - Enabled
+#======== 
+# DisplayOverlayDuringRun - Display Gray Scale Overlay during run
+#   0 - Disabled (Default)
+#   1 - Enabled
+#======== 
+# EMX_MeasureOffline
+#   0 - Disabled (Default)
+#   1 - Enabled
+#======== 
+# ShowLastRepeatPart
+#   0 - Disabled (Default) - First measured part from the repeat part sequence would be with up to date actuals
+#   1 - Enabled - Last measured part (from the repeat part sequence) would be up to date
+#======== 
+# RunOptimizationDefault
+#   0 - No Optimization - Run the routine as Programmed
+#   1 - Pan if possible (Default)
+#   2 - Prediction - optimize step sequence
+#======== 
+# EMX_OUTPUT_PROMPT_START_OF_RUN
+#   0 - Disabled
+#   1 - Enabled (Default) - Prompt the user at step 1 of a routine 
+#			 to save the output file.
+#   
+# PAUSE_OPTION_DISABLE
+#   0 - No (Default)
+#   1 - Yes - "Stop Run" and "Back to Run" are only available options#   in Pause Dialog 
+###############################################################################
+# MODE_ENABLE_LOCKING
+#   0 - Disabled (Default) - None of the Modes Locked
+#   1 - Run mode locked
+#   2 - Program mode locked
+#   3 - Run and Program locked
+#   4 - Measure Mode locked
+#   5 - Run and Measure locked
+#   6 - Program and Measure locked
+###############################################################################
+EMX_DROBackground=80000000
+EMX_StatusBackground=4f000000
+EMX_StatusTextColor=00ff0000
+EMX_StatusFontName=Arial
+EMX_StatusFontSize=18
+EMX_MagBackground=80000000
+EMX_InfWinBackground=4f000000
+EMX_InfWinTextcolor=00ff0000
+EMX_InfWinFontName=
+EMX_InfWinFontSize=18
+EMX_LightLevelOffsetX=22
+EMX_LightLevelOffsetY=30
+EMX_ProgrammingLayout=0
+EMX_ListingEditor=1
+EMX_ListingEnableEditing=1
+EMX_EditRefsInCondensed=0
+EMX_AutoSaveImage=0
+EMX_MaxNumImages=1000
+EMX_ArchiveDirectory=Archive
+EMX_ModelEditStep=2
+EMX_DROEnterPoint=1
+EMX_EnableFocusTarget=1
+EMX_EnableSmartReportPlus=0
+GenerateOutputsAtTheEndOfRun=1
+DisplayOverlayDuringRun=0
+EMX_MeasureOffline=0
+ShowLastRepeatPart=0
+RunOptimizationDefault=0
+MODE_ENABLE_LOCKING=0
+MODE_LOCK_PASSWORD=1
+EMX_LICENCE_DEADLINE_WARNING=0
+EMX_OUTPUT_PROMPT_START_OF_RUN=1
+PAUSE_OPTION_DISABLE=0
+
+[CAD General]
+###############################################################################
+# CAD CONFIGURATION PARAMETERS
+# CadTarget 
+#   0 - Weak Edge
+#   1 - Strong Edge
+#   2 - Edge Trace
+# CadBounds 
+#   6 - 60 Pixels (Default = 30) 
+#   Feature Finder default bounds 
+# CadBoundsSE
+#   6 - 60 Pixels (Default = 20) 
+#   Strong Edge search box 
+# CadBoundsET
+#   6 - 60 Pixels (Default = 20) 
+#   Edge Trace search box 
+# CadCoverage 
+#   10 - 100 percent 
+# CadDensity 
+#   1 - 100 Density - points per inch 
+# CadCutAtEnd	
+#   0 - 20 percent 
+# CadGenConstructed
+#   0, 1 boolean
+# CadGenMeasure
+#   0, 1 boolean
+# CadOnFailure
+#   0 - Stop
+#   1 - Create
+#   2 - Skip
+# CadOptimization
+#   0 - no optimization
+#   1 - nearest feature (Default)
+# CadGenProgramDatums 
+#   0 - Disable
+#   1 - Enable
+# CadGenProgramDatumsPercent 
+#   0 - 100 percent 
+# CadContourET #   0 - Contour
+#   1 - Feature By feature
+# CadAlignMethod 
+#   0 - Part Setup
+#   1 - Orientation Features
+# CadKeepTheoreticalCoordinates 
+#   Keeps CAD coordinate system unchanged#   0 - Disable (default) 
+#   1 - Enable 
+# ZoneType
+#   1 - Solid
+#   2 - Silhouette
+#   3 - Micro-gage
+#  
+# ComparatorDisplayTargets#   0 - Disable
+#   1 - Enable (default)
+#  
+# CadCentroidOffset - Distance between centroid area edge and target rectangle#  
+###############################################################################
+CADinImage=0
+CadBounds=30
+CadBoundsSE=30
+CadBoundsET=20
+CadCoverage=80
+CadCutAtEndWE=5
+CadGenConstructed=1
+CadGenMeasure=1
+CadOnFailure=2
+CadOptimization=1
+CadTarget=0
+CadGenProgramDatums=0
+CadGenProgramDatumsPercent=100
+CadCutAtEndET=5
+CadContourET=1
+CadDensity=4.000000
+CadCutAtEndSE=30
+CadAlignMethod=1
+CadKeepTheoreticalCoords=1
+CadNominalColor=ff
+CadPlusColor=ff00
+CadMinusColor=ff
+CadZoneType=0
+CadTolAlpha=100
+CadDisplayNominal=1
+ComparatorDisplayTargets=0
+CadCentroidOffset=10
+
+[Mouse Joystick]
+###############################################################################
+#	Mouse Joystick Parameters
+#
+#  POT_TABLE_X|Y|Z
+#    0 - Linear (Default)
+#    1 - Non-Linear
+#
+#  MIN_VELOCITY_|Y|Z
+#    [0, 32767]
+#    20 - Default
+#
+#  DEAD_BAND_INDEX_X|Y|Z
+#    [0, 127]
+#    9 - Default
+#
+#  HALF_SLOPE_INDEX_X|Y|Z
+#		Where do we hit max/2 in table?
+#    [0, 127]
+#    9 - Default
+#
+#  MAX_VELOCITY_INDEX_X|Y|Z
+#		Where do we hit max in table?
+#    [0, 127]
+#    120 - Default
+#
+#  RELATIVE
+#    0 - False
+#    1 - True (Default)
+#
+#  ZOOM_SENSITIVE
+#    0 - False
+#    1 - True (Default)
+#
+#  SPEED_FACTOR
+#    Percent [1, 100]
+#    100 - Default (Max Velocity)
+#
+#  BACKOFF_TOLERANCE
+#    Tolerance in pixels [0, 100]
+#    5 - Default
+#
+###############################################################################
+POT_TABLE_X=0
+POT_TABLE_Y=0
+POT_TABLE_Z=0
+MIN_VELOCITY_X=20
+MIN_VELOCITY_Y=20
+MIN_VELOCITY_Z=20
+DEAD_BAND_INDEX_X=10
+DEAD_BAND_INDEX_Y=10
+DEAD_BAND_INDEX_Z=10
+HALF_SLOPE_INDEX_X=20
+HALF_SLOPE_INDEX_Y=20
+HALF_SLOPE_INDEX_Z=20
+MAX_VELOCITY_INDEX_X=120
+MAX_VELOCITY_INDEX_Y=120
+MAX_VELOCITY_INDEX_Z=120
+RELATIVE=1
+ZOOM_SENSITIVE=1
+SPEED_FACTOR=100
+BACKOFF_TOLERANCE=5
+
+[Logging]
+###############################################################################
+#
+#  LOGGING 
+#
+# ENABLE_CONFIG_LOGGING
+#   This parameter enables or disables logging of changes made to the config files.
+#   The default is 1 (On).
+#
+# ENABLE_EVENT_LOGGING
+#   This parameter enables or disables logging events raised by the system.
+#   The default is 0 (Off).
+#
+# ENABLE_BOOT_LOGGING
+#   This parameter enables or disables logging the system boot sequence.
+#   The default is 0 (Off).
+#
+# CONFIG_LOG_FILE
+#   This parameter defines what file to write config change log messages into.
+#   The default is cfg_log.txt
+#   The file will be located in the directory pointed to by the LOGGING_DIR parameter
+#   in the Paths section of the input config file.
+#
+# EVENT_LOG_FILE
+#   This parameter defines what file to write event log messages into.
+#   The default is event_log.txt
+#   The file will be located in the directory pointed to by the LOGGING_DIR parameter
+#   in the Paths section of the input config file.
+#
+# BOOT_LOG_FILE
+#   This parameter defines what file to write boot log messages into.
+#   The default is boot_log.txt
+#   The file will be located in the directory pointed to by the LOGGING_DIR parameter
+#   in the Paths section of the input config file.
+#
+# ENABLE_STATUS_LOGGING
+#   This parameter enables or disables logging the system status.
+#   The default is 0 (Off).
+#	 The Status is logged in the registry: 
+#			HKEY_CURRENT_USER\Software\QVI Measure-X\Measure-X\Status
+#			Status:
+#			-1: Invalid				- No Params - System is not running
+#			 0: NoRoutine			- No Params - System is Running
+#			 1: ReadyToRun		- Routine - the full path to loaded routine
+#			 2: PreRunRoutine - No Params - Part Setup mode
+#			 3: Run						- CurrentStep of [MinStep, MaxStep]; Percent
+#			 4: PartRepeat    - CurrentStep of [MinStep, MaxStep]; CurrentPart of NumParts; Percent
+#			 5: StepEdit			- CurrentStep
+#			 6: RunDone				- No Params
+#			 7: AddStepMeasure- CurrentStep
+#			 8: AddStepConstruct- CurrentStep
+#			 9: InsertStep		- CurrentStep
+#			10: EditStep			- CurrentStep
+#			11: DeleteSteps		- [MinStep, MaxStep]
+#			12: CopySteps			- [MinStep, MaxStep]
+#			13: StageInitNeeded- No Params
+#			14: Calibration		- No Params
+#			15: SystemStopped - Reason
+#			16: TouchProbeInProcess- CurrentStep
+#			17: LaserInProcess- CurrentStep
+#
+#			Reason:
+#			 0: EMX_STATUS_UNKNOWN
+#			 1: EMX_STATUS_ESTOP
+#			 2: EMX_STATUS_USER_INPUT
+#			 3: EMX_STATUS_FEATURE_CALCULATION_FAILED
+#			 4: EMX_STATUS_MEASURE_FAILED
+#
+###############################################################################
+ENABLE_CONFIG_LOGGING=1
+ENABLE_EVENT_LOGGING=0
+ENABLE_BOOT_LOGGING=1
+ENABLE_STATUS_LOGGING=0
+CONFIG_LOG_FILE=cfg_log.txt
+EVENT_LOG_FILE=event_log.txt
+BOOT_LOG_FILE=boot_log.txt
+

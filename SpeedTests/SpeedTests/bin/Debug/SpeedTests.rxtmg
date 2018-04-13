@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modulegroupdoc
+rxversion="7.0">
+  <testsuiteentryhierarchy>
+    <flatlistofchildren>
+      <modulegroups
+      name="SpeedTests"
+      id="ee0cce35-cc77-4a8c-8e9e-18cd9bae844c"/>
+    </flatlistofchildren>
+    <childhierarchy>
+      <modulegroups
+      name="SpeedTests"
+      id="ee0cce35-cc77-4a8c-8e9e-18cd9bae844c"/>
+    </childhierarchy>
+  </testsuiteentryhierarchy>
+</modulegroupdoc>

@@ -1,0 +1,77 @@
+====================================================================================================
+
+Machine Serial Number:  SFD2001052                                                       Page:    1
+====================================================================================================
+Routine Name                                                    Run #            Date & Time        
+====================================================================================================
+MFG_LF101-097D_SX_XY_Bidirectional.mxy                   2     Wednesday, November 22, 2017 17:33:26
+====================================================================================================
+
+ID:MDYyOTE1fjEzLjQyfk1GR19TRkQ0MDAxMDAxX01YX1hZX0JpZGlyZWN0aW9uYWw=
+062915~13.42~MFG_SFD4001001_MX_XY_Bidirectional
+====================================================================================================
+Feature           Unit    Nominal       Actual          Tolerances           Deviation     Exceeded 
+====================================================================================================
+Step 29 - X Range of +X Moves - extended settle
+Result            dd    +0.000        +0.026        +0.000      +0.000     +0.026                   
+   
+Step 30 - X Range of +X Moves
+Result            dd    +0.000        +0.026        +0.000      +0.000     +0.026                   
+   
+Step 31 - Y Range of +X Moves - extended settle
+Result            dd    +0.000        +0.021        +0.000      +0.000     +0.021                   
+   
+Step 32 - Y Range of +X Moves
+Result            dd    +0.000        +0.021        +0.000      +0.000     +0.021                   
+   
+Step 33 - X Range of -X Moves - extended settle
+Result            dd    +0.000        +0.021        +0.000      +0.000     +0.021                   
+   
+Step 34 - X Range of -X Moves
+Result            dd    +0.000        +0.020        +0.000      +0.000     +0.020                   
+   
+Step 35 - Y Range of -X Moves - extended settle
+Result            dd    +0.000        +0.023        +0.000      +0.000     +0.023                   
+   
+Step 36 - Y Range of -X Moves 
+Result            dd    +0.000        +0.023        +0.000      +0.000     +0.023                   
+   
+Step 37 - X Range of Bidirectional X Moves - extended settle
+Result            dd    +0.000        +0.030        +0.000      +0.000     +0.030                   
+   
+Step 38 - X Range of Bidirectional X Moves
+Result            dd    +0.000        +0.029        +0.000      +0.000     +0.029                   
+   
+Step 39 - Y Range of Bidirectional X Moves - extended settle
+Result            dd    +0.000        +0.032        +0.000      +0.000     +0.032                   
+   
+Step 40 - Y Range of Bidirectional X Moves
+Result            dd    +0.000        +0.032        +0.000      +0.000     +0.032                   
+   
+Step 41 - X Range of Bidirectional X&Y Moves - extended settle
+Result            dd    +0.000        +0.030        +0.000      +0.000     +0.030                   
+   
+Step 42 - X Range of Bidirectional X&Y Moves
+Result            dd    +0.000        +0.029        +0.000      +0.000     +0.029                   
+   
+Step 43 - Y Range of Bidirectional X&Y Moves - extended settle
+Result            dd    +0.000        +0.032        +0.000      +0.000     +0.032                   
+   
+Step 44 - Y Range of Bidirectional X&Y Moves
+Result            dd    +0.000        +0.032        +0.000      +0.000     +0.032                   
+   
+Step 45 - XY Bidirectional - extended settle
+Result            dd    +0.000        +0.032        +0.003      +0.000     +0.032       +0.029      
+   
+====================================================================================================
+
+Machine Serial Number:  SFD2001052                                                       Page:    2
+====================================================================================================
+Feature           Unit    Nominal       Actual          Tolerances           Deviation     Exceeded 
+====================================================================================================
+Step 46 - [060 E1 & E2 Verification]: XY Bidirectional
+Result            dd    +0.000        +0.032        +0.003      +0.000     +0.032       +0.029      
+   
+====================================================================================================
+
+============================ END OF INSPECTION - Elapsed Time  00:00:52 ============================

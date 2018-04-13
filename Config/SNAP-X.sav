@@ -1,0 +1,271 @@
+[NonLinear XY to Z]
+###############################################################################
+# NON LINEAR XY to Z CONFIGURATION PARAMETERS
+#  ENABLE_CALIBRATION
+#    0 - Turn calibration off
+#    1 - Turn calibration on
+#  TOLERANCE_IN
+#    Tolerance in inches (Default = 0.00015)
+#  TOLERANCE_MM
+#    Tolerance in millimeters (Default = 0.002)
+#  RANGE_Z_MIN_IN, RANGE_Z_MAX_IN
+#    Z range in inches - (Default [-0.8", +0.8"])
+#  REPEATS
+#    [1, 5] - Default = 3
+#  STEPS
+#    [2, 10] - Default = 10
+###############################################################################
+ENABLE_CALIBRATION=1
+TOLERANCE_IN=0.00015
+TOLERANCE_MM=0.00200
+RANGE_Z_MIN_IN=0.00000
+RANGE_Z_MAX_IN=3.00000
+REPEATS=1
+STEPS=10
+
+[SNAP-X]
+###############################################################################
+# SNAP-X CONFIGURATION PARAMETERS
+# QVIComparator
+#  -1 - Auto Detect (Default)
+#   0 - CCP
+#   1 - CPU2000 and CPU2010
+#   2 - TruLight only - SNAP
+#   3 - CCP2 - bi-directional
+#   4 - CCV, C-Vision, Snap200
+#   5 - DSP System
+#   6 - SNAP200
+#  
+# DRO_Display_Z
+#  -1 - Auto Detect (Default)
+#   0 - off
+#   1 - on
+#  
+#                                                                              
+# ImageType
+#   0 - Corrected       - OGP Focus, CC-14
+#   1 - Fully Corrected - QL-20, QL-30, OQ-30B, CC-20, CC-30, CC-30S
+#                                                                              
+#  ComPort
+#    x - The com port number [1, 3]
+#    You have to set corresponding port parameters under section [Com Ports]   
+#    COM_x_BAUD, COM_x_PARITY, COM_x_DATA_BITS, COM_x_STOP_BITS                
+#                                                                              
+#  ComPortBaud
+#    0 (Default) - Use COM_nn_BAUD value from "Com Ports"
+#    > 0 - the baud rate for this port
+#                                                                              
+#  TruLightComPort
+#    x - The com port number [1, 8]
+#    0 - Not Installed                                                         
+#   -1 - The same as ComPort
+#                                                                              
+#  ServoBoardComPort
+#    x - The com port number [1, 8]
+#    0 - Not Installed                                                         
+#   -1 - The same as ComPort
+#                                                                              
+# EdgeDetection
+#   0 - Off
+#   1 - On (Default)
+#                                                                              
+# If it is an OGP machine, communication with edge detection (Projectron) is enabled
+#                                                                              
+# MotorizedStage
+#   0 - Off
+#   1 - On (Default)
+#                                                                              
+# LENS_CHANGER_PRESENT
+#   0 - Not present - single mag system
+#   1 - Two positions turret (Default)
+#   2 - Four positions Mag Changer
+#                                                                              
+# LENS_CHANGER_MAP
+#   Valid for LENS_CHANGER_PRESENT = 2
+#   Lenses:
+#		Low Mag Lens  - Zoom Counts: 1000
+#		Mid Mag Lens  - Zoom Counts: 2000
+#		High Mag Lens - Zoom Counts: 3000
+#		Alignment Lens
+#     
+#   Mag Changer Positions - 1, 2, 3, 4
+#     
+#   LENS_CHANGER_MAP = 0xAHML Where:
+#     L is the position where Low  Mag  Lens is located (default = 1)
+#     H is the position where High Mag  Lens is located (default = 2)
+#     A is the position where Alignment Lens is located (default = 3)
+#     M is the position where Mid  Mag  Lens is located (default = 4)
+#   Or:
+#   LENS_CHANGER_MAP = L + M*16 + H*256 + A*4096
+#     
+#   Combinations:
+#     - 2 Lenses (Low-Mid):      L = 1; M = 4; H = 0					-> LENS_CHANGER_MAP = 0x0041
+#     - 2 Lenses (Low-High):     L = 1; M = 0; H = 2					-> LENS_CHANGER_MAP = 0x0201
+#     - 3 Lenses (Low-Mid-High): L = 1; M = 4; H = 2					-> LENS_CHANGER_MAP = 0x0241 (Default)
+#     - 4 Lenses (L-M-H-A):			L = 1; M = 4; H = 2; A = 3	-> LENS_CHANGER_MAP = 0x3241
+#     
+# MagnificationSensor
+#   0 - Off
+#   1 - On (Default)
+#                                                                              
+# If it is an OGP machine, communication with magnification sensor board is enabled
+#                                                                              
+# DRO_Output
+#   Format of the output                                                       
+#       {X|@X|@U[in|mm]}{Y|@Y|[in|mm]}{Q|@Q|[dms|dd]}{|@M|[X]}                 
+#                                                                              
+# VP_CameraZoomPosition
+#   01x - for Vidi Probe                                                       
+#   empty (default) - for CCV and all comparators                              
+#                                                                              
+# CENTER_FOV_EOR
+#   Recenters Pan at the end of Run                                            
+#   0 - Off (Default)
+#   1 - On
+#                                                                              
+# CIRCULAR_MASK_DIAM_LOW
+#   Diameter of SNAP200 low optics FOV	in inches                               
+#     0   - no circular mask                                                   
+#     3.9 - recommended value for SNAP200  (default)                           
+# CIRCULAR_MASK_DIAM_HIGH
+#   Diameter of SNAP200 low optics FOV	in inches                               
+#     0   - no circular mask (default)                                         
+#                                                                              
+# CIRCULAR_MASK_CEN_X_LOW|HIGH
+# CIRCULAR_MASK_CEN_Y_LOW|HIGH
+#   Position of SNAP200 optics FOV	in inches                                   
+#     0.0 - (default)                                                          
+# 
+# CIRCULAR_MASK_COLOR
+#	RGB mask color 0x00bbggrr
+#                                                                              
+###############################################################################
+QVIComparator=6
+DRO_Display_Z=1
+ImageType=1
+ComPort=4
+ComPortBaud=38400
+TruLightComPort=-1
+ServoBoardComPort=-1
+EdgeDetection=0
+MotorizedStage=1
+LENS_CHANGER_PRESENT=1
+LENS_CHANGER_MAP=0241
+DRO_Output={X|@X|@U[in|mm]}{Y|@Y|[in|mm]}{Q|@Q|[dms|dd]}{|@M|[X]}
+VP_CameraZoomPosition=
+CENTER_FOV_EOR=0
+CIRCULAR_MASK_DIAM_LOW=3.900000000000
+CIRCULAR_MASK_CEN_X_LOW=0.000000000000
+CIRCULAR_MASK_CEN_Y_LOW=0.000000000000
+CIRCULAR_MASK_DIAM_HIGH=0.000000000000
+CIRCULAR_MASK_CEN_X_HIGH=0.000000000000
+CIRCULAR_MASK_CEN_Y_HIGH=0.000000000000
+CIRCULAR_MASK_COLOR=00f0f0f0
+
+[Calibration]
+###############################################################################
+# FOV CALIBRATION CONFIGURATION PARAMETERS
+#  
+# CALIBRATION_FILE
+#    Calibration File
+#  
+# CALIBRATION_RETICLE_SERIAL
+#    Calibration Reticle Serial Number
+#  
+# CALIBRATION_DISABLE_KEYSTONE_CORRECTION
+#    Disables keystone correction
+#    0 (Default) - Keystone correction is enabled
+#    1 - Keystone correction is disabled
+#  
+# FOV_CAL_KEYSTONE_MAG
+#		What digital zoom is used to calibrate the Keystone
+#    0   - Low Mag
+#    100 - High Mag (Default)
+#  
+# FOV_HIGH_MAG_METHOD
+#    0 - Edge Chase (Default)
+#    1 - 3x3 Dot Pattern
+#  
+# CALIBRATION_FILE_HIGH
+#    Calibration File for High Optical Mag
+#  
+# COMBINED_RETICLE
+#		Optical calibration with 2 separate calibration reticles or 1 combined reticle.
+#    0 - 2 separate calibration reticles (Default)
+#    1 - one combined reticle
+#  
+# FOV_AUTO_CALC
+#		Measure high digital zoom position only and automatic calculate the pixel size for all other positions.
+#    0 - Disabled (Default)
+#    1 - Enabled
+#  
+# VERIFICATION_IGNORE_Z
+#    Allow verification at different Z stage positions
+#    0 (Default) - 	This will force the verification to the top stage position, Z = 0
+#    1 - 	Stage position is ignored and the verification can be done at any (Stage) Z position
+#  
+# CALIBRATION_POINTS_MAX
+#    [4, 100] Default = 80
+#  
+# CALIBRATION_WEAK_STRONG
+#    Calibration Minimum Quality
+#    [1, 100] Default = 50
+#  
+# CALIBRATION_ROUGH_SMOOTH
+#    Calibration Standard Deviation
+#    [1, 100] Default = 50
+#  
+# CALIBRATION_CONTRAST
+#    Calibration Contrast
+#    [1, 255] Default = 120
+#  
+# CALIBRATION_LOC_TOLERANCE_X_MIN_MAG_IN[MM]
+#    Minimum Magnification Calibration Verification Location X Tolerance
+#  
+# CALIBRATION_LOC_TOLERANCE_Y_MIN_MAG_IN[MM]
+#    Minimum Magnification Calibration Verification Location Y Tolerance
+#  
+# CALIBRATION_LOC_TOLERANCE_X_MAX_MAG_IN[MM]
+#    Maximum Magnification Calibration Verification Location X Tolerance
+#  
+# CALIBRATION_LOC_TOLERANCE_Y_MAX_MAG_IN[MM]
+#    Maximum Magnification Calibration Verification Location Y Tolerance
+#  
+#  PositionRepeatability
+#    microns
+#  DistanceUncertainty
+#    millimeters
+#  ToleranceSpecification
+#    1 - XY Tolerance specification
+#    2 - U95 Tolerance specification
+#    3 - XY and U95
+#  
+###############################################################################
+CALIBRATION_FILE=Calibration_640133.ini
+CALIBRATION_RETICLE_SERIAL=
+CALIBRATION_DISABLE_KEYSTONE_CORRECTION=0
+FOV_CAL_KEYSTONE_MAG=100
+VERIFICATION_IGNORE_Z=0
+FOV_HIGH_MAG_METHOD=1
+CALIBRATION_FILE_HIGH=
+COMBINED_RETICLE=1
+FOV_AUTO_CALC=1
+CALIBRATION_POINTS_MAX=80
+CALIBRATION_WEAK_STRONG=35
+CALIBRATION_ROUGH_SMOOTH=60
+CALIBRATION_CONTRAST=120
+CALIBRATION_BOUNDS=50
+CALIBRATION_LOC_TOLERANCE_X_MIN_MAG_IN=0.00040
+CALIBRATION_LOC_TOLERANCE_Y_MIN_MAG_IN=0.00040
+CALIBRATION_LOC_TOLERANCE_X_MAX_MAG_IN=0.00020
+CALIBRATION_LOC_TOLERANCE_Y_MAX_MAG_IN=0.00020
+CALIBRATION_LOC_TOLERANCE_X_MIN_MAG_MM=0.01000
+CALIBRATION_LOC_TOLERANCE_Y_MIN_MAG_MM=0.01000
+CALIBRATION_LOC_TOLERANCE_X_MAX_MAG_MM=0.00500
+CALIBRATION_LOC_TOLERANCE_Y_MAX_MAG_MM=0.00500
+POSITION_REPEATABILITY=10.0
+DISTANCE_UNCERTAINTY=10000000
+POSITION_REPEATABILITY_HIGH=5.0
+DISTANCE_UNCERTAINTY_HIGH=10000000
+WHICH_TOLERANCE_SPEC=1
+

@@ -1,0 +1,371 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<report
+	progress="">
+	<activity
+		result="Success"
+		duration="0ms"
+		durationms="0"
+		type="root"
+		rid="5afdb62dfcf79a8"
+		totalerrorcount="1"
+		totalwarningcount="0"
+		totalsuccesstestcasecount="0"
+		totalfailedtestcasecount="1"
+		totalblockedtestcasecount="0"
+		totalsuccesscount="0"
+		totalfailedcount="1"
+		totalblockedcount="0"
+		user="EVMX"
+		host="SNAPDM200"
+		rxversion="7.0.1.0"
+		osversion="Windows 7 Service Pack 1 32bit"
+		runtimeversion="4.0.30319.42000"
+		procarch="32bit"
+		oslanguage="en-US"
+		dtnlanguage="en-US"
+		screenresolution="1920x1080"
+		timestamp="4/12/2018 15:59:32"
+		timestampiso="2018-04-12T12:59:32"
+		timeoutfactor="1">
+		<detail>
+			Ranorex Testscript
+		</detail>
+		<activity
+			result="Failed"
+			duration="1.4m"
+			durationms="81570"
+			type="test-suite"
+			rid="19c147441d3d62b4"
+			totalerrorcount="1"
+			totalwarningcount="0"
+			totalsuccesstestcasecount="0"
+			totalfailedtestcasecount="1"
+			totalblockedtestcasecount="0"
+			totalsuccesscount="0"
+			totalfailedcount="1"
+			totalblockedcount="0"
+			testsuitename="SpeedTests"
+			headertext="SpeedTests"
+			runconfigname="TestRun"
+			runlabel="">
+			<params>
+			</params>
+			<activity
+				result="Failed"
+				duration="1.4m"
+				durationms="81566"
+				type="test-case"
+				rid="b040b7fcca37940"
+				totalerrorcount="1"
+				totalwarningcount="0"
+				totalsuccesstestcasecount="0"
+				totalfailedtestcasecount="1"
+				totalblockedtestcasecount="0"
+				totalsuccesscount="0"
+				totalfailedcount="1"
+				totalblockedcount="0"
+				testcontainername="TestCase"
+				testcontainerid="ccbcc68a-2b4d-4be6-89e9-44e0777ed2aa"
+				headertext="TestCase"
+				displayName="TestCase"
+				iteration="1"
+				activity-exectype="execute">
+				<activity
+					result="Failed"
+					duration="1.4m"
+					durationms="81561"
+					type="test-module"
+					rid="a8f9c58c72e8e20"
+					totalerrorcount="1"
+					totalwarningcount="0"
+					totalsuccesstestcasecount="0"
+					totalfailedtestcasecount="0"
+					totalblockedtestcasecount="0"
+					totalsuccesscount="0"
+					totalfailedcount="0"
+					totalblockedcount="0"
+					modulename="ActionOne"
+					displayName="ActionOne"
+					moduleid="9eb9cf0b-ff1c-44d0-ab16-95567d57f95d"
+					moduletype="Recording"
+					iteration="1"
+					activity-exectype="execute"
+					testentry-activity-type="testmodule">
+					<varbindings>
+					</varbindings>
+					<item
+						timeRelativeToTestSuiteStartTime="00:00.084"
+						timeRelativeToTestModuleStartTime="00:00.003"
+						timeWallClock="15:59:32"
+						time="00:00.084"
+						level="Info"
+						category="Mouse">
+						<message>
+							Mouse Left Click item 'SnapXUntitled.TitleBar' at 663;11.
+						</message>
+						<metainfo
+							type="repoitem"
+							path="/form[@title='Snap-X - [Untitled]']/element[@controlid='94']"
+							fullname="SpeedTestsRepository.SnapXUntitled.Element94"
+							id="76c8b8ce92bd450a8977236f63e76e7d"
+							timeout="530000"
+							codefile="D:\Joro\GIT_Automations\VERSION 3\AutomationSpeedTest\SpeedTests\SpeedTests\ActionOne.cs"
+							codeline="88"
+							itemindex="0"
+							loglvl="Info">
+						</metainfo>
+					</item>
+					<item
+						timeRelativeToTestSuiteStartTime="00:01.180"
+						timeRelativeToTestModuleStartTime="00:01.099"
+						timeWallClock="15:59:33"
+						time="00:01.180"
+						level="Info"
+						category="Keyboard">
+						<message>
+							Key sequence '{LMenu}'.
+						</message>
+						<metainfo
+							itemindex="1"
+							codefile="D:\Joro\GIT_Automations\VERSION 3\AutomationSpeedTest\SpeedTests\SpeedTests\ActionOne.cs"
+							codeline="92"
+							loglvl="Info">
+						</metainfo>
+					</item>
+					<item
+						timeRelativeToTestSuiteStartTime="00:01.551"
+						timeRelativeToTestModuleStartTime="00:01.470"
+						timeWallClock="15:59:33"
+						time="00:01.551"
+						level="Info"
+						category="Keyboard">
+						<message>
+							Key sequence 'f'.
+						</message>
+						<metainfo
+							itemindex="2"
+							codefile="D:\Joro\GIT_Automations\VERSION 3\AutomationSpeedTest\SpeedTests\SpeedTests\ActionOne.cs"
+							codeline="96"
+							loglvl="Info">
+						</metainfo>
+					</item>
+					<item
+						timeRelativeToTestSuiteStartTime="00:01.911"
+						timeRelativeToTestModuleStartTime="00:01.830"
+						timeWallClock="15:59:33"
+						time="00:01.911"
+						level="Info"
+						category="Keyboard">
+						<message>
+							Key sequence 'o'.
+						</message>
+						<metainfo
+							itemindex="3"
+							codefile="D:\Joro\GIT_Automations\VERSION 3\AutomationSpeedTest\SpeedTests\SpeedTests\ActionOne.cs"
+							codeline="100"
+							loglvl="Info">
+						</metainfo>
+					</item>
+					<item
+						timeRelativeToTestSuiteStartTime="00:04.164"
+						timeRelativeToTestModuleStartTime="00:04.083"
+						timeWallClock="15:59:36"
+						time="00:04.164"
+						level="Info"
+						category="Mouse">
+						<message>
+							Mouse Left DoubleClick item 'OpenSnapXRoutine.FileNameField' at 202;5.
+						</message>
+						<metainfo
+							type="repoitem"
+							path="/form[@title='Open Snap-X Routine']/?/?/text[@controlid='1148']"
+							fullname="SpeedTestsRepository.OpenSnapXRoutine.FileNameField"
+							id="4ffde9065caa4e1f9916cde343dfc1a1"
+							timeout="60000"
+							codefile="D:\Joro\GIT_Automations\VERSION 3\AutomationSpeedTest\SpeedTests\SpeedTests\ActionOne.cs"
+							codeline="104"
+							itemindex="4"
+							loglvl="Info">
+						</metainfo>
+					</item>
+					<item
+						timeRelativeToTestSuiteStartTime="00:05.387"
+						timeRelativeToTestModuleStartTime="00:05.306"
+						timeWallClock="15:59:37"
+						time="00:05.387"
+						level="Info"
+						category="Keyboard">
+						<message>
+							Key sequence '{Delete}' with focus on 'OpenSnapXRoutine.FileNameField'.
+						</message>
+						<metainfo
+							type="repoitem"
+							path="/form[@title='Open Snap-X Routine']/?/?/text[@controlid='1148']"
+							fullname="SpeedTestsRepository.OpenSnapXRoutine.FileNameField"
+							id="4ffde9065caa4e1f9916cde343dfc1a1"
+							timeout="60000"
+							codefile="D:\Joro\GIT_Automations\VERSION 3\AutomationSpeedTest\SpeedTests\SpeedTests\ActionOne.cs"
+							codeline="108"
+							itemindex="5"
+							loglvl="Info">
+						</metainfo>
+					</item>
+					<item
+						timeRelativeToTestSuiteStartTime="00:05.782"
+						timeRelativeToTestModuleStartTime="00:05.701"
+						timeWallClock="15:59:37"
+						time="00:05.782"
+						level="Info"
+						category="Keyboard">
+						<message>
+							Key sequence 'D:\Joro\GIT_Automations\VERSION 3\AutomationSpeedTest\Routines\SpeedOne.mxy'.
+						</message>
+						<metainfo
+							itemindex="6"
+							codefile="D:\Joro\GIT_Automations\VERSION 3\AutomationSpeedTest\SpeedTests\SpeedTests\ActionOne.cs"
+							codeline="112"
+							loglvl="Info">
+						</metainfo>
+					</item>
+					<item
+						timeRelativeToTestSuiteStartTime="00:13.615"
+						timeRelativeToTestModuleStartTime="00:13.534"
+						timeWallClock="15:59:45"
+						time="00:13.615"
+						level="Info"
+						category="Keyboard">
+						<message>
+							Key sequence '{Return}' with focus on 'OpenSnapXRoutine.FileNameField'.
+						</message>
+						<metainfo
+							type="repoitem"
+							path="/form[@title='Open Snap-X Routine']/?/?/text[@controlid='1148']"
+							fullname="SpeedTestsRepository.OpenSnapXRoutine.FileNameField"
+							id="4ffde9065caa4e1f9916cde343dfc1a1"
+							timeout="60000"
+							codefile="D:\Joro\GIT_Automations\VERSION 3\AutomationSpeedTest\SpeedTests\SpeedTests\ActionOne.cs"
+							codeline="116"
+							itemindex="7"
+							loglvl="Info">
+						</metainfo>
+					</item>
+					<item
+						timeRelativeToTestSuiteStartTime="00:14.012"
+						timeRelativeToTestModuleStartTime="00:13.931"
+						timeWallClock="15:59:46"
+						time="00:14.012"
+						level="Info"
+						category="Mouse">
+						<message>
+							Mouse Left Click item 'SnapXUntitled.TitleBar' at 668;9.
+						</message>
+						<metainfo
+							type="repoitem"
+							path="/form[@title='Snap-X - [Untitled]']/element[@controlid='94']"
+							fullname="SpeedTestsRepository.SnapXUntitled.Element94"
+							id="76c8b8ce92bd450a8977236f63e76e7d"
+							timeout="530000"
+							codefile="D:\Joro\GIT_Automations\VERSION 3\AutomationSpeedTest\SpeedTests\SpeedTests\ActionOne.cs"
+							codeline="120"
+							itemindex="8"
+							loglvl="Info">
+						</metainfo>
+					</item>
+					<item
+						timeRelativeToTestSuiteStartTime="00:16.413"
+						timeRelativeToTestModuleStartTime="00:16.332"
+						timeWallClock="15:59:48"
+						time="00:16.413"
+						level="Info"
+						category="Keyboard">
+						<message>
+							Key sequence '{LMenu}'.
+						</message>
+						<metainfo
+							itemindex="9"
+							codefile="D:\Joro\GIT_Automations\VERSION 3\AutomationSpeedTest\SpeedTests\SpeedTests\ActionOne.cs"
+							codeline="124"
+							loglvl="Info">
+						</metainfo>
+					</item>
+					<item
+						timeRelativeToTestSuiteStartTime="00:16.763"
+						timeRelativeToTestModuleStartTime="00:16.682"
+						timeWallClock="15:59:48"
+						time="00:16.763"
+						level="Info"
+						category="Keyboard">
+						<message>
+							Key sequence 'f'.
+						</message>
+						<metainfo
+							itemindex="10"
+							codefile="D:\Joro\GIT_Automations\VERSION 3\AutomationSpeedTest\SpeedTests\SpeedTests\ActionOne.cs"
+							codeline="128"
+							loglvl="Info">
+						</metainfo>
+					</item>
+					<item
+						timeRelativeToTestSuiteStartTime="00:17.132"
+						timeRelativeToTestModuleStartTime="00:17.051"
+						timeWallClock="15:59:49"
+						time="00:17.132"
+						level="Info"
+						category="Keyboard"
+						errimg="images_SpeedTes_13777e1f\SpeedTes_13777e1f_a7ad0e3c_trace.jpg"
+						errthumb="images_SpeedTes_13777e1f\SpeedTes_13777e1f_a7ad0e3c_trace_thumb.jpg">
+						<message>
+							Key sequence 'r'.
+						</message>
+						<metainfo
+							itemindex="11"
+							codefile="D:\Joro\GIT_Automations\VERSION 3\AutomationSpeedTest\SpeedTests\SpeedTests\ActionOne.cs"
+							codeline="132"
+							loglvl="Info">
+						</metainfo>
+					</item>
+					<item
+						timeRelativeToTestSuiteStartTime="00:17.497"
+						timeRelativeToTestModuleStartTime="00:17.416"
+						timeWallClock="15:59:49"
+						time="00:17.497"
+						level="Info"
+						category="Mouse"
+						errimg="images_SpeedTes_13777e1f\SpeedTes_13777e1f_d21e258f_trace.jpg"
+						errthumb="images_SpeedTes_13777e1f\SpeedTes_13777e1f_d21e258f_trace_thumb.jpg">
+						<message>
+							Mouse Left Click item 'SnapXUntitled.ButtonOK' at Center.
+						</message>
+						<metainfo
+							type="repoitem"
+							path="/form[@title='Snap-X - [Untitled]']/container/form//button[@text='&amp;OK']"
+							fullname="SpeedTestsRepository.SnapXUntitled.ButtonOK"
+							id="f7b0551865b84d1ab3d0ef4b40182a53"
+							timeout="1000000"
+							codefile="D:\Joro\GIT_Automations\VERSION 3\AutomationSpeedTest\SpeedTests\SpeedTests\ActionOne.cs"
+							codeline="136"
+							itemindex="12"
+							loglvl="Info">
+						</metainfo>
+					</item>
+					<item
+						timeRelativeToTestSuiteStartTime="01:21.476"
+						timeRelativeToTestModuleStartTime="01:21.395"
+						timeWallClock="16:00:53"
+						time="01:21.476"
+						level="Error"
+						category="User"
+						errimg="images_SpeedTes_13777e1f\SpeedTes_13777e1f_eff429ac_trace.jpg"
+						errthumb="images_SpeedTes_13777e1f\SpeedTes_13777e1f_eff429ac_trace_thumb.jpg">
+						<message>
+							The test run has been aborted by the user.
+						</message>
+						<metainfo
+							loglvl="Error">
+						</metainfo>
+					</item>
+				</activity>
+			</activity>
+		</activity>
+	</activity>
+</report>

@@ -1,0 +1,272 @@
+[AutoID]
+###############################################################################
+#	AutoID PARAMETERS
+# 
+#	AUTOID_DATABASE
+#		AutoID database file (default = AutoID.mdb)
+# 
+#	AUTOID_TOLERANCE
+#		AutoID search tolerance in percents (default = 10%)
+# 
+#	AUTOID_MAX_MATCHES
+#		The maximal number of matched parts (default = 50)
+# 
+#	AUTOID_BEST_ONLY
+#		Best matched parts only (default = true)
+# 
+#	AUTOID_ENABLE_TOUCH_BOUNDARY
+#		Enable touch boundary (default = false)
+# 
+#	AUTOID_RETICLE
+#		Treat all parts as one (Reticle) (default = false)
+# 
+#	AUTOID_CURR_MACHINE_ONLY
+#		Search for parts registered on this machine only (default = false)
+# 
+#	AUTOID_CONTINUE_NO_SAVING
+#		Bypass the prompt if the user wants to save changes to the routine when running multiple parts.
+# 
+#	AUTOID_SHOW_KOZ_RUNMODE
+#		Show or hide Keep out zone in run mode.
+# 
+# AUTOID_ENABLE_FIXTURE_SUBSTRACTION
+#		(default = false)
+# 
+# AUTOID_SHOW_FIXTURE_MASK
+#		(default = true)
+# 
+# AUTOID_FIXTURE_COLOR
+#	RGB mask color 0x00bbggrr - Default: 0x00804000
+# 
+# AUTOID_FIXTURE_ALPHA
+#   Transparency of the mask [0, 255], Default = 200
+# 
+#	AUTOID_EDGE_DETECTION
+#		0 - Binary threshold
+#		1 - Advanced (Default)
+#	AUTOID_THRESHOLD_METHOD
+#		0 - Auto (Default) - automatically calculates a threshold value from image histogram
+#		1 - Fixed - uses [AUTOID_THRESHOLD, AUTOID_THRESHOLD_MAX]
+#	AUTOID_THRESHOLD
+#		Binary threshold min (0-255) default value = 50
+#	AUTOID_THRESHOLD_MAX
+#		Binary threshold max (0-255) default value = 255
+# AUTOID_MIN_PART_AREA
+#		Minimal area of whole part in inch^2
+#		Default 0.01 inch^2
+# AUTOID_MIN_HOLE_AREA
+#		Minimal area of holes in inch^2
+#		Default 0.001 inch^2
+# 
+#	AUTOID_BACK_LIGHT
+#	AUTOID_RING_LIGHT
+#	AUTOID_AUX_LIGHT
+#		AutoID default light levels (0-255)
+# 
+#	AUTOID_HIGH_BACK_LIGHT
+#	AUTOID_HIGH_RING_LIGHT
+#	AUTOID_HIGH_AUX_LIGHT
+#		AutoID default light levels for high magnitude settings (0-255)
+# 
+# Fixture Position
+# AUTOID_FIXTURE_POS_X
+# AUTOID_FIXTURE_POS_Y
+# AUTOID_FIXTURE_POS_ZOOM
+# 
+# AUTOID_STAGE_SCAN_STOPS_X|Y#		Recommended number of stops needed to scan the full stage in one direction.
+#		0 -> Autodetect
+# 
+# AUTOID_KOZ_COLOR
+#	Keep Out Zone - RGB mask color 0x00bbggrr - Default: 0x00804000
+# 
+# AUTOID_KOZ_ALPHA
+#   Keep Out Zone - Transparency of the mask [0, 255], Default = 200
+# 
+# AUTOID_KOZ_LOW_COLOR
+# AUTOID_KOZ_HIGH_COLOR
+# AUTOID_KOZ_HIGH_OUT_COLOR
+#		Detected Parts - RGB color 0x00bbggrr
+# 
+# AUTOID_DETECT_PARTS_INTERVAL
+#		Detect parts interval in milliseconds
+#		500 - Default
+#		0 - Disabled - no automatic part detection
+# 
+# AUTOID_LIGHTS_STROBING_MODE
+#		Set Lights Strobing Mode
+#		0 --> Strobing and Scale Latching are disabled.
+#		1 --> Set Strobing Mode #1 - Enable Scale Latching only. Lights are set normally and are not strobed.
+#		2 --> Set Srobing Mode #2 - Light Strobe enabled. (default)
+#					***This is the preferred mode for strobing and latching the scales while the stage is moving.***
+#					This allows latch scale data to be transferred while the stage is moving
+#					instead of having to wait until the end of a move to retrieve data.
+#		3 --> Set Strobing Mode #3 - Enable Scale Latching and Light Strobe. 
+#					Lights are strobed and a scale latch occurs every time the lights are turned on.
+# 
+# AUTOID_LIGHTS_STROBING_TIME
+#		This is the strobe light on-time in tenth microseconds.  (Default = 10000 --> 1mSec, maximum = 2^32).
+#		Note: A value of 0 will enable strobing duration to be equal to the camera latch signal.
+# 
+# AUTOID_CAMERA_FRAME_SIGNAL_POLARITY
+#		0 --> Light strobing and scale latching are triggered by the falling edge of the Camera Frame hardware signal.  (Default)
+#		1 --> Light strobing and scale latching are triggered by the rising edge of the Camera Frame hardware signal.
+# 
+# AUTOID_CAMERA_FRAME_SIGNAL_DELAY_LIGHT_STROBING
+#		This is the delay time in tenth microseconds from the Camera Frame trigger edge to strobe light turn-on.
+#		(Default = 0, maximum = 2 ^ 32)
+# 
+# AUTOID_CAMERA_FRAME_SIGNAL_DELAY_SCALE_LATCHING
+#		This is the delay time in tenth microseconds from the Camera Frame trigger edge to latching of scale(s).
+#		(Default = 0, maximum = 2 ^ 32)
+# 
+# AUTOID_STAGE_VELOCITY_PERCENT
+#		Scalling factor (percent) to reduce the stage velocity in strobing mode
+#		Range [1, 100.0] where 1 = 1/100th of the max stage speed and 100 equals the max stage speed
+#		Default = 1.0 - max stage speed
+# 
+# AUTOID_EXPOSURE_TIME_PERCENT
+#		Scalling factor to reduce the camera exposure time in strobing mode
+#		Range [1, 100]
+#		Default = 10
+# 
+# AUTOID_MAX_STAGE_VELOCITY
+#		The maximal stage velocity [inch/sec]
+#		This parameter will be automatically calculated during stage home
+#		Default = 0.0 - force stage home
+# 
+# AUTOID_STROBING_CAMERA_GAIN
+#  [-1, 255], Default: -1 -> Use Default camera gain
+# 
+# AUTOID_STITCHING_ALLIGN_MAX_SHIFT
+#  Maximal allowed shift for stitching in pixels.
+# 
+# 
+#	AUTOID_OPERATOR_MODE
+#			0 - Measure (Default)
+#			1 - Run
+#			2 - Program
+#
+#	AUTOID_MODE_SELECTOR_TIMEOUT
+#		Default: 120 (seconds)
+# 
+# 	GUIDE_ARROWS_PRESENT
+#		Default: 1
+# 
+# 	AUTOID_INITIAL_STATE_X|Y|Z
+#		Initial State position in Stage coordinates (inches)
+#		-999 (Default) - Invalid
+# 	
+# 	AUTOID_INITIAL_STATE_LENS_POS
+# 	Initial State lens position 
+# 	Default: 0
+# 
+# 	AUTOID_INITIAL_STATE_BYPASS_POS
+# 	To bypass initial state position
+# 	Default: 0
+# 
+# 	AUTOID_ACTIVE_ZONE_LEFT   = -999 - Inactive (Default)
+# 	AUTOID_ACTIVE_ZONE_RIGHT  = -999
+# 	AUTOID_ACTIVE_ZONE_TOP    = -999
+# 	AUTOID_ACTIVE_ZONE_BOTTOM = -999
+#		AutoID search area defined in Stage coordinates (inches)
+#		SNAP-X uses Stage limits in the case that AutoID zone is not defined.
+#
+# 	AUTOID_MODIFIER_FOR_HIGH_MAG
+#		Define multiplier parameter for high mag area
+#		Default: 10.0
+#		If AUTOID_MODIFIER_FOR_HIGH_MAG < 0 no modification of High Mag behavior
+#		If AUTOID_MODIFIER_FOR_HIGH_MAG = 0 then all parts will be measured on low mag
+# ##############################################################################
+AUTOID_DATABASE=AutoID.mdb
+AUTOID_TOLERANCE=75.000000
+AUTOID_MAX_MATCHES=50
+AUTOID_BEST_ONLY=0
+AUTOID_ENABLE_TOUCH_BOUNDARY=0
+AUTOID_RETICLE=0
+AUTOID_CURR_MACHINE_ONLY=0
+AUTOID_CONTINUE_NO_SAVING=0
+AUTOID_SHOW_KOZ_RUNMODE=0
+AUTOID_ENABLE_FIXTURE_SUBSTRACTION=0
+AUTOID_SHOW_FIXTURE_MASK=1
+AUTOID_FIXTURE_MASK=FixtureMask.bmp
+AUTOID_FIXTURE_COLOR=00c080ff
+AUTOID_FIXTURE_ALPHA=185
+AUTOID_EDGE_DETECTION=0
+AUTOID_THRESHOLD_METHOD=0
+AUTOID_THRESHOLD=50
+AUTOID_THRESHOLD_MAX=255
+AUTOID_MIN_PART_AREA=0.010000
+AUTOID_MIN_HOLE_AREA=0.001000
+AUTOID_BACK_LIGHT=47
+AUTOID_RING_LIGHT=0
+AUTOID_AUX_LIGHT=0
+AUTOID_HIGH_BACK_LIGHT=120
+AUTOID_HIGH_RING_LIGHT=0
+AUTOID_HIGH_AUX_LIGHT=0
+AUTOID_FIXTURE_POS_X=-0.006960
+AUTOID_FIXTURE_POS_Y=0.000499
+AUTOID_FIXTURE_POS_ZOOM=3
+AUTOID_STAGE_SCAN_STOPS_X=5
+AUTOID_STAGE_SCAN_STOPS_Y=3
+AUTOID_KOZ_COLOR=0080ff00
+AUTOID_KOZ_ALPHA=44
+AUTOID_KOZ_LOW_COLOR=000000ff
+AUTOID_KOZ_HIGH_COLOR=0040ff00
+AUTOID_KOZ_HIGH_OUTCOLOR=000000ff
+AUTOID_DETECT_PARTS_INTERVAL=500
+AUTOID_LIGHTS_STROBING_MODE=0
+AUTOID_LIGHTS_STROBING_TIME=80000
+AUTOID_CAMERA_FRAME_SIGNAL_POLARITY=1
+AUTOID_CAMERA_FRAME_SIGNAL_DELAY_LIGHT_STROBING=0
+AUTOID_CAMERA_FRAME_SIGNAL_DELAY_SCALE_LATCHING=0
+AUTOID_MAX_STAGE_VELOCITY=1.252503
+AUTOID_STAGE_VELOCITY_PERCENT=20
+AUTOID_EXPOSURE_TIME_PERCENT=44
+AUTOID_STROBING_CAMERA_GAIN=-1
+AUTOID_STITCHING_ALLIGN_MAX_SHIFT=200
+AUTOID_OPERATOR_MODE=0
+AUTOID_MODE_SELECTOR_TIMEOUT=120
+GUIDE_ARROWS_PRESENT=1
+AUTOID_INITIAL_STATE_X=2.963057
+AUTOID_INITIAL_STATE_Y=-999.000000
+AUTOID_INITIAL_STATE_Z=0.126297
+AUTOID_INITIAL_STATE_LENS_POS=1
+AUTOID_INITIAL_STATE_BYPASS_POS=0
+AUTOID_ACTIVE_ZONE_LEFT=-999.000000
+AUTOID_ACTIVE_ZONE_RIGHT=-999.000000
+AUTOID_ACTIVE_ZONE_TOP=-999.000000
+AUTOID_ACTIVE_ZONE_BOTTOM=-999.000000
+AUTOID_MODIFIER_FOR_HIGH_MAG=-999.000000
+
+[Feature Extraction]
+###############################################################################
+#	Feature Extraction PARAMETERS
+# 
+# FEATURE_EXTRACTION_FEATURES
+#		[0, +100]
+#		 0	 - Most Detailed
+#		 50	 - Default
+#		 100 - Prominent Features Only
+# 
+# 
+# FEATURE_EXTRACTION_PRECISION
+#		Range: [4, +40]
+#		1/4th of Pixel Size
+#		Precision = PixelSize/ 4
+# 
+# FEATURE_EXTRACTION_SUBPIXELING
+#	0 - Disabled
+#	1 - Enabled (Default)
+# 
+# FEATURE_EXTRACTION_MIN_SWEEP_ANGLE
+#	The minimal sweep angle for an object to be considered arc
+#	Range [0, 90]
+#  Default: 5 degrees
+# 
+###############################################################################
+FEATURE_EXTRACTION_FEATURES=21
+FEATURE_EXTRACTION_PRECISION=40
+FEATURE_EXTRACTION_AUTOMATIC=0
+FEATURE_EXTRACTION_SUBPIXELING=1
+FEATURE_EXTRACTION_MIN_SWEEP_ANGLE=5.000000
+

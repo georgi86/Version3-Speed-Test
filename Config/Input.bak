@@ -1,0 +1,646 @@
+[Files]
+###############################################################################
+#FILES CONFIGURATION PARAMETERS
+#  CpuS1File
+#    This is the cpu.s1 path/file name.
+#  DspFile
+#    This is the dsp.out path/file name.
+#  LanguageFile
+#    This is the name of the language file used.
+#  HTML_HELP_FILE
+#    This specifies the .CHM file to use for HtmlHelp.
+###############################################################################
+S1_FILE=.\CPU.S1
+LANGUAGE_FILE=kol.lng
+HTML_HELP_FILE=SNAP-X_enUS.chm
+
+[Paths]
+###############################################################################
+#PATHS CONFIGURATION PARAMETERS
+#  InstalledPath
+#    This is the path where the software was installed.
+#  ConfigDir
+#    This is the directory where configure files are located.
+#  HelpDir
+#    This is the directory where the help files are located.
+#  ResourceDir
+#    This is the directory where the resource files are located.
+#  LanguageDir
+#    This is the directory where the language files are located.
+#  RoutinePath
+#    This is the path where the part routines are located.
+#  ImagePath
+#    This is the path where image files are located.
+#  StatsPath
+#    This is the path where the stats files are located.
+#  DataStreamPath
+#    This is the path where the data stream files are located.
+#  SmartReportPath
+#    This is the path where the smart report files are located.
+#  OutputPath
+#    This is the path where the output files are located.
+#  CAD_IMPORT_DIR
+#    This is the path where the CAD files are located.
+#  LOGGING_DIR
+#    This is the path where the log files are located.
+#  CalibrationPath
+#    This is the path where the Enable.Cal file is located.
+#  EXCEL_DIR
+#    This is the path where the Excel output files are located.
+#  AUTOID_DIR
+#    This is the path where the AutoID database is located.
+#  AUTOID_OUTPUT_DIR#		This the default path where to save AutoID output files.
+#  SMART_PROFILE_EXCHANGE_DIR
+#    This is the path where SmartProfile is looking for DAT Exchange file.
+#    Default: c:\Partrt\
+#  SMART_PROFILE_DATA_FILE
+#    This is the the file name of DAT exchange file.
+#    Default: SmartProfile.apt
+###############################################################################
+CONFIG_DIR=CONFIG\
+HELP_DIR=HELP\
+LANGUAGE_DIR=LANGUAGE\
+ROUTINE_DIR=Routines\
+CAD_IMPORT_DIR=C:\QVI\Snap-X\Routines\
+LOGGING_DIR=Config\
+IMAGE_DIR=Routines\
+STATS_DIR=Routines\
+DATA_STREAM_DIR=C:\Users\EVMX\Desktop\
+SMART_REPORT_PATH=D:\Joro\GIT_Automations\AutomationOutputs\Reports\
+OUTPUT_DIR=C:\Temp\
+CALIBRATION_PATH=C:\
+SEND_COMMAND_DIR=Routines\
+SEND_COMMAND_FILE=send_cmd_out.txt
+SEND_COMMAND_TEMPLATE_DIR=Config\
+SEND_COMMAND_TEMPLATE_FILE=SendOutput.cfg
+EXCEL_DIR=Routines\
+AUTOID_DIR=Config\AutoID\
+AUTOID_OUTPUT_DIR=C:\QVI\Snap-X\Routines\
+SMART_PROFILE_EXCHANGE_DIR=c:\Partrtn\
+SMART_PROFILE_DATA_FILE=SmartProfile.apt
+
+[Metrology]
+###############################################################################
+#METROLOGY CONFIGURATION PARAMETERS
+#  AltNegativeDevation
+#    0 - Do not use alternate (mathematical) method of calculating a negative
+#        deviation.
+#    1 - Use alternate (mathematical) method of calculating a negative
+#        deviation.
+#  UseISOTolerance
+#    0 - Do not use ISO Tolerance
+#    1 - Use ISO Tolerance
+#  BadValueDigit
+#    0..9 - Digit to use when a bad value is encountered.
+#      -1 - Output the value as is
+#  AllowFiveSigDigitsInMM
+#    0 - Do not allow five significant digits
+#    1 - Allow five significant digits
+#  ArrowLengthInPixels
+#    Length of dimension line arrow in pixels
+#  ArrowHeightInPixels
+#    Height of dimension line arrow in pixels
+#  FirstLineOffsetInPixels
+#    Min offset in pixels between first dimension line and object outline 
+#  NextLineOffsetInPixels
+#    Min offset in pixels inbetween dimension lines
+#
+#  DIM_LINES_COLOR
+#    COLORREF of the RGB colours for dimension lines drawing
+#    Default: Cyan - 0x00808000
+#
+#  DIM_TEXT_COLOR
+#    COLORREF of the RGB colours for dimension Text
+#		Default: 0x00804000 - Dark Blue
+#		         0xffffffff - Use the same as lines color
+#
+#  DIM_BACKGROUND_COLOR
+#    COLORREF of the RGB colours for dimension background drawing
+#		Default: 0x00808080 - Dark Gray
+#		         0x00ffffff - White
+#  DIM_HAS_BACKGROUND
+#		1 - Display background color (Default)
+#		0 - No background color
+#		
+#  METROLOGY_DIM_FONT_SIZE
+#    Default Flyouts Font Size is 12 (Size change requires restart)
+#    
+#  METROLOGY_DIM_TEXT_SCALING
+#    Default Flyouts Text Scaling factor is 1.0
+#
+#  WIDTH_MIN_FEAT_MULTIPLIER
+#		Default: 5.25 x pixel size
+#  DIAMETER_MIN_FEAT_MULTIPLIER
+#		Default: 19.1 x pixel size
+#
+#  METROLOGY_DIM_FONT_NAME
+#		Default: Arial Black
+###############################################################################
+ALT_NEGATIVE_DEVIATION=0
+USE_ISO_TOLERANCING=1
+BAD_VALUE_DIGIT=9
+FIVE_SIG_DIGITS_MILLIMETERS=1
+ARROW_LENGTH_PIXELS=15
+ARROW_HEIGHT_PIXELS=7
+FIRST_LINE_OFFSET=40
+NEXT_LINE_OFFSET=30
+DIM_LINES_COLOR=00ffff80
+DIM_TEXT_COLOR=00ffff80
+DIM_BACKGROUND_COLOR=00c0c0c0
+DIM_HAS_BACKGROUND=1
+METROLOGY_DIM_FONT_SIZE=14
+METROLOGY_DIM_TEXT_SCALING=1.200000
+WIDTH_MIN_FEAT_MULTIPLIER=5.250000
+DIAMETER_MIN_FEAT_MULTIPLIER=10.000000
+METROLOGY_DIM_FONT_NAME=Arial Narrow
+
+[Graphics]
+###############################################################################
+#GRAPHICS CONFIGURATION PARAMETERS
+#  
+#  PenSize
+#    For best results use odd number pen sizes. (1 is default)
+#  Target
+#    0 - Cross Hair      8 - Chart Combination        16 - Minimum Weak Edge
+#    1 - Microgage       9 - Multiple                 17 - Laser Focus
+#    2 - Box            10 - Strong Edge              18 - Laser Line Scan
+#    3 - Circle         11 - not used                 19 - Laser Arc Scan
+#    4 - Double Circle  12 - Focus                    20 - Edge Trace
+#    5 - Protractor     13 - Average Weak Edge        21 - Centroid
+#    6 - Chart Radius   14 - Weak Edge FeatureFinder  22 - Advanced Focus
+#    7 - Chart Grid     15 - Maximum Weak Edge
+#  TargetColor
+#    0 - Black          6 - Brown                 11 - Light Cyan
+#    1 - Blue           7 - Grey                  12 - Light Red
+#    2 - Green          8 - Dark Grey             13 - Light Magenta
+#    3 - Cyan           9 - Light Blue            14 - Yellow
+#    4 - Red           10 - Light Green           15 - White
+#    5 - Magenta
+#  TargetXSpacing
+#    Target spacing in pixels.
+#  TargetYSpacing
+#    Target spacing in pixels.
+#  YellowPercent
+#    Percentage of tolerance to start displaying the color yellow.
+#  VideoKeyOverride
+#    -1 - do not override
+#    0  - key on black
+#    3  - key on brown in 256 color mode (or try 19)
+#    14 - key on brown in 16 color mode
+#  DisplayOpticalMag
+#    0 - Do not display the optical magnification.
+#    1 - Display the optical magnification.
+#  DisplayTargetSize
+#    0 - Do not display the target size.
+#    1 - Display the target size.
+#  DisplaySetupInstructions
+#    0 - Do not display the setup instructions.
+#    1 - Display the setup instructions.
+#  ModelMinimumZoom
+#    Number of pixels mouse must move before a rubberband zoom box is displayed.
+#  GlobalPrecision
+#    0 - Don't use precision globally (display as programmed)
+#    1 - Use precision globally
+#  DisplayHeader
+#    0 - Do not display the header.
+#    1 - Display the header.
+#  User Input default cursor location
+#    0 - Default cursor location to numeric value edit box.
+#    1 - Default cursor location to text edit box.
+# 
+#   DISPLAY_ABS_Z
+#      When turned on (1) the ABS value will be displayed in the lower left corner of the image window at all times.
+#      Default value is off (0), not displayed
+# 
+#  GRAPHICS_CFG_DLG_XPOS
+#    X (left) Edit Config Dialog window position
+#  GRAPHICS_CFG_DLG_YPOS
+#    Y (top) Edit Config Dialog window position
+#  GRAPHICS_CFG_DLG_WIDTH
+#    Width of Edit Config Dialog window
+#  GRAPHICS_CFG_DLG_HEIGHT
+#    HEIGHT of Edit Config Dialog window
+# 
+#  UI5_BIG_3D_BTNS
+#    0 - Win 7 style buttons
+#    1 - 3D buttons (default)
+# 
+#  MANUAL_ARROW_SWAP
+#    0 - No arrow direction swap (default)
+#    1 - Arrow direction is swapped
+# 
+###############################################################################
+PEN_SIZE_DFLT=1
+TARGET_DFLT=11
+TARGET_COLOR_DFLT=10
+TARGET_X_SPACING=50
+TARGET_Y_SPACING=50
+YELLOW_PERCENT=75
+VIDEO_KEY_OVERRIDE=-1
+DISPLAY_OPTICAL_MAG=0
+DISPLAY_TARGET_SIZE=1
+RUN_DISPLAY_SETUP=0
+MODEL_MIN_ZOOM=25
+GLOBAL_PRECISION=1
+RUN_DISPLAY_HEADER=0
+USER_INPUT_DEFAULT_CURSOR_LOCATION=0
+DISPLAY_ABS_Z=0
+UI5_BIG_3D_BTNS=1
+MANUAL_ARROW_SWAP=0
+
+[Model]
+###############################################################################
+#  Color Index
+#    color index is:
+#    0 black     4 navy       8 silver    12 blue
+#    1 maroon    5 purple     9 red       13 fuscia
+#    2 green     6 teal      10 lime      14 aqua
+#    3 olive     7 gray      11 yellow    15 white
+#    
+#MODEL CONFIGURATION PARAMETERS
+#    
+#  MODEL_COLOR_IMAGE_OVERLAY
+#    Min = 0, Max = 15
+#    Default is -1 (Use Default CAD Color)
+#    
+#  MODEL_COLOR_3D_BACKGROUND
+#    Min = 0, Max = 15, Default is 0 (black).
+#    
+#  MODEL_COLOR_ACTUAL_FEATURES_IN_TOL
+#    Min = 0, Max = 15, Default is 10 (lime).
+#    
+#  MODEL_COLOR_ACTUAL_FEATURES_ALMOST_OUT_TOL
+#    Min = 0, Max = 15, Default is 11 (ywllow).
+#    
+#  MODEL_COLOR_ACTUAL_FEATURES_OUT_TOL
+#    Min = 0, Max = 15, Default is 9 (red).
+#    
+#  MODEL_COLOR_FEATURES_NOT_MEASURED_YET
+#    Min = 0, Max = 15, Default is 6 (teal).
+#    
+#  MODEL_COLOR_CURRENT_FEATURE
+#    Min = 0, Max = 15, Default is 14 (aqua).
+#    
+#  MODEL_COLOR_PICKED_FEATURE
+#    Min = 0, Max = 15, Default is 13 (fuscia).
+#    
+#  MODEL_COLOR_PICKED_FEATURES_REFERENCE
+#    Min = 0, Max = 15, Default is 5 (purple).
+#    
+#  MODEL_COLOR_NOMINAL_FEATURES
+#    Min = 0, Max = 15, Default is 12 (blue).
+#    
+#  MODEL_COLOR_POINTS
+#    Min = 0, Max = 15, Default is 15 (white).
+#    
+#  MODEL_COLOR_DXF
+#    Min = 0, Max = 15, Default is 15 (white).
+#    
+#  MODEL_COLOR_COORDINATE_SYSTEM_X_AXIS
+#    Min = 0, Max = 15, Default is 9 (RED).
+#    
+#  MODEL_COLOR_COORDINATE_SYSTEM_Y_AXIS
+#    Min = 0, Max = 15, Default is 10 (lime).
+#    
+#  MODEL_COLOR_ALIGNMENT_FEATURE
+#    Min = 0, Max = 15, Default is 9 (RED).
+#    
+#  MODEL_COLOR_COORDINATE_SYSTEM_Z_AXIS
+#    Min = 0, Max = 15, Default is 11 (yellow).
+#    
+#  MODEL_COLOR_FOV_BOX
+#    Min = 0, Max = 15, Default is 12 (blue).
+#    
+#  MODEL_COLOR_MISSED_PROBE_POINT
+#    Min = 0, Max = 15, Default is 11 (yellow).
+#    
+#  MODEL_COLOR_STAGE_INDICATOR
+#    Min = 0, Max = 15, Default is 8 (silver).
+#    
+#  MODEL_COLOR_PROBE_BODY
+#    Min = 0, Max = 15, Default is 7 (grey).
+#    
+#  MODEL_COLOR_PROBE_SHAFT
+#    Min = 0, Max = 15, Default is 15 (white).
+#    
+#  MODEL_COLOR_PROBE_TIP
+#    Min = 0, Max = 15, Default is 1 (maroon).
+#    
+#  MODEL_COLOR_BOUNCY_STAGE_POSITION
+#    Min = 0, Max = 15, Default is 2 (green).
+#    
+#  MODEL_COLOR_BOUNCY_TARGET_POSITION
+#    Min = 0, Max = 15, Default is 11 (yellow).
+#    
+#  MODEL_SHOW_PROBE_BODY
+#    Min = 0, Max = 1, Default is 1 (on).
+#    
+#  MODEL_1_FEATURE_DROP_DOWN
+#    Min = 0, Max = 1, Default is 0 (off).
+#  MODEL_FIT_TO_WINDOW_DURING_RUN
+#    Default is 1 (on).
+#  MODEL_SHOW_FLYOUTS
+#    0 - Hide
+#    1 - Show (Default)
+#  MODEL_DEFAULT_FLYOUT
+#    0 - Selected only (Default)
+#    1 - Selected for Print
+#    2 - All
+#  MODEL_PRINTER_FRIENDLY
+#    Min = 0, Max = 1, Default is 0 (off).
+#    
+#  MODEL_LINE_WIDTH
+#    Min = 1, Max = 5, Default is 1.
+#    
+#  MODEL_SHOW_IMAGE_OVERLAY
+#    Turn On/Off Image Overlay mode
+#    Default = false (off)
+#    
+#  MODEL_SHOW_ACTUALS
+#    Default value is 1 (show actuals)
+#  MODEL_SHOW_NOMINALS
+#    Default value is 0 (do not show nominals)
+#  MODEL_SHOW_POINTS
+#    Default value is 0 (do not show points)
+#  MODEL_SHOW_CAD
+#    Default value is 0 (do not show CAD)
+#  MODEL_SHOW_HIDDEN_FEATURES
+#    Default value is 0 (do not show hidden features)
+#
+###############################################################################
+MODEL_COLOR_3D_BACKGROUND=0
+MODEL_COLOR_ACTUAL_FEATURES_IN_TOL=10
+MODEL_COLOR_ACTUAL_FEATURES_ALMOST_OUT_TOL=11
+MODEL_COLOR_ACTUAL_FEATURES_OUT_TOL=9
+MODEL_COLOR_FEATURES_NOT_MEASURED_YET=6
+MODEL_COLOR_CURRENT_FEATURE=14
+MODEL_COLOR_PICKED_FEATURE=13
+MODEL_COLOR_PICKED_FEATURES_REFERENCE=5
+MODEL_COLOR_NOMINAL_FEATURES=12
+MODEL_COLOR_POINTS=15
+MODEL_COLOR_DXF=8
+MODEL_COLOR_COORDINATE_SYSTEM_X_AXIS=9
+MODEL_COLOR_COORDINATE_SYSTEM_Y_AXIS=10
+MODEL_COLOR_ALIGNMENT_FEATURE=9
+MODEL_COLOR_COORDINATE_SYSTEM_Z_AXIS=11
+MODEL_COLOR_FOV_BOX=12
+MODEL_COLOR_MISSED_PROBE_POINT=11
+MODEL_COLOR_STAGE_INDICATOR=8
+MODEL_COLOR_PROBE_BODY=8
+MODEL_COLOR_PROBE_SHAFT=15
+MODEL_COLOR_PROBE_TIP=1
+MODEL_COLOR_BOUNCY_STAGE_POSITION=2
+MODEL_COLOR_BOUNCY_TARGET_POSITION=11
+MODEL_COLOR_IMAGE_OVERLAY=-1
+MODEL_LINE_WIDTH=5
+MODEL_SHOW_PROBE_BODY=1
+MODEL_1_FEATURE_DROP_DOWN=0
+MODEL_FIT_TO_WINDOW_DURING_RUN=1
+MODEL_SHOW_FLYOUTS=0
+MODEL_DEFAULT_FLYOUT=2
+MODEL_PRINTER_FRIENDLY=0
+MODEL_SHOW_IMAGE_OVERLAY=1
+MODEL_SHOW_ACTUALS=1
+MODEL_SHOW_NOMINALS=0
+MODEL_SHOW_POINTS=0
+MODEL_SHOW_CAD=1
+MODEL_SHOW_HIDDEN_FEATURES=1
+
+[Strong Edge]
+###############################################################################
+#STRONG EDGE CONFIGURATION PARAMETERS
+#  ContrastThreshold
+#    ( 0.0 to 100.0 percent )
+#  MinimumContrastLevel
+#    This is a contrast value below which the system lights will
+#    be TURNED UP until the contrast is above this value.
+#  MaximumContrastLevel
+#    This is a contrast value above which the system lights will
+#    be TURNED DOWN until the contrast is below this value.
+#  FrameAverages
+#    number of video frames to average together
+#    for each edge measurement (1 - fast, 10 - more repeatable)
+#  AutoRemeasure
+#    0 - Do Not remeasure the edge during Measure Mind auto edge
+#    1 - Remeasure the edge and tweak the stage each time
+#  SearchAhead
+#    0 - Do not move the stage to search ahead for the edge when in
+#    automatic playback using directional edge finding
+#    10-100 A percentage of the EdgeFinder box width to move the stage by
+#  SearchRetries
+#    0   Do not move the stage to search ahead for the edge
+#    1..10 Number of times to move the stage looking for an edge
+#  TargetSize
+#    Target size in pixels.
+#  MinimumTargetSize
+#    Minimum target size in pixels.
+#  MaximumTargetSize
+#    Maximum target size in pixels.
+#  LightTooHigh
+#    0 - Do not fail an edge measurement when the light is too high
+#    1 - Fail the edge measurement when the camera is in saturation
+#    2 - Fail only when backlight is on
+#  CheckLightLevel
+#    0 - Do not change light levels when automatically taking an edge
+#    1 - Change the light level to a midrange value during MX playback
+#    2 - Change the light level to a midrange value all the time
+###############################################################################
+EDGE_CONTRAST_THRESHOLD=1.000000
+EDGE_MIN_CONTRAST_LEVEL=20
+EDGE_MAX_CONTRAST_LEVEL=70
+EDGE_FRAME_AVERAGES=2
+EDGE_AUTO_REMEASURE=1
+EDGE_SEARCH_AHEAD=0
+EDGE_SEARCH_RETRYS=0
+EDGE_TARGET_SIZE=30
+EDGE_MIN_TARGET_SIZE=20
+EDGE_MAX_TARGET_SIZE=300
+EDGE_LIGHT_2_HIGH=0
+EDGE_CHECK_LIGHT_LEVEL=0
+
+[Weak Edge]
+###############################################################################
+#WEAK_EDGE CONFIGURATION PARAMETERS
+#  Bounds
+#    Pixel distance from edge to end of patch (6 to 60).
+#  Extent
+#    Pixel distance from start of one patch to the next (4 to 100).
+#  MinQuality
+#    Threshold, used in finding edges (4 to 100)
+#  CalibrationMinQuality
+#    Threshold used in finding edges (4 to 100) ONLY for non-linear calibration
+#  StandardDeviation
+#    Pixel error allowable distance (in tenths) (1 to 100)
+#  Contrast
+#    Target contrast level for edges (1 to 256)
+#  DrawArrows
+#    0 - Do not draw arrows
+#    1 - Draw arrows
+#  ArrowSize
+#    
+#  BoundsSize
+#    
+#  CarryParameters
+#    0 - Do not carry parameters
+#    1 - Carry parameters
+#    
+#  PointEliminationPercent
+#		Percent of points to eliminate should be in 0-50 range
+#    0  - No elimination (Default)
+#    
+#  TestCalMinQuality
+#    Threshold used to determine whether a refocus is necessary (4 - 100)
+#    ONLY for non-linear calibration
+#    
+#  SECOND_EVALUATION
+#    0 - Do not perform (Default)
+#    1 - Enable second evaluation
+#    2 - Enable second evaluation for back light only
+#    
+###############################################################################
+DEFAULT_BOUNDS=30
+DEFAULT_EXTENT=4
+DEFAULT_MINQUAL=17
+CALIBRATE_MINQUAL=50
+DEFAULT_STD=10
+DEFAULT_TARCONT=0
+DRAW_ARROWS=1
+ARROW_SIZE=0
+BOUND_SIZE=2
+CARRY_PARAMETERS=1
+POINT_ELIMINATION_PERCENT=0
+TEST_CAL_MINQUAL=70
+SECOND_EVALUATION=1
+
+[Edge Trace]
+###############################################################################
+#EDGE TRACE CONFIGURATION PARAMETERS
+#  PointSpacing
+#    The distance between taking points in pixels. 
+#  Deviation
+#    The default point elimination parameter.
+#    Minimum = 0, Maximum = 50, Default = 0
+#  Strength
+#    Adjusts the area for searching for the starting point.
+#    Minimum = 1, Maximum = 10, Default = 5
+#  Smoothing
+#    Adjust the area to search for each point during the edge trace.
+#    Minimum = 1, Maximum = 10, Default = 5
+###############################################################################
+POINT_SPACING=10
+DEVIATION=0
+STRENGTH=5
+SMOOTHING=5
+
+[System]
+###############################################################################
+#System CONFIGURATION PARAMETERS
+#  SERIAL_NO
+#    The serial number of the machine
+#  ALT_Z2
+#    For internal use only
+###############################################################################
+SERIAL_NO=SFD2001052
+ALT_Z2=1
+MACH_INFO=
+
+[Manual]
+###############################################################################
+#MANUAL MACHINE CONFIGURATION PARAMETERS
+# AutoscalePercentage
+#	Enter a number between 0 and 100. This means that the stage will
+#	travel that percentage of the distance to the target feature before
+#    zooming in.
+#
+#  FocusMinBin
+#	The minimum number of raw data values needed for each z position
+#	bin before the focus position is calculated
+#	Default 3
+#
+#  FocusDepthOfField
+#	The multipler used to determine the depth of field (Z range) of the
+#	graphical interface for a manual focus.  This value is multiplied
+#	by the STEP SIZE in MICRONS from the focus.cfg table entry
+#	Default 20.0
+#
+#  FocusXContrastOnly
+#	Only use the horizontal component of image contrast for the focus
+#	calculation instead of both the horizontal and vertical.
+#	This may yield more repeatable results, except scenes with only
+#	horizontal lines will not focus
+#	Default 0 (off)
+#
+#  FocusPeakValuesOnly
+#	This parameter forces the focus routine to use ONLY the peak
+#	contrast values measured at a given Z position, the idea being
+#	that either vibration or motion will lower the contrast, so by
+#	saving only peak values we are statistically reducing the influence
+#	of vibration and motion
+#	Default 1 (on)
+#
+#  FocusSlowMotionOnly
+#	Do not collect contrast data if the user is moving the Z slide
+#	faster than a pre-defined velocity derived from the value below
+#	(from manual_focus_motion_limit)
+#	Default 0 (off)
+#
+#  FocusPixelSkip
+#	Number of pixels to skip while calculating contrast over the
+#	video patch (min 1 = best repeatability, max 10 = fastest)
+#	Default 1
+#
+#  FocusForceToBest
+#	Force the user to move the Z slide to the found focus position
+#	and then declare the focus completed
+#	Default 1 (on)
+#
+#  FocusMotionLimit
+#	When the above parameter is set to ON, do not collect contrast
+#	data if the Z slide is moved more than this amount between
+#	two video frames (inches).
+#	Default 0.002
+#
+#  CalibrationDelay
+#	The machine waits this amount of time before taking a data point
+#	after the person stops moving the stage manually.
+#	Default 2.0 seconds
+#
+#  GUIFillColor
+#	Color filled in for good focus data
+#	default = 12 (blue)
+#
+#  GUIFoundColor
+#	Color of the large bar indicating where the good focus is (cross hatch)
+#    default = 10 (lime)
+#
+#  GUIMissedColor
+#	Color filled in for missed or bad focus data
+#    default = 9 (red)
+#
+#  Color Index
+#    0 black     4 navy       8 silver    12 blue
+#    1 maroon    5 purple     9 red       13 fuscia
+#    2 green     6 teal      10 lime      14 aqua
+#    3 olive     7 grey      11 yellow    15 white
+#
+#  FocusZTolerance
+#	If ForceFocusToBest is turned on then the step size is multiplied by this
+#    to tolerance when we are positioned close enough to the found z value.
+#	Default .30
+#
+###############################################################################
+AUTOSCALE_PERCENTAGE=75
+FOCUS_MIN_BIN=3
+FOCUS_DEPTH_OF_FIELD=20.000000
+FOCUS_X_CONTRAST_ONLY=0
+FOCUS_PEAK_VALUES_ONLY=1
+FOCUS_SLOW_MOTION_ONLY=0
+FOCUS_PIXEL_SKIP=1
+FOCUS_FORCE_TO_BEST=1
+FOCUS_MOTION_LIMIT=0.002000
+CALIBRATION_DELAY=2.000000
+GUI_FILL_COLOR=12
+GUI_FOUND_COLOR=10
+GUI_MISSED_COLOR=9
+FOCUS_Z_TOLERANCE=0.300000
+

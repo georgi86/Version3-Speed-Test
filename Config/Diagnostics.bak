@@ -1,0 +1,55 @@
+[Focus Diagnostics]
+###############################################################################
+#FOCUS DIAGNOSTICS CONFIGURATION PARAMETERS
+#  AntiJitterEnabled
+#    0 - anti (video sync / Z motion) jitter compensation OFF
+#    1 - anti (video sync / Z motion) jitter compensation ON
+#  ContrastType
+#    THIS IS INTENDED FOR ENGINEERING'S USE ONLY (default 0)
+#    0 - Traditional X-Y rectangular box contrast calculation
+#    1 - Only calculate gradient focus data in a roundish pattern
+#        with contributions near the patch borders weighted less
+#        than the data in the center of the patch
+#    2 - X only rectangular box contrast
+#    3 - Y only rectangular box contrast
+#    4 - +/-45 degree rectangular box contrast
+#    5 - ODD VIDEO FIELD +/-45 degree rectangular box contrast
+#    6 - EVEN VIDEO FIELD +/-45 degree rectangular box contrast
+#    7 - ODD VIDEO FIELD 'L' shaped contrast
+#    8 - EVEN VIDEO FIELD 'L' shaped contrast
+#  PadWidth
+#    THIS IS INTENDED FOR ENGINEERING'S USE ONLY
+#    Border patch width as a percent of total patch widthX (default 60)
+#  PadHeight
+#    THIS IS INTENDED FOR ENGINEERING'S USE ONLY
+#    Border patch height as a percent of total patch height (default 10)
+#  PadWeight
+#    THIS IS INTENDED FOR ENGINEERING'S USE ONLY
+#    Border patch weighting percentage (default 50)
+###############################################################################
+AVANT_FOCUS_ANTI_JITTER=0
+AVANT_FOCUS_CONTRAST_TYPE=0
+AVANT_FOCUS_PAD_WIDTH=60
+AVANT_FOCUS_PAD_HEIGHT=10
+AVANT_FOCUS_PAD_WEIGHT=50
+
+[Video Diagnostics]
+###############################################################################
+#VIDEO DIAGNOSTICS CONFIGURATION PARAMETERS
+#  ProcessYellow
+#    Change this value to a percentage such as 50 or 70 to allow edge
+#    detection routines to see yellow/white boundaries as a luminance change
+#    default 0
+###############################################################################
+AVANT_PROCESS_YELLOW=0
+
+[Stage Diagnostics]
+###############################################################################
+#STAGE DIAGNOSTICS CONFIGURATION PARAMETERS
+#  Tolerance
+#    The +/- amount in inches that a stage motion is allowed to miss by when
+#    running System...Diagnostics...Advanced Diagnostics...Stage...Random
+#    Torture. (default 0.001 inches)
+###############################################################################
+TOLERANCE=0.001000
+

@@ -1,0 +1,129 @@
+[Focus]
+###############################################################################
+#FOCUS CONFIGURATION PARAMETERS
+#  BackoffFactor
+#    
+#  RetryWithSameParameters
+#    
+#  RetryWithDifferentParameters
+#    
+#  FrameDelay
+#    
+#  FOCUS_BACKOFF_TRUNCATE
+#    
+#  USE_STROBE_WIRE
+#    -1 - Auto Detect (Default). Valid for DSP systems. TruLight board cannot automatically detect the strobe wire.
+#     0 - Disabled
+#     1 - Enabled
+#  SNAP Focus during AutoID:
+#  FOCUS_SNAP_BACKOFF_DIST_MM
+#    Back-off distance from Initial state position in the up direction [mm]
+#    Default: 5 mm
+#    
+#  FOCUS_SNAP_SWEEP_DIST_MM
+#    Sweep distance [mm]
+#    Default: 35 mm
+#    
+###############################################################################
+BACK_OFF_FACTOR=40
+RETRY_FOCUS_SAME_PARAMS=1
+RETRY_FOCUS_DIFF_PARAMS=1
+NEW_FRAME_DELAY=10
+DISPLAY_FOUND_Z=1
+FOCUS_BACKOFF_TRUNCATE=1
+USE_STROBE_WIRE=-1
+FOCUS_SNAP_BACKOFF_DIST_MM=5.000000000000
+FOCUS_SNAP_SWEEP_DIST_MM=35.000000000000
+
+[Advanced Focus]
+###############################################################################
+#ADVANCED FOCUS CONFIGURATION PARAMETERS
+#
+#  DofCurveBaseline
+#    Portion of contrast curve below which is considered outside of the
+#    depth of focus.  Above which is divided into data submitted to the
+#    autofocus algorithm.
+#    Default 0.33
+#
+#  DefaultBackoff
+#    The default number of steps to backoff for fast scan after an
+#    optimization has been performed (at create time).
+#    Default 10
+#
+#  FirstScanRatio
+#    How much slower a first pass focus scan is compared to full speed.
+#    This ratio is used during reset, manual focus, and for playback
+#    when the optimize checkbox in the advanced window is checked.
+#    Default 2.0
+#
+#  SlowScanRatio
+#    How much slower a slow pass focus scan is compared to the optimized
+#    velocity for the given depth of focus (magnification).
+#    Default 10.0
+#
+#  SlowScanSteps
+#    Total number of video frames taken during a slow scan focus pass.
+#    Default 100
+#
+#  FastScanSteps
+#    Maximum number of video frames taken during a full speed focus pass.
+#    Default 20
+#
+#  SlowScanRetries
+#    Number of attempts to make before returning a failed focus.
+#    Default 3
+#
+#  FastScanRetries
+#    Number of attempts to make before returning a failed focus.
+#   Default 3
+#
+#  BaselineStepSize
+#    This ONLY pertains to new machines where Advanced Autofocus has not been
+#    performed at all magnifications and front lens combinations.
+#    If the above two routines fail or are disabled (turned OFF) then
+#    the Advanced Autofocus will use this baseline step size for it's
+#    first autofocus attempt at the new magnification and front lens
+#    configuration.
+#    Value is in microns.
+#    Default 100.0
+#
+#  MaxBackoff
+#    This is a limit to autofocus backoff distance
+#    which is DOUBLE this value for a MAX CONTRAST focus!
+#    Value is in millimeters.
+#    Default 25.4
+#
+#  FrameTimeStampTolerance
+#    The amount of time stamp slippage to allow for the focus sampling rate.
+#    A smaller number is less tolerant of operating system interrupts to the CPU
+#    during an autofocus scan.
+#    Value in microseconds.
+#    Default 5000 (0.005sec)
+#
+#  ReadZAxisTimeLimit
+#    The amount of time stamp allowed for the z location read during the focus sweep.
+#    Value in microseconds.
+#    Default 2000 (0.002sec)
+#
+#  SCurveCoefficient
+#    Correction to the calculated subdivision for the focus peak as contrast
+#    points are taken at various phase angles. (S-wave correction)
+#    Default is 0.1111
+#
+###############################################################################
+DOF_CURVE_BASELINE=0.330000
+DEFAULT_BACKOFF=10
+FIRST_SCAN_RATIO=2.000000
+SLOW_SCAN_RATIO=10.000000
+SLOW_SCAN_STEPS=100
+FAST_SCAN_STEPS=20
+SLOW_SCAN_RETRYS=3
+FAST_SCAN_RETRYS=3
+MAX_ACCELERATION_FRAMES=10
+BASELINE_STEP_SIZE=100.000000
+MAX_BACKOFF=25.400000
+FRAME_TIME_STAMP_TOLERANCE=5000
+READ_ZAXIS_TIME_LIMIT=2000
+SCURVE_COEFFICIENT=0.111100
+F2_CARRY_PARAMETERS=1
+

@@ -1,0 +1,33 @@
+Machine Serial Number:  SFD2001052                                                       Page:    1
+====================================================================================================
+Routine Name                                                    Run #            Date & Time        
+====================================================================================================
+MFG_LF101-097D_SX_Size_Change_With_Intensity.mxy         1     Wednesday, November 22, 2017 17:38:05
+====================================================================================================
+
+ID:MDcyNzE1fjEyLjU3fk1GR19MRjEwMS0wOTdEX1NYX1NpemVfQ2hhbmdlX1dpdGhfSW50ZW5zaXR5
+072715~12.57~MFG_LF101-097D_SX_Size_Change_With_Intensity
+====================================================================================================
+Feature           Unit    Nominal       Actual          Tolerances           Deviation     Exceeded 
+====================================================================================================
+Step 15 - Backlight 10% (or lowest achievable)
+Diameter          mm    +6.350        +6.348        +0.000      +0.000     -0.002                   
+   
+Step 16 - Backlight 30% (or lowest achievable)
+Diameter          mm    +6.350        +6.347        +0.000      +0.000     -0.003                   
+   
+Step 17 - Backlight 50%
+Diameter          mm    +6.350        +6.346        +0.000      +0.000     -0.004                   
+   
+Step 18 - Backlight 65%
+Diameter          mm    +6.350        +6.346        +0.000      +0.000     -0.004                   
+   
+Step 19 - Backlight 80% (or highest achievable)
+Diameter          mm    +6.350        +6.345        +0.000      +0.000     -0.005                   
+   
+Step 20 - [040 Optics Verification]: Size Change with Intensity
+Result            dd    +0.000        +0.003        +0.004      +0.000     +0.003       ++++        
+   
+====================================================================================================
+
+============================ END OF INSPECTION - Elapsed Time  00:01:35 ============================

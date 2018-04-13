@@ -1,0 +1,45 @@
+Machine Serial Number:  SFD2001052                                                       Page:    1
+====================================================================================================
+Routine Name                                                    Run #            Date & Time        
+====================================================================================================
+MFG_LF101-097D_SX_FOV_DOF_1inch_1002_RL.mxy                  1 Wednesday, April 06, 2016 10:11:25 AM
+====================================================================================================
+
+ID:MDEzMDE0fjEwLjE2fk1GR19MRjIwMS0wMTRDVl9NWDJEX0ltYWdlX0RyaWZ0X1RlbGVjZW50cmlj
+013014~10.16~MFG_LF201-014CV_MX2D_Image_Drift_Telecentric
+====================================================================================================
+Feature           Unit    Nominal       Actual          Tolerances           Deviation     Exceeded 
+====================================================================================================
+Step 28 - Feature Pass/Fail: -22mm
+Result            dd    +1.0000       +1.0000       +0.1000     -0.1000    +0.0000                  
+   
+Step 40 - Feature Pass/Fail: +22mm
+Result            dd    +1.0000       +1.0000       +0.1000     -0.1000    +0.0000                  
+   
+Step 100 - Max X Position Error
+Result            dd    +0.0000       +0.0040       +0.0000     +0.0000    +0.0040                  
+   
+Step 103 - Max Y Position Error
+Result            dd    +0.0000       +0.0056       +0.0000     +0.0000    +0.0056                  
+   
+Step 132 - Max FOV Error
+Result            dd    +0.0000       +0.0097       +0.0000     +0.0000    +0.0097                  
+   
+Step 133 - Min FOV Error
+Result            dd    +0.0000       +0.0033       +0.0000     +0.0000    +0.0033                  
+   
+Step 146 - Max DOF Difference
+Result            dd    +0.0000       +0.0007       +0.0000     +0.0000    +0.0007                  
+   
+Step 147 - Min DOF Difference
+Result            dd    +0.0000       -0.0005       +0.0000     +0.0000    -0.0005                  
+   
+Step 148 - [040 Optics Verification]: FOV Error DOF
+Result            dd    +0.0000       +0.0097       +0.0250     +0.0000    +0.0097      +           
+   
+Step 149 - [040 Optics Verification]: FOV Variance DOF
+Result            dd    +0.0000       +0.0007       +0.0200     +0.0000    +0.0007      ++++        
+   
+====================================================================================================
+
+============================ END OF INSPECTION - Elapsed Time  00:02:23 ============================

@@ -1,0 +1,1197 @@
+[MiscHardware]
+###############################################################################
+#MISC_HARDWARE CONFIGURATION PARAMETERS
+#  GRID_PRESENT
+#    0 - not present
+#    1 - LCD grid
+#    2 - LED grid
+#    3 - Ronchi shuttle
+#    (default is 0)
+#  MIN_GRID_MAGNIFICATION
+#    LED grid will not function below this magnification level
+#    (default is 3.0)
+#  SCREEN_WIDTH_INCHES
+#    the actual width of the video image on the screen in inches
+#    this is used to calculate the screen magnification
+#    for the mag indicator
+#    (default is -1 -> Auto Detect)
+#	
+#	X_MOTOR_POWER_LIMIT
+#	Y_MOTOR_POWER_LIMIT
+#	Z_MOTOR_POWER_LIMIT
+#		Units: Watts, range: 0 to 1000, default: 0 = disabled
+#		Each of these MOTOR_POWER_LIMIT parameters shall set the threshold for the
+#		instantaneous power reading (MOTOR_POWER_LIMIT_TIMEOUT=0) or averaged power
+#		level (MOTOR_POWER_LIMIT_TIMEOUT >0) that can be safely applied to the servomotor.
+#	
+#	X_MOTOR_POWER_LIMIT_TIMEOUT
+#	Y_MOTOR_POWER_LIMIT_TIMEOUT
+#	Z_MOTOR_POWER_LIMIT_TIMEOUT
+#		Units: milliseconds, range: 0 to 30000, default: 0
+#
+# DISABLE_JOYSTICK
+#	0 = leave joystick enabled
+#	1 = disable joystick only during run mode
+#	2 = disable joystick completely.
+#	default: 1
+#
+###############################################################################
+GRID_PRESENT=0
+MIN_GRID_MAGNIFICATION=3.000000
+SCREEN_WIDTH_INCHES=-1.000000
+X_MOTOR_POWER_LIMIT=0
+Y_MOTOR_POWER_LIMIT=0
+Z_MOTOR_POWER_LIMIT=0
+X_MOTOR_POWER_LIMIT_TIMEOUT=0
+Y_MOTOR_POWER_LIMIT_TIMEOUT=0
+Z_MOTOR_POWER_LIMIT_TIMEOUT=0
+DISABLE_JOYSTICK=1
+
+[Camera]
+###############################################################################
+#CAMERA CONFIGURATION PARAMETERS
+#  EDGE_LIGHT_ON_RIGHT_SPILLAGE
+#    Number of camera pixels that bright light
+#    spills into dark pixels (should be less than 1 pixel)
+#    (default is 0.04)
+#  EDGE_LIGHT_ON_LEFT_SPILLAGE
+#    Number of camera pixels that bright light
+#    spills into dark pixels (should be less than 1 pixel)
+#    (default is 0.30)
+#  EDGE_LIGHT_ON_BOTTOM_SPILLAGE
+#    Number of camera pixels that bright light
+#    spills into dark pixels (should be less than 1 pixel)
+#    (default is 0.16)
+#  EDGE_LIGHT_ON_TOP_SPILLAGE
+#    Number of camera pixels that bright light
+#    spills into dark pixels (should be less than 1 pixel)
+#    (default is 0.09)
+#  AVANT_CCD_WIDTH_INCHES
+#    The actual width of the CCD array in inches
+#    this is used to calculate the optical magnification
+#    (default is 0.26)
+#  AVANT_NEW_CAMERA_NOISE
+#    (default is 4.0)
+#  CAMERA_PIXEL_NOISE (MUTECH400_PIXEL_NOISE)
+#    should be used for the focus multiplier (default is 0.75)
+#  DEFAULT_GAIN
+#	  Gain setting to use for analog cameras that support it
+#	  (default is 0 - camera does not support gain setting)
+#  DEFAULT_AGC
+#	  Auto Gain Control
+#	  Boolean (default is 0 - Off)
+#  DEFAULT_FRAME_INTEGRATION
+#	  Frame Integration setting to use for cameras that support it
+#	  1 - 8 (default is 1)
+#  DEFAULT_SHUTTER_PERCENT
+#	  Shutter setting to use for digital cameras that support it
+#	  Percent of the maximum allowed speed for current frame integration
+#	  Range [1, 100], default is 100
+#  DEFAULT_DIGITAL_GAIN
+#	  Digital Gain setting to use for digital cameras that support it
+#	  Range [1, 15], default is 1.25
+#  DEFAULT_ANALOG_GAIN
+#	  Analog Gain setting to use for digital cameras that support it
+#	  Range [1, 15], default is 1.25
+#  DEFAULT_BRIGHTNESS
+#	  Brightness setting to use for digital cameras that support it
+#	  Range [0, 1025], default is 1
+#  DEFAULT_WALL_EFFECT_CORRECTION
+#	  Gamma Correction setting to use for digital cameras that support it
+#	  0, 1 or 2, default is 0 (off)
+#	  
+#  WALL_EFFECT_0_GAMMA_PERCENT
+#  WALL_EFFECT_1_GAMMA_PERCENT
+#  WALL_EFFECT_2_GAMMA_PERCENT
+#	  Percent for Gamma calculation. 
+#	  Default values: 100, 80, 60
+#	  
+#  USE_DEFAULTS_DURING_RUN
+#	  0 - Use values stored in the routine (Default)
+#	  1 - Use default camera values
+#	  
+#  CAMERA_HORIZONTAL_FLIP
+#  CAMERA_VERTICAL_FLIP
+#    0 - Disabled (Default)
+#    1 - Enabled
+#  
+#  VIDEO_SWAP_CAMERAS
+#  Flag indicating whether or not the camera signals should be swapped.
+#  Under normal circumstances camera 0 should be low mag and camera 1 should
+#  be high mag. Setting this value to 1 will make camera 1 low mag and
+#  camera 0 high mag.
+#  Default: 0
+#  
+#  CAMERA_EXPOSURE_TIME_OVERRIDE
+#		Moved to DigitalZoom.ini
+#	  
+#  COLOR_BALANCE_RED
+#  COLOR_BALANCE_GREEN
+#  COLOR_BALANCE_BLUE
+#     10-255
+#	  
+#  CAMERA_USE_SAME_IMAGE
+#    0 - Disabled
+#    1 - Enabled (Default)
+#  CAMERA_ENABLE_PANNING
+#    0 - Disabled
+#    1 - Enabled (Default)
+#	  
+#	SVIEW_CAMERA_LOW_MAG_3X_BINNING
+#	Enable or disable 3x binning at low mag on the SView camera in the camera firmware.
+#		0 - Disabled, binning will be done on the PC instead of the camera firmware.
+#		1 - Enabled with a shift at low magnification, visible shift when changing to low digital zoom magnification.
+#		2 - Enabled with a shift at all magnifications, no centerline shift when changing digital zoom magnification.
+#		(0 results in a slow frame rate at low magnification)
+#		(1 requires a large value for AVANT_MAX_CENTER_CORRECTION)
+#		(2 requires mechanical adjustment to ensure proper camera alignment)
+#		Default: 0
+#	  
+#	SVIEW_CAMERA_LOW_MAG_FOCUS_FIX
+#	  0 - Disabled (Default)
+#	  1 - Enabled
+#	  
+#	OVERRIDE_FOCUS_POST_PROCESS_FRAME_DELAY
+#		The frame delay override value for focus post process for lining up top down and bottom up focus.
+#	  0.0 - Default
+#	  
+###############################################################################
+EDGE_LIGHT_ON_RIGHT_SPILLAGE=0.040000
+EDGE_LIGHT_ON_LEFT_SPILLAGE=0.300000
+EDGE_LIGHT_ON_BOTTOM_SPILLAGE=0.160000
+EDGE_LIGHT_ON_TOP_SPILLAGE=0.090000
+AVANT_CCD_WIDTH_INCHES=0.260000
+AVANT_NEW_CAMERA_NOISE=4.000000
+CAMERA_PIXEL_NOISE=0.750000
+DEFAULT_GAIN=0
+DEFAULT_AGC=0
+DEFAULT_FRAME_INTEGRATION=1
+DEFAULT_SHUTTER_PERCENT=100
+DEFAULT_DIGITAL_GAIN=1.500000
+DEFAULT_ANALOG_GAIN=1.000000
+DEFAULT_BRIGHTNESS=1
+DEFAULT_WALL_EFFECT_CORRECTION=0
+WALL_EFFECT_0_GAMMA_PERCENT=100
+WALL_EFFECT_1_GAMMA_PERCENT=80
+WALL_EFFECT_2_GAMMA_PERCENT=60
+USE_DEFAULTS_DURING_RUN=0
+CAMERA_HORIZONTAL_FLIP=1
+CAMERA_VERTICAL_FLIP=0
+VIDEO_SWAP_CAMERAS=0
+COLOR_BALANCE_RED=80
+COLOR_BALANCE_GREEN=60
+COLOR_BALANCE_BLUE=80
+CAMERA_USE_SAME_IMAGE=0
+CAMERA_ENABLE_PANNING=1
+SVIEW_CAMERA_LOW_MAG_3X_BINNING=0
+SVIEW_CAMERA_LOW_MAG_FOCUS_FIX=0
+OVERRIDE_FOCUS_POST_PROCESS_FRAME_DELAY=0.000000
+CAMERA_CPU=
+CAMERA_FPGA=
+
+[Basler Camera1]
+###############################################################################
+#  BASLER CAMERAS CONFIGURATION PARAMETERS
+#  
+#  BASLER_C3_VALUE
+#		Exposure reset time in seconds used to calculate camera frame time.  Frame time = exposure time - C3.
+#  Default: 0.000204
+#  
+#  BASLER_CAMERA_EXPOSURE_TIME_OVERRIDE
+#		Override value for the camera exposure time in seconds.  If set to 0.0 then the default exposure time will be used.
+#		This parameter is not valid for all cameras
+#  Default: 0.0
+#  
+#  BASLER_EXPOSURE_TIME_PERCENT
+#  [80, 120], Default: 100
+#  
+#  BASLER_GAIN
+#  [0, 255], Default: 0.0
+#  
+#  BASLER_DIGITAL_SHIFT
+#  [0, 255], Default: 0.0
+#  
+#  BASLER_BLACK_LEVEL
+#  [0, 255], Default: 0.0
+#  
+#  CCDY_PIXEL_SIZE_MICRONS
+#  Pixel size in microns, Default: 5.5
+#  
+#  DEFAULT_WALL_EFFECT_CORRECTION
+#	  Gamma Correction setting to use for digital cameras that support it
+#	  0, 1 or 2, default is 0 (off)
+#	  
+#  WALL_EFFECT_0_GAMMA_PERCENT
+#  WALL_EFFECT_1_GAMMA_PERCENT
+#  WALL_EFFECT_2_GAMMA_PERCENT
+#	  Percent for Gamma calculation. Gamma Range is [0, 3.99]
+#	  Default values: 25,  22,   18    which correspods to
+#	  Gamma         : 1.0, 0.88, 0.72
+#	  
+###############################################################################
+BASLER_C3_VALUE=0.000204
+BASLER_EXPOSURE_TIME_PERCENT=100
+BASLER_GAIN=0
+BASLER_DIGITAL_SHIFT=0
+BASLER_BLACK_LEVEL=0
+CCDY_PIXEL_SIZE_MICRONS=5.500000
+DEFAULT_WALL_EFFECT_CORRECTION=0
+WALL_EFFECT_0_GAMMA_PERCENT=25
+WALL_EFFECT_1_GAMMA_PERCENT=22
+WALL_EFFECT_2_GAMMA_PERCENT=18
+
+[Basler Camera2]
+###############################################################################
+#  BASLER CAMERAS CONFIGURATION PARAMETERS
+#  
+#  BASLER_C3_VALUE
+#		Exposure reset time in seconds used to calculate camera frame time.  Frame time = exposure time - C3.
+#  Default: 0.000204
+#  
+#  BASLER_CAMERA_EXPOSURE_TIME_OVERRIDE
+#		Override value for the camera exposure time in seconds.  If set to 0.0 then the default exposure time will be used.
+#		This parameter is not valid for all cameras
+#  Default: 0.0
+#  
+#  BASLER_EXPOSURE_TIME_PERCENT
+#  [80, 120], Default: 100
+#  
+#  BASLER_GAIN
+#  [0, 255], Default: 0.0
+#  
+#  BASLER_DIGITAL_SHIFT
+#  [0, 255], Default: 0.0
+#  
+#  BASLER_BLACK_LEVEL
+#  [0, 255], Default: 0.0
+#  
+#  CCDY_PIXEL_SIZE_MICRONS
+#  Pixel size in microns, Default: 5.5
+#  
+#  DEFAULT_WALL_EFFECT_CORRECTION
+#	  Gamma Correction setting to use for digital cameras that support it
+#	  0, 1 or 2, default is 0 (off)
+#	  
+#  WALL_EFFECT_0_GAMMA_PERCENT
+#  WALL_EFFECT_1_GAMMA_PERCENT
+#  WALL_EFFECT_2_GAMMA_PERCENT
+#	  Percent for Gamma calculation. Gamma Range is [0, 3.99]
+#	  Default values: 25,  22,   18    which correspods to
+#	  Gamma         : 1.0, 0.88, 0.72
+#	  
+###############################################################################
+BASLER_C3_VALUE=0.000204
+BASLER_EXPOSURE_TIME_PERCENT=100
+BASLER_GAIN=50
+BASLER_DIGITAL_SHIFT=0
+BASLER_BLACK_LEVEL=0
+CCDY_PIXEL_SIZE_MICRONS=5.500000
+DEFAULT_WALL_EFFECT_CORRECTION=0
+WALL_EFFECT_0_GAMMA_PERCENT=25
+WALL_EFFECT_1_GAMMA_PERCENT=22
+WALL_EFFECT_2_GAMMA_PERCENT=18
+
+[Stage]
+###############################################################################
+#STAGE CONFIGURATION PARAMETERS
+#  XStageTravel
+#  YStageTravel
+#  ZStageTravel
+#    Actual stage travel
+#
+#  OffsetXLimit
+#  OffsetYLimit
+#  OffsetZLimit
+#    Offset from the x/y/z axis limit switch to table tooling 0
+#
+# DEFAULT_SETUP_ZERO_X - default position for setup zero point in x
+# DEFAULT_SETUP_ZERO_Y - default position for setup zero point in y
+# DEFAULT_SETUP_ZERO_Z - default position for setup zero point in z
+#   default: 0.00
+#
+# X_SCALE_SWAP - reverse sign of x axis scale
+#   default: 1
+# Y_SCALE_SWAP - reverse sign of y axis scale
+#   default: -1
+# Z_SCALE_SWAP - reverse sign of z axis scale
+#   default: 1
+#
+# SECOND_X_SCALE_SWAP - reverse sign of 2nd x axis scale
+# SECOND_Y_SCALE_SWAP - reverse sign of 2nd y axis scale
+# SECOND_Z_SCALE_SWAP - reverse sign of 2nd z axis scale
+#   1 = do not reverse sign of scale
+#  -1 = reverse sign of scale
+#   default: 1
+#  WARNING: DO NOT SET THESE TO 0 (zero) AS THE SCALE WILL NOT COUNT
+#
+# USE_SECOND_X_SCALE
+# USE_SECOND_Y_SCALE
+# USE_SECOND_Z_SCALE
+#   0 = don't use 2nd scale (the one plugged into the 'XTRA' connector)
+#   1 = Average both scales. Primary scale is in the normal position.
+#        That is, the primary scale is approached during stage home.
+#   2 = only use 2nd scale (the one plugged into the 'XTRA' connector)
+#   3 = Average both scales. Primary scale is in the alternate position.
+#        That is, the optics move away from the primary scale when homing.
+#        This setting is NOT valid on machines with dual Z scales.
+#   default: 0
+#
+# MaxZoomCounts
+#
+# ZOOM_OFFSET: Zoom offset in counts (the offset is added to position and checked if in min/max zoom count position range)
+#
+#  ForceStageInit
+#    0 - don't force a seek stage home
+#    1 - force a seek stage home
+#    2 - manual seek stage home (for all MVP machines)
+#
+#  STAGE_HOME_ENABLE_WARM_START
+#    0 - don't use warm start
+#    1 - use warm start if possible (Default)
+#    2 - warm start only (QVI Portal)
+#    
+#  UseIndexPulse
+#    0 - don't use index pulse
+#    1 - use index pulse on X Y and Z
+#
+#  XIndexOffset
+#  YIndexOffset
+#  ZIndexOffset
+#    Unsigned distance (in inches) from limit switch to index pulse
+#    set them ALL to zero to re-seek all. #    X and Y: use 0,0 limit (optics over forward & left corner of stage)
+#    Z:       use unsigned distance from upper limit to index pulse.
+#    Z is not explicitly seeked. do stage home with low Z start position. 
+#
+#  ModelMoveStage
+#    0 - move stage with no confirm (DEFAULT)
+#    1 - move stage after confirming
+#    2 - never move stage from model
+#
+#  ForceMagneticLimitsX
+#  ForceMagneticLimitsY
+#  ForceMagneticLimitsZ
+#    0 - (DEFAULT)
+#    1 - turn on magnetic limits for that axis that has conventional limits as well
+#
+#  X_NEG_LIM_POSITION_KEEP_ENABLE
+#  Turn on or off limit position keeping on the negative x limit.
+#
+#  X_POS_LIM_POSITION_KEEP_ENABLE
+#  Turn on or off limit position keeping on the positive x limit.
+#
+#  Y_NEG_LIM_POSITION_KEEP_ENABLE
+#  Turn on or off limit position keeping on the negative y limit.
+#
+#  Y_POS_LIM_POSITION_KEEP_ENABLE
+#  Turn on or off limit position keeping on the positive y limit.
+#
+#  Z_NEG_LIM_POSITION_KEEP_ENABLE
+#  Turn on or off limit position keeping on the negative z limit.
+#
+#  Z_POS_LIM_POSITION_KEEP_ENABLE
+#  Turn on or off limit position keeping on the positive z limit.
+#
+#  Z_MOUSE_WHEEL_ENABLE
+#  Turn on or off the mouse zoom wheel for control of the Z motion.
+#
+#  XYY_CORRECTION
+#  This parameter corrects the measured X position as a function of
+#  the difference in Y scales on a dual Y machine. It is effective 
+#  on machines where the center of Y slide engagement moves with the
+#  sensor side of the Y axis. (ball slides don’t do this.
+#
+#==============================================================================
+#  SCR# 23909 - Dual Index Pulse
+#
+# DUAL_X_SCALE_SEPARATION
+#   The physical distance between the two X scales.
+#   default: 0.00 inches
+#
+# DUAL_Y_SCALE_SEPARATION
+#   The physical distance between the two Y scales
+#   default: 0.00 inches
+#
+# DUAL_Z_SCALE_SEPARATION
+#   The physical distance between the two Z scales
+#   default: 15.55 inches
+#
+# USE_SECOND_X_INDEX_PULSE
+#   0 = don't use index pulse
+#   1 = use index pulse on secondary X
+#   default: 0
+#
+# USE_SECOND_Y_INDEX_PULSE
+#   0 = don't use index pulse
+#   1 = use index pulse on secondary Y
+#   default: 0
+#
+# USE_SECOND_Z_INDEX_PULSE
+#   0 = don't use index pulse
+#   1 = use index pulse on secondary Z
+#   default: 0
+#
+# SECOND_X_INDEX_OFFSET
+# SECOND_Y_INDEX_OFFSET
+# SECOND_Z_INDEX_OFFSET
+#   unsigned distance (in inches) from limit switch to secondary index pulse
+#   set them ALL to zero to re-seek all. 
+#   X and Y: use 0,0 limit (optics over forward & left corner of stage)
+#   default: 0.00
+#   Z:       use unsigned distance from upper limit to index pulse.
+#   Z is not explicitly seeked. do stage home with low Z start position. 
+#   default: 0.00
+#
+# DUAL_X_INDEX_PULSE_SQUARENESS_THRESHOLD
+# DUAL_Y_INDEX_PULSE_SQUARENESS_THRESHOLD
+# DUAL_Z_INDEX_PULSE_SQUARENESS_THRESHOLD
+#   The threshold tolerance on the difference between the primary and secondary index pulses.
+#   The default threshold of 0 inches disables the checking of the tolerance.
+#   default: 0.00 inches
+#
+# DUAL_DRIVE_INDEX_DELTA
+# This number represents the raw scale distance between the dual scale index pulses.
+# If AG_DUAL_DRIVE_SERVO is set to 1, then zero this parameter when seeking 
+# new index pulses. Before seeking new index pulses, make sure the axis riding
+# on the dual drive axis is square with respect to the dual drive axis.
+#
+#  **** X correction for dual Z systems ****
+#  DUAL_Z_WD_INCHES         effective dual z working distance at Z = 0.
+#     This is the distance in Z from the field of view to the dual Z rotational center.
+#     It can be determined experimentally, and is typically a few inches.
+#  DUAL_Z_WD_SLOPE          Slope of effective working distance variation with Z
+#     This is how quickly the effective working distance *decreases* as Z increases.
+#     It is in inches per inch. If zero, there is no reduction with Z.
+#     It is typically a positive value, less than 1.000.
+#
+# DUAL_SCALE_MIDPOINT_OFFSET
+#   The actual distance from the center of the two scales to the center of orthogonal axis of travel.
+#   A negative value indicates that the center of the two scales is closer to the zero point on the
+#   orthogonal axis than the center of orthogonal axis of travel.
+#   A positive value indicates that the center of the two scales is farther away from the zero point on the
+#   orthogonal axis than the center of orthogonal axis of travel.
+#   default: 0.00 inches
+#
+# DUAL_SCALE_ORTHOGONAL_AXIS
+#   The orthogonal axis that the dual scales span.
+#  -1 = No Dual Scale.
+#   0 = X axis (Used for Dual Y or Dual Z scales)
+#   1 = Y axis (Used for Dual X scales)
+#   2 = Z axis
+#   default: -1
+#
+#  SOFLIM_[1,2,3]_LEFT_FACE_X   - Left Box Limit
+#  SOFLIM_[1,2,3]_FRONT_FACE_Y  - Front Box Limit
+#  SOFLIM_[1,2,3]_BOTTOM_FACE_Z - Bottom Box Limit
+#  SOFLIM_[1,2,3]_RIGHT_FACE_X  - Right Box Limit
+#  SOFLIM_[1,2,3]_REAR_FACE_Y   - Rear Box Limit
+#  SOFLIM_[1,2,3]_TOP_FACE_Z    - Top Box Limit
+#  SOFLIM_[1,2,3]_ENABLE (1/0 = box movement restriction used/not used)
+#  SOFLIM_[1,2,3]_LIMIT_LEFT_FACE_ENABLE
+#  SOFLIM_[1,2,3]_LIMIT_FRONT_FACE_ENABLE
+#  SOFLIM_[1,2,3]_LIMIT_BOTTOM_FACE_ENABLE
+#  SOFLIM_[1,2,3]_LIMIT_RIGHT_FACE_ENABLE
+#  SOFLIM_[1,2,3]_LIMIT_REAR_FACE_ENABLE
+#  SOFLIM_[1,2,3]_LIMIT_TOP_FACE_ENABLE
+#
+###############################################################################
+X_STAGE_TRAVEL= 5.90929
+Y_STAGE_TRAVEL= 0.00000
+Z_STAGE_TRAVEL= 0.10258
+OFFSET_X_LIMIT= 0.00000
+OFFSET_Y_LIMIT= 0.00000
+OFFSET_Z_LIMIT= 0.87382
+DEFAULT_SETUP_ZERO_X= 0.00000
+DEFAULT_SETUP_ZERO_Y= 0.00000
+DEFAULT_SETUP_ZERO_Z= 0.00000
+X_SCALE_SWAP=1
+Y_SCALE_SWAP=-1
+Z_SCALE_SWAP=1
+SECOND_X_SCALE_SWAP=1
+SECOND_Y_SCALE_SWAP=1
+SECOND_Z_SCALE_SWAP=1
+USE_SECOND_X_SCALE=0
+USE_SECOND_Y_SCALE=0
+USE_SECOND_Z_SCALE=0
+MAX_ZOOM_COUNTS=2000.000000
+ZOOM_OFFSET=0.000000
+FORCE_STAGE_INIT=1
+STAGE_HOME_ENABLE_WARM_START=0
+USE_INDEX_PULSE=0
+X_INDEX_OFFSET=0.000000000000
+Y_INDEX_OFFSET=0.000000000000
+Z_INDEX_OFFSET=0.000000000000
+MODEL_MOVE_STAGE=0
+FORCE_MAGNETIC_LIMITS_X=1
+FORCE_MAGNETIC_LIMITS_Y=0
+FORCE_MAGNETIC_LIMITS_Z=0
+X_NEG_LIM_POSITION_KEEP_ENABLE=0
+X_POS_LIM_POSITION_KEEP_ENABLE=0
+Y_NEG_LIM_POSITION_KEEP_ENABLE=0
+Y_POS_LIM_POSITION_KEEP_ENABLE=0
+Z_NEG_LIM_POSITION_KEEP_ENABLE=0
+Z_POS_LIM_POSITION_KEEP_ENABLE=0
+Z_MOUSE_WHEEL_ENABLE=1
+XYY_CORRECTION= 0.00000
+USE_SECOND_X_INDEX_PULSE=0
+USE_SECOND_Y_INDEX_PULSE=0
+USE_SECOND_Z_INDEX_PULSE=0
+SECOND_X_INDEX_OFFSET=0.000000000000
+SECOND_Y_INDEX_OFFSET=0.000000000000
+SECOND_Z_INDEX_OFFSET=0.000000000000
+DUAL_X_INDEX_PULSE_SQUARENESS_THRESHOLD=0.000000000000
+DUAL_Y_INDEX_PULSE_SQUARENESS_THRESHOLD=0.000000000000
+DUAL_Z_INDEX_PULSE_SQUARENESS_THRESHOLD=0.000000000000
+DUAL_X_SCALE_SEPARATION=0.000000000000
+DUAL_Y_SCALE_SEPARATION=0.000000000000
+DUAL_Z_SCALE_SEPARATION=15.550000000000
+DUAL_DRIVE_INDEX_DELTA=0
+DUAL_Z_WD_INCHES=0.000000
+DUAL_Z_WD_SLOPE=0.000000
+DUAL_SCALE_MIDPOINT_OFFSET=0.000000
+DUAL_SCALE_ORTHOGONAL_AXIS=-1
+SOFLIM_1_LEFT_FACE_X=0.000000000000
+SOFLIM_1_FRONT_FACE_Y=0.000000000000
+SOFLIM_1_BOTTOM_FACE_Z=0.000000000000
+SOFLIM_1_RIGHT_FACE_X=0.000000000000
+SOFLIM_1_REAR_FACE_Y=0.000000000000
+SOFLIM_1_TOP_FACE_Z=0.000000000000
+SOFLIM_1_ENABLE=0
+SOFLIM_1_LIMIT_LEFT_FACE_ENABLE=0
+SOFLIM_1_LIMIT_FRONT_FACE_ENABLE=0
+SOFLIM_1_LIMIT_BOTTOM_FACE_ENABLE=0
+SOFLIM_1_LIMIT_RIGHT_FACE_ENABLE=0
+SOFLIM_1_LIMIT_REAR_FACE_ENABLE=0
+SOFLIM_1_LIMIT_TOP_FACE_ENABLE=0
+SOFLIM_2_LEFT_FACE_X=0.000000000000
+SOFLIM_2_FRONT_FACE_Y=0.000000000000
+SOFLIM_2_BOTTOM_FACE_Z=0.000000000000
+SOFLIM_2_RIGHT_FACE_X=0.000000000000
+SOFLIM_2_REAR_FACE_Y=0.000000000000
+SOFLIM_2_TOP_FACE_Z=0.000000000000
+SOFLIM_2_ENABLE=0
+SOFLIM_2_LIMIT_LEFT_FACE_ENABLE=0
+SOFLIM_2_LIMIT_FRONT_FACE_ENABLE=0
+SOFLIM_2_LIMIT_BOTTOM_FACE_ENABLE=0
+SOFLIM_2_LIMIT_RIGHT_FACE_ENABLE=0
+SOFLIM_2_LIMIT_REAR_FACE_ENABLE=0
+SOFLIM_2_LIMIT_TOP_FACE_ENABLE=0
+SOFLIM_3_LEFT_FACE_X=0.000000000000
+SOFLIM_3_FRONT_FACE_Y=0.000000000000
+SOFLIM_3_BOTTOM_FACE_Z=0.000000000000
+SOFLIM_3_RIGHT_FACE_X=0.000000000000
+SOFLIM_3_REAR_FACE_Y=0.000000000000
+SOFLIM_3_TOP_FACE_Z=0.000000000000
+SOFLIM_3_ENABLE=0
+SOFLIM_3_LIMIT_LEFT_FACE_ENABLE=0
+SOFLIM_3_LIMIT_FRONT_FACE_ENABLE=0
+SOFLIM_3_LIMIT_BOTTOM_FACE_ENABLE=0
+SOFLIM_3_LIMIT_RIGHT_FACE_ENABLE=0
+SOFLIM_3_LIMIT_REAR_FACE_ENABLE=0
+SOFLIM_3_LIMIT_TOP_FACE_ENABLE=0
+
+[Settle]
+###############################################################################
+#SETTLE CONFIGURATION PARAMETERS
+#  XTimeOut
+#    Timeout in milliseconds. Maximum amount of time to wait for stage to stop
+#    moving after a stage move and before an edge detection. This time out
+#    occurs when XBandwidth fails. (default value is 300 which is 0.3 secs.)
+#  YTimeOut
+#    Timeout in milliseconds. Maximum amount of time to wait for stage to stop
+#    moving after a stage move and before an edge detection. This time out
+#    occurs when YBandwidth fails. (default value is 300 which is 0.3 secs.)
+#  ZTimeOut
+#    Timeout in milliseconds. Maximum amount of time to wait for stage to stop
+#    moving after a stage move and before an edge detection. This time out
+#    occurs when ZBandwidth fails. (default value is 300 which is 0.3 secs.)
+#  MagTimeOut
+#    Timeout in milliseconds. Maximum amount of time to wait for stage to stop
+#    moving after a stage move and before an edge detection. This time out
+#    occurs when MagBandwidth fails. (default value is 300 which is 0.3 secs.)
+# 
+#  EDGE_RETRY_BANDWIDTH_[X,Y,Z,MAG]
+#  Stage motion in millionths of an inch over EDGE_RETRY_PERIOD seconds
+#  Maximum amount of stage motion allowed before an edge is measured.
+#  If the stage is moving MORE than this amount, the edge will not be
+#  measured, if the stage is moving THIS amount or LESS then the edge
+#  will be measured.
+#	 EDGE_RETRY_BANDWIDTH_X 
+#	 EDGE_RETRY_BANDWIDTH_Y 
+#	 EDGE_RETRY_BANDWIDTH_Z 
+#        Default: 50		(which is just over one micron,
+#        1 micron equals 39 millionths of an inch)
+#
+#	 EDGE_RETRY_BANDWIDTH_MAG 
+#     Allowed ZOOM motion specified in ZOOM ENCODER COUNTS over a Time Interval specified by: 
+#       EDGE_RETRY_PERIOD seconds for PC settle  OR 
+#       The sample time associated with the EDGE_DSP_SETTLE setting for DSP settle. 
+#        Default: 50		(which is just over one micron,
+#
+#  EDGE_RETRY_COUNT_[X,Y,Z,MAG,ROT1,ROT2]
+#  Number of EXTRA consecutive times to test for the stage not moving
+#  after it passes once.
+#	 EDGE_RETRY_COUNT_X 
+#	 EDGE_RETRY_COUNT_Y 
+#	 EDGE_RETRY_COUNT_Z 
+#	 EDGE_RETRY_COUNT_MAG 
+#	 EDGE_RETRY_COUNT_ROT1 
+#	 EDGE_RETRY_COUNT_ROT2 
+#        Default: 1		( 1 retry, which actually means 2 tries)
+#
+# EDGE_RETRY_PERIOD 
+# Length of time in seconds of retry period.
+#     Default: 0.1000        => 0.1000 second
+#
+#  XYMotionTolerance
+#    The minimum number of pixels needed before a X or Y move is really done.
+#    (default = 10)
+#  ZMotionTolerance
+#    Minimum distance in inches for the Z axis before a move is really done.
+#    (default = 0.0001  which is 2.5 microns, 0.000040 in = 1.0 micron)
+#  ZoomMotionTolerance
+#    Minimum percentage of the entire zoom range that must be requested
+#    before the zoom is actually moved. (default = 2)
+#  LIGHT_SETTLE_TIME
+#    Amount of time to wait when changing light sources during a routine run.
+#    Units are 1/60th of a second. (default = 30 which = 1/2 second)
+#
+#  ACC_LIGHT_SETTLE_TIME
+#    Amount of time to wait when changing Accucentric Light sources.
+#    Units are 1/60th of a second. (default = 30 which = 1/2 second)
+#
+#
+#  SRLSettleTime
+#    Amount of time to wait when changing SRL sources during a routine run.
+#    Units are 1/60th of a second. (default = 4 which = 1/15 second)
+#
+#  EDGE_DSP_SETTLE: 
+#  0 = use original PC settle test 
+#  1 = use VELOCITY MODE settle test in DSP with 10 Times Per Second Sample Rate 
+#  2 = use POSITION MODE settle test in DSP with 90 Times Per Second Sample Rate 
+#  3 = use BOTH VELOCITY MODE AND POSITION MODE settle test in DSP (90X/sec Sample Rate) 
+#      The stage is settled when BOTH the Velocity and Position tests have passed 
+#  4 = use BOTH VELOCITY MODE AND POSITION MODE settle test in DSP (90X/sec Sample Rate) 
+#      The stage is settled when EITHER the Velocity OR the Position test has passed 
+#  5 = use VELOCITY MODE settle test in DSP with 90 Times Per Second Sample Rate 
+#  EDGE_DSP_SETTLE has no effect on non-dsp based systems. 
+#        Default: 0
+###############################################################################
+EDGE_RETRY_TIMEOUT_X=2000
+EDGE_RETRY_TIMEOUT_Y=2000
+EDGE_RETRY_TIMEOUT_Z=1000
+EDGE_RETRY_TIMEOUT_MAG=300
+EDGE_RETRY_BANDWIDTH_X=10
+EDGE_RETRY_BANDWIDTH_Y=10
+EDGE_RETRY_BANDWIDTH_Z=10
+EDGE_RETRY_BANDWIDTH_MAG=120
+EDGE_RETRY_COUNT_X=17
+EDGE_RETRY_COUNT_Y=17
+EDGE_RETRY_COUNT_Z=13
+EDGE_RETRY_COUNT_MAG=1
+EDGE_RETRY_PERIOD=0.100000
+MM_XY_PIXEL_MOTION_TOLERANCE=10
+MM_Z_INCH_MOTION_TOLERANCE=0.025000
+MM_ZOOM_PERCENT_MOTION_TOLERANCE=2
+LIGHT_SETTLE_TIME=4
+ACC_LIGHT_SETTLE_TIME=10
+SRL_SETTLE_TIME=4
+EDGE_DSP_SETTLE=0
+
+[Servos]
+###############################################################################
+#SERVOS CONFIGURATION PARAMETERS
+#  XPosWin
+#  YPosWin
+#  ZPosWin
+#  ZoomPosWin
+#    
+#  XRollOff
+#  YRollOff
+#  ZRollOff
+#  ZoomRollOff
+#    
+#  XKSP
+#  YKSP
+#  ZKSP
+#  ZoomKSP
+#    
+#  XShaftToScale
+#  YShaftToScale
+#  ZShaftToScale
+#  ZoomShaftToScale
+#    
+#  XScaleDitherFactor
+#  YScaleDitherFactor
+#  ZScaleDitherFactor
+#    
+#  MinimumMoveTime
+#    The minimum amount of time in seconds to move the stage.
+#    
+#  EnableSCurve
+#    Use S curve for stage trajectory (0 = no, 1 = yes)
+#	
+#  AntiHunt
+#	Enable the anti hunt parameter (0 = no, 1 = yes)
+#	
+#  BreakThresh
+#    The breakaway threshold tells how sensitive the machine is to knobs.
+#    -1 means use default parameters, 375 if no KSD, ie, tach motors.. if KSD: 12000.
+#    0 means never breakaway. any other value: means set your own breakaway threshold.
+#	
+#  BreakTix
+#	1000 means 1/3 of a second (0.341 sec)
+#    
+#  FORCE_Z_TO_TOP_ON_STOP
+#    0 - Do not force user to drive Z up on crash conditions
+#    1 - Force user to drive Z up on crash conditions
+#  DISABLE_VECTORING
+#    0 - Vectoring is enabled - default
+#    1 - Vectoring is disabled
+#
+# AG_DUAL_SCALE_SERVO
+# This parameter is ignored when USE_SECOND_X_SCALE = 0 
+# and USE_SECOND_Y_SCALE = 0 
+# and USE_SECOND_Z_SCALE = 0.
+# However, when the system is set up to use a second scale:
+# Turning this off (0) causes the stage to move to the primary scale
+# position initially, then to the averaged scale position. (Default)
+# Turning this on (1) causes the stage to move directly to the averaged
+# scale position on the dual scale axis. (Preferred) This parameter
+# should be set to (1) on all dual scale machines that are configured
+# to use the second scale. 
+#
+# AG_DUAL_SCALE_SERVO_FILTER
+# Adjusts the percentage of the tweak difference to be applied per
+# tweak update. Zero turns the filtering off. Valid range: 0-100
+# Default: 0
+#
+# AG_DUAL_DRIVE_SERVO
+# This parameter is used to enable various dual drive modes.
+# 0 - Dual drive is turned off. The 5th axis motor output is turned off. (default)
+# 1 - Dual drive is enabled in normal mode. This mode allows independent PID control
+# of each dual scale axis if stage home completes without errors.
+# 2 - Dual drive is enabled, but both PID loops servo off the primary shaft and scale only.
+# This forces the motor power output to be equal on both drives at all times. 
+# 3 - Dual drive is enabled, but both PID loops servo off the secondary shaft and scale only.
+# This forces the motor power output to be equal on both drives at all times. 
+#
+# AG_DUAL_DRIVE_SERVO_DIFF_LIMIT
+# This parameter is used to limit the allowable difference between scales in dual drive mode.
+# The system will notify the user if a larger difference is detected.
+# 0.0 - Difference Detection is turned off
+# >0.0 - Allowable difference between scales, in inches. 
+# Default: 0.0
+#
+#  [X,Y,Z]_POS_KEEP_POS_WIN
+#  The position keeping PID parameters are switched in when: 
+#  the axis is within this position error window (specified in inches)
+#  and there are no servo owners, i.e. the trajectory is done.
+#     Default: 0.0005
+#
+#  [X,Y,Z]_POS_KEEP_KP     Default: 1
+#  [X,Y,Z]_POS_KEEP_KPF    Default: 0.0000
+#  [X,Y,Z]_POS_KEEP_KI     Default: 0
+#  [X,Y,Z]_POS_KEEP_KIF    Default: 0.0000
+#  [X,Y,Z]_POS_KEEP_KD     Default: 0.0
+#  [X,Y,Z]_POS_KEEP_IL     Default: 10000
+#  [X,Y,Z]_POS_KEEP_KDD    Default: 0.0
+#  [X,Y,Z]_POS_KEEP_KSD    Default: 0.0
+#  [X,Y,Z]_POS_KEEP_KSP    Default: 0.0
+#
+###############################################################################
+AG_X_POS_WIN=1
+AG_Y_POS_WIN=1
+AG_Z_POS_WIN=1
+AG_ZM_POS_WIN=0
+AG_X_ROLLOFF=0
+AG_Y_ROLLOFF=0
+AG_Z_ROLLOFF=0
+AG_ZM_ROLLOFF=0
+AG_X_KSP=0
+AG_Y_KSP=0
+AG_Z_KSP=0
+AG_ZM_KSP=0
+AG_X_SHAFT2SCALE=0.000000
+AG_Y_SHAFT2SCALE=0.000000
+AG_Z_SHAFT2SCALE=0.000000
+AG_ZM_SHAFT2SCALE=0.000000
+X_SCALE_DITHER_FACTOR=1
+Y_SCALE_DITHER_FACTOR=1
+Z_SCALE_DITHER_FACTOR=1
+AG_X_ANTI_HUNT=0
+AG_Y_ANTI_HUNT=0
+AG_Z_ANTI_HUNT=0
+AG_ZM_ANTI_HUNT=0
+X_BREAK_THRESHOLD=-1
+Y_BREAK_THRESHOLD=-1
+Z_BREAK_THRESHOLD=0
+ZM_BREAK_THRESHOLD=0
+X_BREAK_TICKS=1000
+Y_BREAK_TICKS=1000
+Z_BREAK_TICKS=1000
+ZM_BREAK_TICKS=1000
+AG_MIN_MOVE_TIME=0.200000
+AG_ENABLE_S_CURVE=0
+FORCE_Z_TO_TOP_ON_STOP=0
+DISABLE_VECTORING=0
+AG_DUAL_SCALE_SERVO=0
+AG_DUAL_SCALE_SERVO_FILTER=0
+AG_DUAL_DRIVE_SERVO=0
+AG_DUAL_DRIVE_SERVO_DIFF_LIMIT=0.000000
+X_POS_KEEP_PARAMS_ENABLE=0
+Y_POS_KEEP_PARAMS_ENABLE=0
+Z_POS_KEEP_PARAMS_ENABLE=0
+X_POS_KEEP_POS_WIN=0.000500
+Y_POS_KEEP_POS_WIN=0.000500
+Z_POS_KEEP_POS_WIN=0.000500
+X_POS_KEEP_KP=1
+Y_POS_KEEP_KP=1
+Z_POS_KEEP_KP=1
+X_POS_KEEP_KPF=0.000000
+Y_POS_KEEP_KPF=0.000000
+Z_POS_KEEP_KPF=0.000000
+X_POS_KEEP_KI=0
+Y_POS_KEEP_KI=0
+Z_POS_KEEP_KI=0
+X_POS_KEEP_KIF=0.000000
+Y_POS_KEEP_KIF=0.000000
+Z_POS_KEEP_KIF=0.000000
+X_POS_KEEP_KD=0.000000
+Y_POS_KEEP_KD=0.000000
+Z_POS_KEEP_KD=0.000000
+X_POS_KEEP_IL=10000
+Y_POS_KEEP_IL=10000
+Z_POS_KEEP_IL=10000
+X_POS_KEEP_KDD=0.000000
+Y_POS_KEEP_KDD=0.000000
+Z_POS_KEEP_KDD=0.000000
+X_POS_KEEP_KSD=0.000000
+Y_POS_KEEP_KSD=0.000000
+Z_POS_KEEP_KSD=0.000000
+X_POS_KEEP_KSP=0.000000
+Y_POS_KEEP_KSP=0.000000
+Z_POS_KEEP_KSP=0.000000
+READ_ONLY=0
+
+[Trackball Servos]
+###############################################################################
+#TRACKBALL SERVOS CONFIGURATION PARAMETERS
+#
+#  For each X and Y servo has the following parameter
+#
+#  KP
+#  KPF
+#  KI
+#  KIF
+#  KD
+#  IL
+#  KDD
+#  KSD
+#  AFF
+#  VFF
+#  MaxVelocity
+#  Acceleration
+#  PrelimitVelocity
+#  Swap
+#  ExcessPosition
+#  PositivePrelimitOffset
+#  NegativePrelimitOffset
+#    
+###############################################################################
+TB_X_SERVO_KP=16
+TB_X_SERVO_KI=0
+TB_X_SERVO_KD=0
+TB_X_SERVO_IL=0
+TB_X_SERVO_KDD=0
+TB_X_SERVO_KSD=0
+TB_X_SERVO_AFF=0
+TB_X_SERVO_VFF=0
+TB_X_SERVO_VEL=0.000000
+TB_X_SERVO_ACC=0.000000
+TB_X_SERVO_PRELIM_VEL=0.000000
+TB_X_SERVO_SWAP=1
+TB_X_SERVO_KPF=0.0000
+TB_X_SERVO_KIF=0.0000
+TB_Y_SERVO_KP=16
+TB_Y_SERVO_KI=0
+TB_Y_SERVO_KD=0
+TB_Y_SERVO_IL=0
+TB_Y_SERVO_KDD=0
+TB_Y_SERVO_KSD=0
+TB_Y_SERVO_AFF=0
+TB_Y_SERVO_VFF=0
+TB_Y_SERVO_VEL=0.000000
+TB_Y_SERVO_ACC=0.000000
+TB_Y_SERVO_PRELIM_VEL=0.000000
+TB_Y_SERVO_SWAP=1
+TB_Y_SERVO_KPF=0.0000
+TB_Y_SERVO_KIF=0.0000
+
+[Joystick Servos]
+###############################################################################
+#JOYSTICK SERVOS CONFIGURATION PARAMETERS
+#
+#  For each X, Y, Z and Zoom servo has the following parameter
+#
+#  KP
+#  KPF
+#  KI
+#  KIF
+#  KD
+#  IL
+#  KDD
+#  KSD
+#  AFF
+#  VFF
+#  MaxVelocity
+#  Acceleration
+#  PrelimitVelocity
+#  Swap
+#  ExcessPosition
+#  PositivePrelimitOffset
+#  NegativePrelimitOffset
+#    
+###############################################################################
+JS_X_SERVO_KP=16
+JS_X_SERVO_KI=0
+JS_X_SERVO_KD=0
+JS_X_SERVO_IL=0
+JS_X_SERVO_KDD=0
+JS_X_SERVO_KSD=0
+JS_X_SERVO_AFF=0
+JS_X_SERVO_VFF=0
+JS_MAX_VELOCITY_X=0.000000
+JS_X_SERVO_ACC=0.000000
+X_SERVO_PRE_VELOCITY=0.000000
+JS_X_SERVO_SWAP=1
+JS_X_POS_PRELIM_OFFSET=1.500000
+JS_X_NEG_PRELIM_OFFSET=1.500000
+JS_X_SERVO_KPF=0.0000
+JS_X_SERVO_KIF=0.0000
+JS_Y_SERVO_KP=16
+JS_Y_SERVO_KI=0
+JS_Y_SERVO_KD=0
+JS_Y_SERVO_IL=0
+JS_Y_SERVO_KDD=0
+JS_Y_SERVO_KSD=0
+JS_Y_SERVO_AFF=0
+JS_Y_SERVO_VFF=0
+JS_MAX_VELOCITY_Y=0.000000
+JS_Y_SERVO_ACC=0.000000
+Y_SERVO_PRE_VELOCITY=0.000000
+JS_Y_SERVO_SWAP=-1
+JS_Y_POS_PRELIM_OFFSET=1.500000
+JS_Y_NEG_PRELIM_OFFSET=1.500000
+JS_Y_SERVO_KPF=0.0000
+JS_Y_SERVO_KIF=0.0000
+JS_Z_SERVO_KP=16
+JS_Z_SERVO_KI=0
+JS_Z_SERVO_KD=0
+JS_Z_SERVO_IL=0
+JS_Z_SERVO_KDD=0
+JS_Z_SERVO_KSD=0
+JS_Z_SERVO_AFF=0
+JS_Z_SERVO_VFF=0
+JS_MAX_VELOCITY_Z=0.000000
+JS_Z_SERVO_ACC=0.000000
+Z_SERVO_PRE_VELOCITY=0.000000
+JS_Z_SERVO_SWAP=-1
+JS_Z_POS_PRELIM_OFFSET=0.250000
+JS_Z_NEG_PRELIM_OFFSET=0.250000
+JS_Z_SERVO_KPF=0.0000
+JS_Z_SERVO_KIF=0.0000
+JS_ZM_SERVO_KP=16
+JS_ZM_SERVO_KI=0
+JS_ZM_SERVO_KD=0
+JS_ZM_SERVO_IL=0
+JS_ZM_SERVO_KDD=0
+JS_ZM_SERVO_KSD=0
+JS_ZM_SERVO_AFF=0
+JS_ZM_SERVO_VFF=0
+JS_MAX_VELOCITY_ZM=0.000000
+JS_ZM_SERVO_ACC=0.000000
+ZM_SERVO_PRE_VELOCITY=0.000000
+JS_ZM_SERVO_SWAP=-1
+JS_ZM_POS_PRELIM_OFFSET=0.000000
+JS_ZM_NEG_PRELIM_OFFSET=0.000000
+JS_ZM_SERVO_KPF=0.0000
+JS_ZM_SERVO_KIF=0.0000
+
+[AutoGo Servos]
+###############################################################################
+#AUTOGO SERVOS CONFIGURATION PARAMETERS
+#  
+#  For each X, Y, Z and Zoom servo has the following parameter
+#  
+#  KP
+#  KPF
+#  KI
+#  KIF
+#  KD
+#  IL
+#  KDD
+#  KSD
+#  AFF
+#  VFF
+#  MaxVelocity
+#  Acceleration
+#  PrelimitVelocity
+#  Swap
+#  ExcessPosition
+#  PositivePrelimitOffset
+#  NegativePrelimitOffset
+#    
+#  AG_[X,Y,Z]_SERVO_LOW_ACC_DIST - Move distance (in inches) below which the axis 
+#    accelerations will be scaled back.  Zero disables this function.
+#     Default: 0
+#    
+#  AG_[X,Y,Z]_GOBSI - OBSERVER input gain. Acceleration units per dac count.
+#     (Number of scale counts per pid tick squared per dac count.)
+#     Default: 0
+#
+#  AG_[X,Y,Z]_DOBS -  Velocity observer damping. Scales the velocity state variable:
+#     0=>fully damped, 65535=>undamped
+#     Default: 0
+#
+#  AG_[X,Y,Z]_KOBSV -  Kalman gain on velocity observer
+#     65535 = 1 radian per pid tick = 2932.6Hz/(2*3.14159) = 467Hz
+#     14000 = (14000/65535) = 0.2136 rad / pid tick = .2136*467Hz = 99.75Hz
+#     Default: 0
+#
+#  AG_[X,Y,Z]_KOBSP -  Scales the position state variable
+#     0=>fully damped, 65535=>undamped
+#     Default: 0
+#
+#  AG_[X,Y,Z]_KDO -  gain on velocity observer output
+#     0=>off, 65535=>full gain
+#     Default: 0
+#
+#  AG_[X,Y,Z]_KPO -  gain on position observer output
+#     0=>off, 65535=>full gain
+#     Default: 0
+#  
+#  AG_[X,Y,Z]_S_CURVE_MAX_JERK
+#  Maximum limit for the rate of acceleration.  Valid Range: 0.000001 - 0.05 
+#     Default 0.0500
+#  
+###############################################################################
+AG_X_SERVO_KP=16
+AG_X_SERVO_KI=0
+AG_X_SERVO_KD=0
+AG_X_SERVO_IL=0
+AG_X_SERVO_KDD=0
+AG_X_SERVO_KSD=0
+AG_X_SERVO_AFF=0
+AG_X_SERVO_VFF=0
+AG_X_SERVO_VEL=0.000000
+AG_X_SERVO_ACC=0.000000
+X_SERVO_PRE_VEL=0.000000
+AG_X_SERVO_PID_SWAP=0
+X_SERVO_XCESS_PERR=1
+AG_X_POS_PRELIM_OFFSET=0.000000
+AG_X_NEG_PRELIM_OFFSET=0.000000
+AG_X_SERVO_KPF=0.0000
+AG_X_SERVO_KIF=0.0000
+AG_X_SERVO_LOW_ACC_DIST=0.000000
+AG_X_GOBSI=0
+AG_X_DOBS=0
+AG_X_KOBSV=0
+AG_X_KOBSP=0
+AG_X_KDO=0
+AG_X_KPO=0
+AG_X_S_CURVE_MAX_JERK=0.050000
+AG_Y_SERVO_KP=16
+AG_Y_SERVO_KI=0
+AG_Y_SERVO_KD=0
+AG_Y_SERVO_IL=0
+AG_Y_SERVO_KDD=0
+AG_Y_SERVO_KSD=0
+AG_Y_SERVO_AFF=0
+AG_Y_SERVO_VFF=0
+AG_Y_SERVO_VEL=0.000000
+AG_Y_SERVO_ACC=0.000000
+Y_SERVO_PRE_VEL=0.000000
+AG_Y_SERVO_PID_SWAP=0
+Y_SERVO_XCESS_PERR=1
+AG_Y_POS_PRELIM_OFFSET=0.000000
+AG_Y_NEG_PRELIM_OFFSET=0.000000
+AG_Y_SERVO_KPF=0.0000
+AG_Y_SERVO_KIF=0.0000
+AG_Y_SERVO_LOW_ACC_DIST=0.000000
+AG_Y_GOBSI=0
+AG_Y_DOBS=0
+AG_Y_KOBSV=0
+AG_Y_KOBSP=0
+AG_Y_KDO=0
+AG_Y_KPO=0
+AG_Y_S_CURVE_MAX_JERK=0.050000
+AG_Z_SERVO_KP=16
+AG_Z_SERVO_KI=0
+AG_Z_SERVO_KD=0
+AG_Z_SERVO_IL=0
+AG_Z_SERVO_KDD=0
+AG_Z_SERVO_KSD=0
+AG_Z_SERVO_AFF=0
+AG_Z_SERVO_VFF=0
+AG_Z_SERVO_VEL=0.000000
+AG_Z_SERVO_ACC=0.000000
+Z_SERVO_PRE_VEL=0.000000
+AG_Z_SERVO_PID_SWAP=0
+Z_SERVO_XCESS_PERR=1
+AG_Z_POS_PRELIM_OFFSET=0.000000
+AG_Z_NEG_PRELIM_OFFSET=0.000000
+AG_Z_SERVO_KPF=0.0000
+AG_Z_SERVO_KIF=0.0000
+AG_Z_SERVO_LOW_ACC_DIST=0.000000
+AG_Z_GOBSI=0
+AG_Z_DOBS=0
+AG_Z_KOBSV=0
+AG_Z_KOBSP=0
+AG_Z_KDO=0
+AG_Z_KPO=0
+AG_Z_S_CURVE_MAX_JERK=0.050000
+AG_ZM_SERVO_KP=16
+AG_ZM_SERVO_KI=0
+AG_ZM_SERVO_KD=0
+AG_ZM_SERVO_IL=0
+AG_ZM_SERVO_KDD=0
+AG_ZM_SERVO_KSD=0
+AG_ZM_SERVO_AFF=0
+AG_ZM_SERVO_VFF=0
+AG_ZM_SERVO_VEL=0.000000
+AG_ZM_SERVO_ACC=0.000000
+ZM_SERVO_PRE_VEL=0.000000
+AG_ZM_SERVO_PID_SWAP=0
+ZM_SERVO_XCESS_PERR=1
+AG_ZM_POS_PRELIM=0.000000
+AG_ZM_NEG_PRELIM=0.000000
+AG_ZM_SERVO_KPF=0.0000
+AG_ZM_SERVO_KIF=0.0000
+READ_ONLY=0
+
+[Stepper]
+###############################################################################
+#STEPPER CONFIGURATION PARAMETERS
+#  Stepper Offset
+#    Value     Approximate Max. Freq.     Approximate Freq. Resolution
+#      0                 305 Hz                     0.01  Hz
+#      1                 610 Hz                     0.02  Hz
+#      2               1,220 Hz                     0.04  Hz
+#      3               2,441 Hz                     0.075 Hz
+#      4               4,882 Hz                     0.15  Hz
+#      5               9,765 Hz                     0.3   Hz
+#      6              19,530 Hz                     0.6   Hz
+#      7              39,061 Hz                     1.2   Hz
+#      8              78,122 Hz                     2.4   Hz
+#      9             156,245 Hz                     4.8   Hz
+#     10             312,490 Hz                     9.5   Hz
+#     11             624,980 Hz                    19.1   Hz
+#     12           1,249,961 Hz                    38.2   Hz
+#     13           2,499,923 Hz                    76.3   Hz
+#     14           4,999,847 Hz                   152.6   Hz
+#     15           9,999,694 Hz                   305.2   Hz
+#  Deadband
+###############################################################################
+STEPPER_OFFSET=11
+DEADBAND=0
+

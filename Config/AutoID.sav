@@ -1,0 +1,106 @@
+[AutoID]
+###############################################################################
+#	AutoID PARAMETERS
+# 
+#	AUTOID_DATABASE
+#		AutoID database file (default = AutoID.mdb)
+# 
+#	AUTOID_TOLERANCE
+#		AutoID search tolerance in percents (default = 10%)
+# 
+#	AUTOID_MAX_MATCHES
+#		The maximal number of matched parts (default = 50)
+# 
+#	AUTOID_BEST_ONLY
+#		Best matched parts only (default = true)
+# 
+#	AUTOID_ENABLE_TOUCH_BOUNDARY
+#		Enable touch boundary (default = false)
+# 
+#	AUTOID_CURR_MACHINE_ONLY
+#		Search for parts registered on this machine only (default = false)
+# 
+# AUTOID_ENABLE_FIXTURE_SUBSTRACTION
+#		(default = false)
+# 
+# AUTOID_SHOW_FIXTURE_MASK
+#		(default = true)
+# 
+# AUTOID_FIXTURE_COLOR
+#	RGB mask color 0x00bbggrr - Default: 0x00804000
+# 
+# AUTOID_FIXTURE_ALPHA
+#   Transparency of the mask [0, 255], Default = 200
+# 
+#	AUTOID_METHOD
+#		0 - Binary threshold (Default)
+#		1 - Canny
+#	AUTOID_THRESHOLD
+#		Binary threshold min (0-255) default value = 50
+#	AUTOID_THRESHOLD_MAX
+#		Binary threshold max (0-255) default value = 255
+# AUTOID_MIN_PART_AREA
+#		Minimal area of whole part in inch^2
+#		Default 0.01 inch^2
+# AUTOID_MIN_HOLE_AREA
+#		Minimal area of holes in inch^2
+#		Default 0.001 inch^2
+# 
+#	AUTOID_BACK_LIGHT
+#	AUTOID_RING_LIGHT
+#	AUTOID_AUX_LIGHT
+#		AutoID default light levels (0-255)
+# 
+#	AUTOID_HIGH_BACK_LIGHT
+#	AUTOID_HIGH_RING_LIGHT
+#	AUTOID_HIGH_AUX_LIGHT
+#		AutoID default light levels for high magnitude settings (0-255)
+# 
+# Fixture Position
+# AUTOID_FIXTURE_POS_X
+# AUTOID_FIXTURE_POS_Y
+# AUTOID_FIXTURE_POS_ZOOM
+# 
+# AUTOID_STAGE_SCAN_STOPS_X|Y#		Recommended number of stops needed to scan the full stage in one direction.
+#		default: 3 stops
+# 
+# AUTOID_MAX_STAGE_VELOCITY
+#		The maximal stage velocity [inch/sec]
+#		This parameter will be automatically calculated during stage home
+#		Default = 0.0 - force stage home
+# 
+###############################################################################
+i€v
+AUTOID_DATABASE=AutoID.mdb
+AUTOID_TOLERANCE=10.000000
+AUTOID_MAX_MATCHES=50
+AUTOID_BEST_ONLY=1
+AUTOID_ENABLE_TOUCH_BOUNDARY=0
+AUTOID_CURR_MACHINE_ONLY=0
+AUTOID_ENABLE_FIXTURE_SUBSTRACTION=0
+AUTOID_SHOW_FIXTURE_MASK=1
+AUTOID_FIXTURE_MASK=FixtureMask.bmp
+AUTOID_FIXTURE_COLOR=0000b4ff
+AUTOID_FIXTURE_ALPHA=200
+AUTOID_METHOD=0
+AUTOID_THRESHOLD=50
+AUTOID_THRESHOLD_MAX=255
+AUTOID_MIN_PART_AREA=0.010000
+AUTOID_MIN_HOLE_AREA=0.001000
+AUTOID_BACK_LIGHT=125
+AUTOID_RING_LIGHT=0
+AUTOID_AUX_LIGHT=0
+AUTOID_HIGH_BACK_LIGHT=125
+AUTOID_HIGH_RING_LIGHT=0
+AUTOID_HIGH_AUX_LIGHT=0
+AUTOID_FIXTURE_POS_X=0.000000
+AUTOID_FIXTURE_POS_Y=0.000000
+AUTOID_FIXTURE_POS_ZOOM=1
+AUTOID_STAGE_SCAN_STOPS_X=3
+AUTOID_STAGE_SCAN_STOPS_Y=3
+AUTOID_MAX_STAGE_VELOCITY=1.257489
+AUTOID_DLG_XPOS=-1
+AUTOID_DLG_YPOS=-1
+AUTOID_DLG_WIDTH=-1
+AUTOID_DLG_HEIGHT=-1
+

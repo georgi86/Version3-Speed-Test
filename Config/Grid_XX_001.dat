@@ -1,0 +1,17 @@
+# This is comment
+#
+# Parameters:
+#@Version 1
+#@PN xxxxxx
+#@UNITS MM
+#@ROWS 6
+#@COLS 1
+#
+#
+# X
+0.00
+24.5
+37.0
+74.0
+111.0
+123.5
