@@ -196,7 +196,21 @@ namespace SpeedTests
             
             Report.Log(ReportLevel.Info, "Delay", "Waiting for 6s.", new RecordItemIndex(27));
             Delay.Duration(6000, false);
-            
+
+            Report.Log(ReportLevel.Info, "Keyboard", "Key sequence '{LMenu}'.", new RecordItemIndex(9));
+            Keyboard.Press("{LMenu}");
+            Delay.Milliseconds(100);
+
+            Report.Log(ReportLevel.Info, "Keyboard", "Key sequence 'f'.", new RecordItemIndex(10));
+            Keyboard.Press("f");
+            Delay.Milliseconds(100);
+
+            Report.Log(ReportLevel.Info, "Keyboard", "Key sequence 'n'.", new RecordItemIndex(11));
+            Keyboard.Press("n");
+            Delay.Milliseconds(100);
+
+
+
         }
 
 #region Image Feature Data
