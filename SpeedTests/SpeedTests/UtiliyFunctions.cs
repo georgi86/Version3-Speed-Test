@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Text.RegularExpressions;
 
-
 namespace UtilityFunctions
 {
-
     public class Mathematics
     {
         public static bool IsZero(double dExpression, double EPSILONE)
@@ -18,10 +16,15 @@ namespace UtilityFunctions
         }
     }
 
-
-
     public class ReportAction
     {
+
+        public static void RunIncreasedResult(int ActualTime)
+        {
+            string ActualValue = "Actual value is: " + ActualTime;
+            Ranorex.Report.Success("THE SPEED HAS INCREASED");
+        }
+
         public static void RunPositiveResult(int ActualTime)
         {
             string ActualValue = "Actual Value is: " + ActualTime;
@@ -87,13 +90,22 @@ namespace UtilityFunctions
                     int.TryParse(seconds, out ss);
                     int ActualTime = (3600 * hh) + (60 * mm) + ss;
 
-                    if (Mathematics.IsEQ(ActualTime, HardcodedTime, 8))
+                    if (Mathematics.IsEQ(ActualTime, HardcodedTime, 4))
                     {
                         ReportAction.RunPositiveResult(ActualTime);
                     }
 
                     else
-                        ReportAction.RunNegativeResult(ActualTime, HardcodedTime, i);
+                    {
+                        if (ActualTime < HardcodedTime)
+                        {
+                            ReportAction.RunIncreasedResult(ActualTime); 
+                        }
+
+                        else
+
+                            ReportAction.RunNegativeResult(ActualTime, HardcodedTime, i);
+                    }
 
                     break;
                 }

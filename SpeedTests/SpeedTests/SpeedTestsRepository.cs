@@ -335,14 +335,14 @@ namespace SpeedTests
             /// <summary>
             /// The FileNameField item.
             /// </summary>
-            [RepositoryItem("4ffde906-5caa-4e1f-9916-cde343dfc1a1")]
-            public virtual Ranorex.Text FileNameField
-            {
-                get
-                {
-                    return _filenamefieldInfo.CreateAdapter<Ranorex.Text>(true);
-                }
-            }
+            //[RepositoryItem("4ffde906-5caa-4e1f-9916-cde343dfc1a1")]
+            //public virtual Ranorex.Text FileNameField
+            //{
+            //    get
+            //    {
+            //        return _filenamefieldInfo.CreateAdapter<Ranorex.Text>(true);
+            //    }
+            //}
 
             /// <summary>
             /// The FileNameField item info.

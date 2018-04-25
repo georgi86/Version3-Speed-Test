@@ -81,133 +81,113 @@ namespace SpeedTests
 
             Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'SnapXUntitled.TitleBar' at 663;11.", repo.SnapXUntitled.Element94Info, new RecordItemIndex(0));
             repo.SnapXUntitled.Element94.Click("663;11");
-            Delay.Milliseconds(200);
-            
+            Thread.Sleep(200);
+
             Report.Log(ReportLevel.Info, "Keyboard", "Key sequence '{LMenu}'.", new RecordItemIndex(1));
             Keyboard.Press("{LMenu}");
-            Delay.Milliseconds(100);
-            
+            Thread.Sleep(200);
+
             Report.Log(ReportLevel.Info, "Keyboard", "Key sequence 'f'.", new RecordItemIndex(2));
             Keyboard.Press("f");
-            Delay.Milliseconds(100);
-            
+            Thread.Sleep(100);
+
             Report.Log(ReportLevel.Info, "Keyboard", "Key sequence 'o'.", new RecordItemIndex(3));
             Keyboard.Press("o");
-            Delay.Milliseconds(100);
-            
-            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left DoubleClick item 'OpenSnapXRoutine.FileNameField' at 202;5.", repo.OpenSnapXRoutine.FileNameFieldInfo, new RecordItemIndex(4));
-            repo.OpenSnapXRoutine.FileNameField.DoubleClick("202;5");
-            Delay.Milliseconds(200);
-            
-            Report.Log(ReportLevel.Info, "Keyboard", "Key sequence '{Delete}' with focus on 'OpenSnapXRoutine.FileNameField'.", repo.OpenSnapXRoutine.FileNameFieldInfo, new RecordItemIndex(5));
-            repo.OpenSnapXRoutine.FileNameField.PressKeys("{Delete}");
-            Delay.Milliseconds(100);
-            
+            Thread.Sleep(3000);            
+
             Report.Log(ReportLevel.Info, "Keyboard", "Key sequence 'D:\\Joro\\GIT_Automations\\VERSION 3\\AutomationSpeedTest\\Routines\\SpeedFive.mxy'.", new RecordItemIndex(6));
             Keyboard.Press("D:\\Joro\\GIT_Automations\\VERSION 3\\AutomationSpeedTest\\Routines\\SpeedFive.mxy");
-            Delay.Milliseconds(100);
-            
-            Report.Log(ReportLevel.Info, "Keyboard", "Key sequence '{Return}' with focus on 'OpenSnapXRoutine.FileNameField'.", repo.OpenSnapXRoutine.FileNameFieldInfo, new RecordItemIndex(7));
-            repo.OpenSnapXRoutine.FileNameField.PressKeys("{Return}");
-            Delay.Milliseconds(100);
-            
+            Thread.Sleep(100);
+
+            Keyboard.Press("{Return}");
+            Thread.Sleep(300);
+
             Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'SnapXUntitled.TitleBar' at 668;9.", repo.SnapXUntitled.Element94Info, new RecordItemIndex(8));
             repo.SnapXUntitled.Element94.Click("668;9");
-            Delay.Milliseconds(200);
-            
+            Thread.Sleep(200);
+
             Report.Log(ReportLevel.Info, "Keyboard", "Key sequence '{LMenu}'.", new RecordItemIndex(9));
             Keyboard.Press("{LMenu}");
-            Delay.Milliseconds(100);
-            
+            Thread.Sleep(100);
+
             Report.Log(ReportLevel.Info, "Keyboard", "Key sequence 'f'.", new RecordItemIndex(10));
             Keyboard.Press("f");
-            Delay.Milliseconds(100);
-            
+            Thread.Sleep(100);
+
             Report.Log(ReportLevel.Info, "Keyboard", "Key sequence 'r'.", new RecordItemIndex(11));
             Keyboard.Press("r");
-            Delay.Milliseconds(100);
-            
+            Thread.Sleep(200);
+
             Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'SnapXUntitled.ButtonOK' at Center.", repo.SnapXUntitled.ButtonOKInfo, new RecordItemIndex(12));
             repo.SnapXUntitled.ButtonOK.Click();
-            Delay.Milliseconds(200);
+            Thread.Sleep(200);
 
-            //// This step waits for Remeasure button to becomes an active. To do that you need to check this butto to has not only the text but also to have and accessiblestate(Focusable)
-            //Report.Log(ReportLevel.Info, "Wait", "This step waits for Remeasure button to becomes an active. To do that you need to check this butto to has not only the text but also to have and accessiblestate(Focusable)\r\nWaiting 5m for item 'SnapXUntitled.ReMeasure' to exist.", repo.SnapXUntitled.ReMeasureInfo, new ActionTimeout(300000), new RecordItemIndex(13));
-            //repo.SnapXUntitled.ReMeasureInfo.WaitForExists(300000);
-            //Delay.Milliseconds(2000);
-
-            repo.SnapXUntitled.ReMeasure.Focus();
-            Delay.Milliseconds(1000);
+            repo.SnapXUntitled.ReMeasure.Focus();   // this code is added to get all ReMeasure options to become active (find Re-Measure text , the button should be Enabled ) befor opening the ElapsedTimeOne.PRT file
+            Thread.Sleep(1000);
 
             Report.Log(ReportLevel.Info, "Application", "Run application 'D:\\Joro\\GIT_Automations\\VERSION 3\\AutomationSpeedTest\\Reports\\ElapsedTimeFive.PRT' with arguments '' in normal mode.", new RecordItemIndex(14));
             Host.Local.RunApplication("D:\\Joro\\GIT_Automations\\VERSION 3\\AutomationSpeedTest\\Reports\\ElapsedTimeFive.PRT", "", "D:\\Joro\\GIT_Automations\\VERSION 3\\AutomationSpeedTest\\Reports", false);
-            Delay.Milliseconds(100);
-            
+            Thread.Sleep(100);
+
             Report.Log(ReportLevel.Info, "Invoke Action", "Invoking Maximize() on item 'ElapsedTimeFivePRTNotepad'.", repo.ElapsedTimeFivePRTNotepad.SelfInfo, new RecordItemIndex(15));
             repo.ElapsedTimeFivePRTNotepad.Self.Maximize();
-            Delay.Milliseconds(100);
+            Thread.Sleep(100);
 
             int iHardcodedFive = 82;
             string ResultRoutineFive = ((SpeedTests.SpeedTestsRepositoryFolders.ElapsedTimeFivePRTNotepadAppFolder)repo.ElapsedTimeFivePRTNotepad.Text15Info.ParentFolder).Text15.TextValue;
-            UtilityRun.RunEx(iHardcodedFive, ResultRoutineFive);   
-           
-            
+            UtilityRun.RunEx(iHardcodedFive, ResultRoutineFive);
+            Thread.Sleep(100);
+
             Report.Log(ReportLevel.Info, "Application", "Closing application containing item 'ElapsedTimeFivePRTNotepad.Text15'.", repo.ElapsedTimeFivePRTNotepad.Text15Info, new RecordItemIndex(17));
             Host.Current.CloseApplication(repo.ElapsedTimeFivePRTNotepad.Text15, new Duration(0));
-            Delay.Milliseconds(100);
-            
-            Report.Log(ReportLevel.Info, "Delay", "Waiting for 4s.", new RecordItemIndex(18));
-            Delay.Duration(4000, false);
-            
+            Thread.Sleep(100);
+
+            Thread.Sleep(5000);
+
             Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'SnapXUntitled.ReMeasure' at Center.", repo.SnapXUntitled.ReMeasureInfo, new RecordItemIndex(19));
             repo.SnapXUntitled.ReMeasure.Click();
-            Delay.Milliseconds(200);
-
-            //Report.Log(ReportLevel.Info, "Wait", "Waiting 5m for item 'SnapXUntitled.Finish' to exist.", repo.SnapXUntitled.FinishInfo, new ActionTimeout(300000), new RecordItemIndex(20));
-            //repo.SnapXUntitled.FinishInfo.WaitForExists(300000);
-            //Delay.Milliseconds(2000);
+            Thread.Sleep(100);
 
             repo.SnapXUntitled.Finish.Focus();
-            Delay.Milliseconds(1000);
+            Thread.Sleep(1000);
 
             Report.Log(ReportLevel.Info, "Application", "Run application 'D:\\Joro\\GIT_Automations\\VERSION 3\\AutomationSpeedTest\\Reports\\ElapsedTimeFive.PRT' with arguments '' in normal mode.", new RecordItemIndex(21));
             Host.Local.RunApplication("D:\\Joro\\GIT_Automations\\VERSION 3\\AutomationSpeedTest\\Reports\\ElapsedTimeFive.PRT", "", "D:\\Joro\\GIT_Automations\\VERSION 3\\AutomationSpeedTest\\Reports", false);
-            Delay.Milliseconds(100);
-            
+            Thread.Sleep(100);
+
             Report.Log(ReportLevel.Info, "Invoke Action", "Invoking Maximize() on item 'ElapsedTimeFivePRTNotepad'.", repo.ElapsedTimeFivePRTNotepad.SelfInfo, new RecordItemIndex(22));
             repo.ElapsedTimeFivePRTNotepad.Self.Maximize();
-            Delay.Milliseconds(100);
+            Thread.Sleep(100);
 
             iHardcodedFive = 82;
             string ResultRemeasureRoutineFive = ((SpeedTests.SpeedTestsRepositoryFolders.ElapsedTimeFivePRTNotepadAppFolder)repo.ElapsedTimeFivePRTNotepad.Text15Info.ParentFolder).Text15.TextValue;
-            UtilityRun.RunEx(iHardcodedFive, ResultRemeasureRoutineFive);   
-            
-            
+            UtilityRun.RunEx(iHardcodedFive, ResultRemeasureRoutineFive);
+            Thread.Sleep(100);
+
+
             Report.Log(ReportLevel.Info, "Application", "Closing application containing item 'ElapsedTimeFivePRTNotepad.Text15'.", repo.ElapsedTimeFivePRTNotepad.Text15Info, new RecordItemIndex(24));
             Host.Current.CloseApplication(repo.ElapsedTimeFivePRTNotepad.Text15, new Duration(0));
-            Delay.Milliseconds(100);
-            
-            Report.Log(ReportLevel.Info, "Delay", "Waiting for 4s.", new RecordItemIndex(25));
-            Delay.Duration(4000, false);
-            
+            Thread.Sleep(100);
+
+            Thread.Sleep(5000);
+
             Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'SnapXUntitled.Finish' at Center.", repo.SnapXUntitled.FinishInfo, new RecordItemIndex(26));
             repo.SnapXUntitled.Finish.Click();
-            Delay.Milliseconds(200);
-            
-            Report.Log(ReportLevel.Info, "Delay", "Waiting for 6s.", new RecordItemIndex(27));
-            Delay.Duration(6000, false);
+            Thread.Sleep(200);
+
+            Thread.Sleep(5000);
 
             Report.Log(ReportLevel.Info, "Keyboard", "Key sequence '{LMenu}'.", new RecordItemIndex(9));
             Keyboard.Press("{LMenu}");
-            Delay.Milliseconds(100);
+            Thread.Sleep(100);
 
             Report.Log(ReportLevel.Info, "Keyboard", "Key sequence 'f'.", new RecordItemIndex(10));
             Keyboard.Press("f");
-            Delay.Milliseconds(100);
+            Thread.Sleep(100);
 
             Report.Log(ReportLevel.Info, "Keyboard", "Key sequence 'n'.", new RecordItemIndex(11));
             Keyboard.Press("n");
-            Delay.Milliseconds(100);
+            Thread.Sleep(100);
 
 
 
