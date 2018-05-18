@@ -117,14 +117,22 @@ namespace SpeedTests
 
             Report.Log(ReportLevel.Info, "Keyboard", "Key sequence 'r'.", new RecordItemIndex(11));
             Keyboard.Press("r");
+            Thread.Sleep(2000);
+
+            Keyboard.Press("{Return}");
             Thread.Sleep(200);
 
-            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'SnapXUntitled.ButtonOK' at Center.", repo.SnapXUntitled.ButtonOKInfo, new RecordItemIndex(12));
-            repo.SnapXUntitled.ButtonOK.Click();
-            Thread.Sleep(200);
+            //Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'SnapXUntitled.ButtonOK' at Center.", repo.SnapXUntitled.ButtonOKInfo, new RecordItemIndex(12));
+            //repo.SnapXUntitled.ButtonOK.Click();
+            //Thread.Sleep(200);
 
-            repo.SnapXUntitled.ReMeasure.Focus();   // this code is added to get all ReMeasure options to become active (find Re-Measure text , the button should be Enabled ) befor opening the ElapsedTimeOne.PRT file
-            Thread.Sleep(1000);
+            do
+            {
+                Thread.Sleep(100);
+            }
+
+            while
+            (!repo.SnapXUntitled.ReMeasure.Enabled);
 
             Report.Log(ReportLevel.Info, "Application", "Run application 'D:\\Joro\\GIT_Automations\\VERSION 3\\AutomationSpeedTest\\Reports\\ElapsedTimeFive.PRT' with arguments '' in normal mode.", new RecordItemIndex(14));
             Host.Local.RunApplication("D:\\Joro\\GIT_Automations\\VERSION 3\\AutomationSpeedTest\\Reports\\ElapsedTimeFive.PRT", "", "D:\\Joro\\GIT_Automations\\VERSION 3\\AutomationSpeedTest\\Reports", false);
@@ -149,8 +157,13 @@ namespace SpeedTests
             repo.SnapXUntitled.ReMeasure.Click();
             Thread.Sleep(100);
 
-            repo.SnapXUntitled.Finish.Focus();
-            Thread.Sleep(1000);
+            do
+            {
+                Thread.Sleep(100);
+            }
+
+            while
+            (!repo.SnapXUntitled.ReMeasure.Enabled);
 
             Report.Log(ReportLevel.Info, "Application", "Run application 'D:\\Joro\\GIT_Automations\\VERSION 3\\AutomationSpeedTest\\Reports\\ElapsedTimeFive.PRT' with arguments '' in normal mode.", new RecordItemIndex(21));
             Host.Local.RunApplication("D:\\Joro\\GIT_Automations\\VERSION 3\\AutomationSpeedTest\\Reports\\ElapsedTimeFive.PRT", "", "D:\\Joro\\GIT_Automations\\VERSION 3\\AutomationSpeedTest\\Reports", false);

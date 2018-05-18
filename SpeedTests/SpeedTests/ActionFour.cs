@@ -117,14 +117,22 @@ namespace SpeedTests
 
             Report.Log(ReportLevel.Info, "Keyboard", "Key sequence 'r'.", new RecordItemIndex(11));
             Keyboard.Press("r");
-            Thread.Sleep(200);
+            Thread.Sleep(2000);
 
-            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'SnapXUntitled.ButtonOK' at Center.", repo.SnapXUntitled.ButtonOKInfo, new RecordItemIndex(12));
-            repo.SnapXUntitled.ButtonOK.Click();
-            Thread.Sleep(200);
+            Keyboard.Press("{Return}");
+            Thread.Sleep(100);
 
-            repo.SnapXUntitled.ReMeasure.Focus();   // this code is added to get all ReMeasure options to become active (find Re-Measure text , the button should be Enabled ) befor opening the ElapsedTimeOne.PRT file
-            Thread.Sleep(1000);
+            //Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'SnapXUntitled.ButtonOK' at Center.", repo.SnapXUntitled.ButtonOKInfo, new RecordItemIndex(12));
+            //repo.SnapXUntitled.ButtonOK.Click();
+            //Thread.Sleep(200);
+
+            do
+            {
+                Thread.Sleep(100);
+            }
+
+            while
+            (!repo.SnapXUntitled.ReMeasure.Enabled);
 
             Report.Log(ReportLevel.Info, "Application", "Run application 'D:\\Joro\\GIT_Automations\\VERSION 3\\AutomationSpeedTest\\Reports\\ElapsedTimeFour.PRT' with arguments '' in normal mode.", new RecordItemIndex(14));
             Host.Local.RunApplication("D:\\Joro\\GIT_Automations\\VERSION 3\\AutomationSpeedTest\\Reports\\ElapsedTimeFour.PRT", "", "D:\\Joro\\GIT_Automations\\VERSION 3\\AutomationSpeedTest\\Reports", false);
@@ -150,8 +158,13 @@ namespace SpeedTests
             repo.SnapXUntitled.ReMeasure.Click();
             Thread.Sleep(200);
 
-            repo.SnapXUntitled.Finish.Focus();
-            Thread.Sleep(1000);
+            do
+            {
+                Thread.Sleep(100);
+            }
+
+            while
+            (!repo.SnapXUntitled.ReMeasure.Enabled);
 
             Report.Log(ReportLevel.Info, "Application", "Run application 'D:\\Joro\\GIT_Automations\\VERSION 3\\AutomationSpeedTest\\Reports\\ElapsedTimeFour.PRT' with arguments '' in normal mode.", new RecordItemIndex(21));
             Host.Local.RunApplication("D:\\Joro\\GIT_Automations\\VERSION 3\\AutomationSpeedTest\\Reports\\ElapsedTimeFour.PRT", "", "D:\\Joro\\GIT_Automations\\VERSION 3\\AutomationSpeedTest\\Reports", false);
@@ -169,13 +182,11 @@ namespace SpeedTests
 
             Report.Log(ReportLevel.Info, "Application", "Closing application containing item 'ElapsedTimeFourPRTNotepad.Text15'.", repo.ElapsedTimeFourPRTNotepad.Text15Info, new RecordItemIndex(24));
             Host.Current.CloseApplication(repo.ElapsedTimeFourPRTNotepad.Text15, new Duration(0));
-            Thread.Sleep(100);
-
+            
             Thread.Sleep(5000);
 
             Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'SnapXUntitled.Finish' at Center.", repo.SnapXUntitled.FinishInfo, new RecordItemIndex(26));
-            repo.SnapXUntitled.Finish.Click();
-            Thread.Sleep(200);
+            repo.SnapXUntitled.Finish.Click();            
 
             Thread.Sleep(7000);
 
