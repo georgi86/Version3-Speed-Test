@@ -73,6 +73,9 @@ D:\Joro\GIT_Automations\VERSION 3\AutomationSpeedTest\SpeedTests\SpeedTests\bin\
 D:\Joro\GIT_Automations\VERSION 3\AutomationSpeedTest\SpeedTests\SpeedTests\bin\Debug\SpeedTests.rxtst
 D:\Joro\GIT_Automations\VERSION 3\AutomationSpeedTest\SpeedTests\SpeedTests\bin\Debug\SpeedTests.exe
 D:\Joro\GIT_Automations\VERSION 3\AutomationSpeedTest\SpeedTests\SpeedTests\bin\Debug\SpeedTests.pdb
+D:\Joro\GIT_Automations\VERSION 3\SpeedTest\SpeedTests\SpeedTests\bin\Debug\SpeedTests.exe.config
+D:\Joro\GIT_Automations\VERSION 3\SpeedTest\SpeedTests\SpeedTests\obj\x86\Debug\SpeedTests.exe
+D:\Joro\GIT_Automations\VERSION 3\SpeedTest\SpeedTests\SpeedTests\obj\x86\Debug\SpeedTests.pdb
 D:\Joro\GIT_Automations\VERSION 3\AutomationSpeedTest\SpeedTests\SpeedTests\bin\Debug\Ranorex.Core.dll
 D:\Joro\GIT_Automations\VERSION 3\AutomationSpeedTest\SpeedTests\SpeedTests\bin\Debug\Ranorex.Plugin.Cef.dll
 D:\Joro\GIT_Automations\VERSION 3\AutomationSpeedTest\SpeedTests\SpeedTests\bin\Debug\Ranorex.Plugin.ChromeWeb.dll

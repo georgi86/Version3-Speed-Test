@@ -80,8 +80,8 @@ namespace SpeedTests
 
             Init();
 
-            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'SnapXUntitled.TitleBar' at 663;11.", repo.SnapXUntitled.Element94Info, new RecordItemIndex(0));
-            repo.SnapXUntitled.Element94.Click("663;11");
+            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'SnapXUntitled.TitleBar' at 663;11.", repo.SnapXUntitled.TitleBarInfo, new RecordItemIndex(0));
+            repo.SnapXUntitled.TitleBar.Click("663;11");
             Thread.Sleep(200);
 
             Report.Log(ReportLevel.Info, "Keyboard", "Key sequence '{LMenu}'.", new RecordItemIndex(1));
@@ -94,7 +94,7 @@ namespace SpeedTests
 
             Report.Log(ReportLevel.Info, "Keyboard", "Key sequence 'o'.", new RecordItemIndex(3));
             Keyboard.Press("o");
-            Thread.Sleep(3000);            
+            Thread.Sleep(3000);
 
             Report.Log(ReportLevel.Info, "Keyboard", "Key sequence 'D:\\Joro\\GIT_Automations\\VERSION 3\\AutomationSpeedTest\\Routines\\SpeedFour.mxy'.", new RecordItemIndex(6));
             Keyboard.Press("D:\\Joro\\GIT_Automations\\VERSION 3\\AutomationSpeedTest\\Routines\\SpeedFour.mxy");
@@ -103,8 +103,8 @@ namespace SpeedTests
             Keyboard.Press("{Return}");
             Thread.Sleep(300);
 
-            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'SnapXUntitled.TitleBar' at 668;9.", repo.SnapXUntitled.Element94Info, new RecordItemIndex(8));
-            repo.SnapXUntitled.Element94.Click("668;9");
+            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'SnapXUntitled.TitleBar' at 668;9.", repo.SnapXUntitled.TitleBarInfo, new RecordItemIndex(8));
+            repo.SnapXUntitled.TitleBar.Click("668;9");
             Thread.Sleep(200);
 
             Report.Log(ReportLevel.Info, "Keyboard", "Key sequence '{LMenu}'.", new RecordItemIndex(9));
@@ -148,7 +148,7 @@ namespace SpeedTests
 
             Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'SnapXUntitled.ReMeasure' at Center.", repo.SnapXUntitled.ReMeasureInfo, new RecordItemIndex(19));
             repo.SnapXUntitled.ReMeasure.Click();
-            Thread.Sleep(200);            
+            Thread.Sleep(200);
 
             repo.SnapXUntitled.Finish.Focus();
             Thread.Sleep(1000);
@@ -181,8 +181,8 @@ namespace SpeedTests
 
         }
 
-#region Image Feature Data
-#endregion
+        #region Image Feature Data
+        #endregion
     }
 #pragma warning restore 0436
 }

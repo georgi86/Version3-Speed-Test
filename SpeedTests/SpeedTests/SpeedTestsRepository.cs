@@ -151,23 +151,25 @@ namespace SpeedTests
         [RepositoryFolder("fba33c25-8c4b-40d7-9138-93af7c3ad7b6")]
         public partial class SnapXUntitledAppFolder : RepoGenBaseFolder
         {
-            RepoItemInfo _element94Info;
+            RepoItemInfo _titlebarInfo;
             RepoItemInfo _buttonokInfo;
             RepoItemInfo _remeasureInfo;
             RepoItemInfo _finishInfo;
+            RepoItemInfo _switchtosensorInfo;
+            RepoItemInfo _textmeasureInfo;
 
             /// <summary>
             /// Creates a new SnapXUntitled  folder.
             /// </summary>
             public SnapXUntitledAppFolder(RepoGenBaseFolder parentFolder) :
-                    base("SnapXUntitled", "/form[@title='Snap-X - [Untitled]']", parentFolder, 500000, null, true, "fba33c25-8c4b-40d7-9138-93af7c3ad7b6", "")
+                    base("SnapXUntitled", "/form[@title='Snap-X - [Untitled]']", parentFolder, 30000, null, true, "fba33c25-8c4b-40d7-9138-93af7c3ad7b6", "")
             {
-                _element94Info = new RepoItemInfo(this, "Element94", "element[@controlid='94']", 500000, null, "76c8b8ce-92bd-450a-8977-236f63e76e7d");
-                _buttonokInfo = new RepoItemInfo(this, "ButtonOK", "container/form//button[@text='&OK']", 500000, null, "f7b05518-65b8-4d1a-b3d0-ef4b40182a53");
-                //_remeasureInfo = new RepoItemInfo(this, "ReMeasure", "container/form/?/?/element/element/container/button[@text='Re-Measure' and @enabled='True']", 1000000, null, "fdde19aa-2930-49b2-b57f-e7ed19b7f556");
-                _remeasureInfo = new RepoItemInfo(this, "ReMeasure", "container[@controlid='59648']//button[@text='Re-Measure' and @enabled='True']", 300000, null, "00e03edc-fc5a-42dd-a45a-0ef737982254");
-                //_finishInfo = new RepoItemInfo(this, "Finish", "container/form/?/?/element/element/container/button[@text='Finish' and @enabled='True']", 1000000, null, "5274fe14-9b92-4e07-9dbc-ece5afef7527");
-                _finishInfo = new RepoItemInfo(this, "Finish", "container[@controlid='59648']//button[@text='Finish' and @enabled='True']", 300000, null, "b11eaeb2-faaa-46af-998b-14a7402099c8");
+                _titlebarInfo = new RepoItemInfo(this, "TitleBar", "element[@controlid='94']", 30000, null, "b1cac8a1-e0b7-44b8-9783-a88b7192bcef");
+                _buttonokInfo = new RepoItemInfo(this, "ButtonOK", "container/form//button[@text='&OK']", 30000, null, "f7b05518-65b8-4d1a-b3d0-ef4b40182a53");
+                _remeasureInfo = new RepoItemInfo(this, "ReMeasure", "container[@controlid='59648']/form//button[@text='Re-Measure']", 190000, null, "bebf8b7a-af7f-4272-a885-b97fbe55f027");
+                _finishInfo = new RepoItemInfo(this, "Finish", "container[@controlid='59648']/form//button[@text='Finish']", 190000, null, "dcb6e74b-a091-432b-9aa0-94bea3847f79");
+                _switchtosensorInfo = new RepoItemInfo(this, "SwitchToSensor", "container[@controlid='59648']/form[@title='Untitled']/?/?/element[@controlid='59650']/element[@controlid='59648']/toolbar[@controlid='59392']/button[@commandid='40029']", 30000, null, "0763827f-cf5a-444f-8368-a5e4a7bef77f");
+                _textmeasureInfo = new RepoItemInfo(this, "TextMeasure", "container[@controlid='59648']/form[@title='Untitled']//text[@controlid='2394']", 30000, null, "7e0d98d9-912e-4d5b-84e0-95f81fbb8019");
             }
 
             /// <summary>
@@ -197,24 +199,24 @@ namespace SpeedTests
             /// <summary>
             /// The TitleBar item.
             /// </summary>
-            [RepositoryItem("76c8b8ce-92bd-450a-8977-236f63e76e7d")]
-            public virtual Ranorex.Unknown Element94
+            [RepositoryItem("b1cac8a1-e0b7-44b8-9783-a88b7192bcef")]
+            public virtual Ranorex.Unknown TitleBar
             {
                 get
                 {
-                    return _element94Info.CreateAdapter<Ranorex.Unknown>(true);
+                    return _titlebarInfo.CreateAdapter<Ranorex.Unknown>(true);
                 }
             }
 
             /// <summary>
-            /// The Element94 item info.
+            /// The TitleBar item info.
             /// </summary>
-            [RepositoryItemInfo("76c8b8ce-92bd-450a-8977-236f63e76e7d")]
-            public virtual RepoItemInfo Element94Info
+            [RepositoryItemInfo("b1cac8a1-e0b7-44b8-9783-a88b7192bcef")]
+            public virtual RepoItemInfo TitleBarInfo
             {
                 get
                 {
-                    return _element94Info;
+                    return _titlebarInfo;
                 }
             }
 
@@ -245,7 +247,7 @@ namespace SpeedTests
             /// <summary>
             /// The ReMeasure item.
             /// </summary>
-            [RepositoryItem("00e03edc-fc5a-42dd-a45a-0ef737982254")]
+            [RepositoryItem("bebf8b7a-af7f-4272-a885-b97fbe55f027")]
             public virtual Ranorex.Button ReMeasure
             {
                 get
@@ -257,7 +259,7 @@ namespace SpeedTests
             /// <summary>
             /// The ReMeasure item info.
             /// </summary>
-            [RepositoryItemInfo("00e03edc-fc5a-42dd-a45a-0ef737982254")]
+            [RepositoryItemInfo("bebf8b7a-af7f-4272-a885-b97fbe55f027")]
             public virtual RepoItemInfo ReMeasureInfo
             {
                 get
@@ -269,7 +271,7 @@ namespace SpeedTests
             /// <summary>
             /// The Finish item.
             /// </summary>
-            [RepositoryItem("b11eaeb2-faaa-46af-998b-14a7402099c8")]
+            [RepositoryItem("dcb6e74b-a091-432b-9aa0-94bea3847f79")]
             public virtual Ranorex.Button Finish
             {
                 get
@@ -281,12 +283,60 @@ namespace SpeedTests
             /// <summary>
             /// The Finish item info.
             /// </summary>
-            [RepositoryItemInfo("b11eaeb2-faaa-46af-998b-14a7402099c8")]
+            [RepositoryItemInfo("dcb6e74b-a091-432b-9aa0-94bea3847f79")]
             public virtual RepoItemInfo FinishInfo
             {
                 get
                 {
                     return _finishInfo;
+                }
+            }
+
+            /// <summary>
+            /// The SwitchToSensor item.
+            /// </summary>
+            [RepositoryItem("0763827f-cf5a-444f-8368-a5e4a7bef77f")]
+            public virtual Ranorex.Button SwitchToSensor
+            {
+                get
+                {
+                    return _switchtosensorInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The SwitchToSensor item info.
+            /// </summary>
+            [RepositoryItemInfo("0763827f-cf5a-444f-8368-a5e4a7bef77f")]
+            public virtual RepoItemInfo SwitchToSensorInfo
+            {
+                get
+                {
+                    return _switchtosensorInfo;
+                }
+            }
+
+            /// <summary>
+            /// The TextMeasure item.
+            /// </summary>
+            [RepositoryItem("7e0d98d9-912e-4d5b-84e0-95f81fbb8019")]
+            public virtual Ranorex.Text TextMeasure
+            {
+                get
+                {
+                    return _textmeasureInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The TextMeasure item info.
+            /// </summary>
+            [RepositoryItemInfo("7e0d98d9-912e-4d5b-84e0-95f81fbb8019")]
+            public virtual RepoItemInfo TextMeasureInfo
+            {
+                get
+                {
+                    return _textmeasureInfo;
                 }
             }
         }
@@ -335,14 +385,14 @@ namespace SpeedTests
             /// <summary>
             /// The FileNameField item.
             /// </summary>
-            //[RepositoryItem("4ffde906-5caa-4e1f-9916-cde343dfc1a1")]
-            //public virtual Ranorex.Text FileNameField
-            //{
-            //    get
-            //    {
-            //        return _filenamefieldInfo.CreateAdapter<Ranorex.Text>(true);
-            //    }
-            //}
+            [RepositoryItem("4ffde906-5caa-4e1f-9916-cde343dfc1a1")]
+            public virtual Ranorex.Text FileNameField
+            {
+                get
+                {
+                    return _filenamefieldInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
 
             /// <summary>
             /// The FileNameField item info.

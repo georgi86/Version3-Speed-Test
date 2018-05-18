@@ -20,8 +20,6 @@ using Ranorex.Core;
 using Ranorex.Core.Testing;
 using Ranorex.Core.Repository;
 using UtilityFunctions;
-using System.IO;
-
 
 namespace SpeedTests
 {
@@ -53,6 +51,7 @@ namespace SpeedTests
         {
             get { return instance; }
         }
+
 #region Variables
 
 #endregion
@@ -64,9 +63,7 @@ namespace SpeedTests
         public static void Start()
         {
             TestModuleRunner.Run(Instance);
-        }   
-
-       
+        }
 
         /// <summary>
         /// Performs the playback of actions in this recording.
@@ -75,8 +72,6 @@ namespace SpeedTests
         /// instance to the <see cref="TestModuleRunner.Run(ITestModule)"/> method
         /// that will in turn invoke this method.</remarks>
         [System.CodeDom.Compiler.GeneratedCode("Ranorex", "7.0")]
-
-
         void ITestModule.Run()
         {
             Mouse.DefaultMoveTime = 300;
@@ -85,21 +80,45 @@ namespace SpeedTests
 
             Init();
 
-            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'SnapXUntitled.TitleBar' at 663;11.", repo.SnapXUntitled.Element94Info, new RecordItemIndex(0));
-            repo.SnapXUntitled.Element94.Click("663;11");
+            string strBigModeText = "Measure";
+
+            bool bBigMode = true;
+
+            try
+            {
+                Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'SnapXUntitled.TextMeasure' at Center.", repo.SnapXUntitled.TextMeasureInfo, new RecordItemIndex(0));
+                repo.SnapXUntitled.TextMeasure.MoveTo();
+                Delay.Milliseconds(200);
+
+                bBigMode = repo.SnapXUntitled.TextMeasure.TextValue.CompareTo(strBigModeText) == 0 && repo.SnapXUntitled.TextMeasure.Visible;
+
+            }
+            catch (Exception ex)
+            {
+                
+            }
+
+            if (!bBigMode)
+
+                repo.SnapXUntitled.SwitchToSensor.Click();
+                Delay.Milliseconds(200);
+            
+
+            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'SnapXUntitled.TitleBar' at 663;11.", repo.SnapXUntitled.TitleBarInfo, new RecordItemIndex(0));
+            repo.SnapXUntitled.TitleBar.Click("663;11");
             Thread.Sleep(200);
 
             Report.Log(ReportLevel.Info, "Keyboard", "Key sequence '{LMenu}'.", new RecordItemIndex(1));
             Keyboard.Press("{LMenu}");
             Thread.Sleep(200);
-            
+
             Report.Log(ReportLevel.Info, "Keyboard", "Key sequence 'f'.", new RecordItemIndex(2));
             Keyboard.Press("f");
             Thread.Sleep(100);
 
             Report.Log(ReportLevel.Info, "Keyboard", "Key sequence 'o'.", new RecordItemIndex(3));
             Keyboard.Press("o");
-            Thread.Sleep(3000);            
+            Thread.Sleep(3000);
 
             Report.Log(ReportLevel.Info, "Keyboard", "Key sequence 'D:\\Joro\\GIT_Automations\\VERSION 3\\AutomationSpeedTest\\Routines\\SpeedOne.mxy'.", new RecordItemIndex(6));
             Keyboard.Press("D:\\Joro\\GIT_Automations\\VERSION 3\\AutomationSpeedTest\\Routines\\SpeedOne.mxy");
@@ -108,8 +127,8 @@ namespace SpeedTests
             Keyboard.Press("{Return}");
             Thread.Sleep(300);
 
-            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'SnapXUntitled.TitleBar' at 668;9.", repo.SnapXUntitled.Element94Info, new RecordItemIndex(8));
-            repo.SnapXUntitled.Element94.Click("668;9");
+            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'SnapXUntitled.TitleBar' at 668;9.", repo.SnapXUntitled.TitleBarInfo, new RecordItemIndex(8));
+            repo.SnapXUntitled.TitleBar.Click("668;9");
             Thread.Sleep(200);
 
             Report.Log(ReportLevel.Info, "Keyboard", "Key sequence '{LMenu}'.", new RecordItemIndex(9));
@@ -122,14 +141,24 @@ namespace SpeedTests
 
             Report.Log(ReportLevel.Info, "Keyboard", "Key sequence 'r'.", new RecordItemIndex(11));
             Keyboard.Press("r");
-            Thread.Sleep(200);
+            Thread.Sleep(2000);
 
-            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'SnapXUntitled.ButtonOK' at Center.", repo.SnapXUntitled.ButtonOKInfo, new RecordItemIndex(12));
-            repo.SnapXUntitled.ButtonOK.Click();
-            Thread.Sleep(200);           
+            Keyboard.Press("{Return}");
+            Thread.Sleep(100);
 
-            repo.SnapXUntitled.ReMeasure.Focus();   // this code is added to get all ReMeasure options to become active (find Re-Measure text , the button should be Enabled ) befor opening the ElapsedTimeOne.PRT file
-            Thread.Sleep(1000);
+
+            //USE THIS CODE IN CASE IN WHICH THE ENTER BUTTON DON'T EXECUTE THE MEASUREMENT//
+            //Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'SnapXUntitled.ButtonOK' at Center.", repo.SnapXUntitled.ButtonOKInfo, new RecordItemIndex(12));
+            //repo.SnapXUntitled.ButtonOK.Click();
+            //Thread.Sleep(200);            
+
+            do
+            {
+                Thread.Sleep(100);
+            }
+
+            while
+            (!repo.SnapXUntitled.ReMeasure.Enabled);
 
 
             Report.Log(ReportLevel.Info, "Application", "Run application 'D:\\Joro\\GIT_Automations\\VERSION 3\\AutomationSpeedTest\\Reports\\ElapsedTimeOne.PRT' with arguments '' in normal mode.", new RecordItemIndex(14));
@@ -143,27 +172,31 @@ namespace SpeedTests
 
             ////////////Function///////////////
 
-            int iHardcodedOne = 22;  
+            int iHardcodedOne = 22;
             string ResultRoutineOne = ((SpeedTests.SpeedTestsRepositoryFolders.ElapsedTimeOnePRTNotepadAppFolder)repo.ElapsedTimeOnePRTNotepad.Text15Info.ParentFolder).Text15.TextValue;
             UtilityRun.RunEx(iHardcodedOne, ResultRoutineOne);
             Delay.Milliseconds(100);
 
             ////////////////////////////////////
-                                  
-            
+
+
             Report.Log(ReportLevel.Info, "Application", "Closing application containing item 'ElapsedTimeOnePRTNotepad.Text15'.", repo.ElapsedTimeOnePRTNotepad.Text15Info, new RecordItemIndex(17));
-            Host.Current.CloseApplication(repo.ElapsedTimeOnePRTNotepad.Text15, new Duration(0));
-            Thread.Sleep(200);
+            Host.Current.CloseApplication(repo.ElapsedTimeOnePRTNotepad.Text15, new Duration(0));            
+            Thread.Sleep(5000);            
+                        
+            {
+                Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'SnapXUntitled.ReMeasure' at Center.", repo.SnapXUntitled.ReMeasureInfo, new RecordItemIndex(19));
+                repo.SnapXUntitled.ReMeasure.Click();
+                Thread.Sleep(200);
+            }
 
-            Thread.Sleep(5000);
+            do
+            {
+                Thread.Sleep(100);
+            }
+            while (!repo.SnapXUntitled.Finish.Enabled);
 
-            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'SnapXUntitled.ReMeasure' at Center.", repo.SnapXUntitled.ReMeasureInfo, new RecordItemIndex(19));
-            repo.SnapXUntitled.ReMeasure.Click();
-            Thread.Sleep(200);
                       
-            repo.SnapXUntitled.Finish.Focus();
-            Delay.Milliseconds(1000);
-
             Report.Log(ReportLevel.Info, "Application", "Run application 'D:\\Joro\\GIT_Automations\\VERSION 3\\AutomationSpeedTest\\Reports\\ElapsedTimeOne.PRT' with arguments '' in normal mode.", new RecordItemIndex(14));
             Host.Local.RunApplication("D:\\Joro\\GIT_Automations\\VERSION 3\\AutomationSpeedTest\\Reports\\ElapsedTimeOne.PRT", "", "D:\\Joro\\GIT_Automations\\VERSION 3\\AutomationSpeedTest\\Reports", true);
             Thread.Sleep(200);
@@ -178,21 +211,19 @@ namespace SpeedTests
             Thread.Sleep(100);
 
             Report.Log(ReportLevel.Info, "Application", "Closing application containing item 'ElapsedTimeOnePRTNotepad.Text15'.", repo.ElapsedTimeOnePRTNotepad.Text15Info, new RecordItemIndex(24));
-            Host.Current.CloseApplication(repo.ElapsedTimeOnePRTNotepad.Text15, new Duration(0));
-            Thread.Sleep(100);
+            Host.Current.CloseApplication(repo.ElapsedTimeOnePRTNotepad.Text15, new Duration(0));         
 
             Thread.Sleep(5000);
 
             Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'SnapXUntitled.Finish' at Center.", repo.SnapXUntitled.FinishInfo, new RecordItemIndex(26));
-            repo.SnapXUntitled.Finish.Click();
-            Thread.Sleep(100);
+            repo.SnapXUntitled.Finish.Click();            
 
             Thread.Sleep(7000);
 
         }
 
-#region Image Feature Data
-#endregion
+        #region Image Feature Data
+        #endregion
     }
 #pragma warning restore 0436
 }
