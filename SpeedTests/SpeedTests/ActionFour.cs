@@ -96,8 +96,8 @@ namespace SpeedTests
             Keyboard.Press("o");
             Thread.Sleep(3000);
 
-            Report.Log(ReportLevel.Info, "Keyboard", "Key sequence 'D:\\Joro\\GIT_Automations\\VERSION 3\\AutomationSpeedTest\\Routines\\SpeedFour.mxy'.", new RecordItemIndex(6));
-            Keyboard.Press("D:\\Joro\\GIT_Automations\\VERSION 3\\AutomationSpeedTest\\Routines\\SpeedFour.mxy");
+            Report.Log(ReportLevel.Info, "Keyboard", "Key sequence 'C:\\JORO\\AUTOMATIONS\\GIT_Automations\\VERSION 3\\AutomationSpeedTest\\Routines\\SpeedFour.mxy'.", new RecordItemIndex(6));
+            Keyboard.Press("C:\\JORO\\AUTOMATIONS\\GIT_Automations\\VERSION 3\\AutomationSpeedTest\\Routines\\SpeedFour.mxy");
             Thread.Sleep(100);
 
             Keyboard.Press("{Return}");
@@ -134,8 +134,8 @@ namespace SpeedTests
             while
             (!repo.SnapXUntitled.ReMeasure.Enabled);
 
-            Report.Log(ReportLevel.Info, "Application", "Run application 'D:\\Joro\\GIT_Automations\\VERSION 3\\AutomationSpeedTest\\Reports\\ElapsedTimeFour.PRT' with arguments '' in normal mode.", new RecordItemIndex(14));
-            Host.Local.RunApplication("D:\\Joro\\GIT_Automations\\VERSION 3\\AutomationSpeedTest\\Reports\\ElapsedTimeFour.PRT", "", "D:\\Joro\\GIT_Automations\\VERSION 3\\AutomationSpeedTest\\Reports", false);
+            Report.Log(ReportLevel.Info, "Application", "Run application 'C:\\JORO\\AUTOMATIONS\\GIT_Automations\\VERSION 3\\AutomationSpeedTest\\Reports\\ElapsedTimeFour.PRT' with arguments '' in normal mode.", new RecordItemIndex(14));
+            Host.Local.RunApplication("C:\\JORO\\AUTOMATIONS\\GIT_Automations\\VERSION 3\\AutomationSpeedTest\\Reports\\ElapsedTimeFour.PRT", "", "C:\\JORO\\AUTOMATIONS\\GIT_Automations\\VERSION 3\\AutomationSpeedTest\\Reports", false);
             Thread.Sleep(100);
 
             Report.Log(ReportLevel.Info, "Invoke Action", "Invoking Maximize() on item 'ElapsedTimeFourPRTNotepad'.", repo.ElapsedTimeFourPRTNotepad.SelfInfo, new RecordItemIndex(15));
@@ -166,8 +166,8 @@ namespace SpeedTests
             while
             (!repo.SnapXUntitled.ReMeasure.Enabled);
 
-            Report.Log(ReportLevel.Info, "Application", "Run application 'D:\\Joro\\GIT_Automations\\VERSION 3\\AutomationSpeedTest\\Reports\\ElapsedTimeFour.PRT' with arguments '' in normal mode.", new RecordItemIndex(21));
-            Host.Local.RunApplication("D:\\Joro\\GIT_Automations\\VERSION 3\\AutomationSpeedTest\\Reports\\ElapsedTimeFour.PRT", "", "D:\\Joro\\GIT_Automations\\VERSION 3\\AutomationSpeedTest\\Reports", false);
+            Report.Log(ReportLevel.Info, "Application", "Run application 'C:\\JORO\\AUTOMATIONS\\GIT_Automations\\VERSION 3\\AutomationSpeedTest\\Reports\\ElapsedTimeFour.PRT' with arguments '' in normal mode.", new RecordItemIndex(21));
+            Host.Local.RunApplication("C:\\JORO\\AUTOMATIONS\\GIT_Automations\\VERSION 3\\AutomationSpeedTest\\Reports\\ElapsedTimeFour.PRT", "", "C:\\JORO\\AUTOMATIONS\\GIT_Automations\\VERSION 3\\AutomationSpeedTest\\Reports", false);
             Thread.Sleep(100);
 
             Report.Log(ReportLevel.Info, "Invoke Action", "Invoking Maximize() on item 'ElapsedTimeFourPRTNotepad'.", repo.ElapsedTimeFourPRTNotepad.SelfInfo, new RecordItemIndex(22));
