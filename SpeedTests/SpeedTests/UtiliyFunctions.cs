@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Text.RegularExpressions;
+using System.IO;
 
 namespace UtilityFunctions
 {
@@ -47,30 +48,20 @@ namespace UtilityFunctions
 
     public class UtilityRun
     {
-        public static void RunEx(int iHardcodedInParam, string ResultRoutineInParam)
+        public static void RunEx(string ResultRoutineInParam, int iHardcodedInParam)
         {
-            string ResultRoutineOne = ResultRoutineInParam; // ((SpeedTests.SpeedTestsRepositoryFolders.ElapsedTimeOnePRTNotepadAppFolder)repo.ElapsedTimeOnePRTNotepad.Text15Info.ParentFolder).Text15.TextValue;
-
-            string[] ReadResultRoutineOne = Regex.Split(ResultRoutineOne, "[\r\n]+");
-
-            int iNumResultRows = ReadResultRoutineOne.Length;
-
-            string HardcodedResultOne = "Machine Serial Number:  SFD2001052                                                       Page:    1\r\n====================================================================================================\r\nRoutine Name                                                    Run #            Date & Time        \r\n====================================================================================================\r\nSpeedOne.mxy                                             1     Wednesday, November 08, 2017 17:01:10\r\n====================================================================================================\r\n\r\n====================================================================================================\r\nFeature           Unit    Nominal       Actual          Tolerances           Deviation     Exceeded \r\n====================================================================================================\r\nStep 3   \r\nDiameter          mm    +6.3129       +6.3116       +0.0000     +0.0000    -0.0013                  \r\n   \r\n====================================================================================================\r\n\r\n============================ END OF INSPECTION - Elapsed Time  00:00:23 ============================\r\n";
-
-            string[] HardcodedReadResultOne = Regex.Split(HardcodedResultOne, "[\r\n]+");
-
-            int iNumhardcodedResultRow = HardcodedReadResultOne.Length;
-
+            string[] readActualLines = File.ReadAllLines(ResultRoutineInParam);            
+            int iNumActualRows = readActualLines.Length;
+            
             int HardcodedTime = iHardcodedInParam; // 25; // this is the expected time. With this time we compare the actual time
 
-
-            for (int i = iNumResultRows - 1; i >= 0; i--) //this for method will work in revers order 
+            for (int i = iNumActualRows - 1; i >= 0; i--) //this for method will work in revers order 
 
             {
-                bool bExpectedTextRow = ReadResultRoutineOne[i].Contains("END OF INSPECTION");
+                bool bExpectedTextRow = readActualLines[i].Contains("END OF INSPECTION");
                 if (bExpectedTextRow)
                 {
-                    string sFinalInspection = ReadResultRoutineOne[i];
+                    string sFinalInspection = readActualLines[i];
 
                     string toSearch = ":";  //This will give the first postion of the : symbol. We assume, that there will be two such symbols in the whole string //- one between the hour and the minutes, and one between the minutes and the seconds
 
@@ -99,7 +90,7 @@ namespace UtilityFunctions
                     {
                         if (ActualTime < HardcodedTime)
                         {
-                            ReportAction.RunIncreasedResult(ActualTime); 
+                            ReportAction.RunIncreasedResult(ActualTime);
                         }
 
                         else

@@ -52,9 +52,9 @@ namespace SpeedTests
             get { return instance; }
         }
 
-#region Variables
+        #region Variables
 
-#endregion
+        #endregion
 
         /// <summary>
         /// Starts the replay of the static recording <see cref="Instance"/>.
@@ -134,24 +134,12 @@ namespace SpeedTests
             while
             (!repo.SnapXUntitled.ReMeasure.Enabled);
 
-            Report.Log(ReportLevel.Info, "Application", "Run application 'C:\\JORO\\AUTOMATIONS\\GIT_Automations\\VERSION 3\\AutomationSpeedTest\\Reports\\ElapsedTimeTwo.PRT' with arguments '' in normal mode.", new RecordItemIndex(14));
-            Host.Local.RunApplication("C:\\JORO\\AUTOMATIONS\\GIT_Automations\\VERSION 3\\AutomationSpeedTest\\Reports\\ElapsedTimeTwo.PRT", "", "C:\\JORO\\AUTOMATIONS\\GIT_Automations\\VERSION 3\\AutomationSpeedTest\\Reports", false);
-            Thread.Sleep(200);
-
-            Report.Log(ReportLevel.Info, "Invoke Action", "Invoking Maximize() on item 'ElapsedTimeTwoPRTNotepad'.", repo.ElapsedTimeTwoPRTNotepad.SelfInfo, new RecordItemIndex(15));
-            repo.ElapsedTimeTwoPRTNotepad.Self.Maximize();
-            Thread.Sleep(200);
-
-            int iHardcodedTwo = 36;
-            string ResultRoutineTwo = ((SpeedTests.SpeedTestsRepositoryFolders.ElapsedTimeTwoPRTNotepadAppFolder)repo.ElapsedTimeTwoPRTNotepad.SelfInfo.ParentFolder).Text15.TextValue;
-            UtilityRun.RunEx(iHardcodedTwo, ResultRoutineTwo);
-            Thread.Sleep(100);
-
-
-            Report.Log(ReportLevel.Info, "Application", "Closing application containing item 'ElapsedTimeTwoPRTNotepad.Text15'.", repo.ElapsedTimeTwoPRTNotepad.Text15Info, new RecordItemIndex(17));
-            Host.Current.CloseApplication(repo.ElapsedTimeTwoPRTNotepad.Text15, new Duration(0));            
-
-            Thread.Sleep(5000);
+            string ActualResultRoutineTwo = "C:\\JORO\\AUTOMATIONS\\GIT_Automations\\VERSION 3\\AutomationSpeedTest\\Reports\\ElapsedTimeTwo.PRT";
+            int HardcodedResultRoutineTwo = 25;
+            UtilityRun.RunEx(ActualResultRoutineTwo, HardcodedResultRoutineTwo);
+            Delay.Milliseconds(200);
+            
+            Thread.Sleep(3000);
 
             Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'SnapXUntitled.ReMeasure' at Center.", repo.SnapXUntitled.ReMeasureInfo, new RecordItemIndex(19));
             repo.SnapXUntitled.ReMeasure.Click();
@@ -165,28 +153,16 @@ namespace SpeedTests
             while
              (!repo.SnapXUntitled.ReMeasure.Enabled);
 
-            Report.Log(ReportLevel.Info, "Application", "Run application 'C:\\JORO\\AUTOMATIONS\\GIT_Automations\\VERSION 3\\AutomationSpeedTest\\Reports\\ElapsedTimeTwo.PRT' with arguments '' in normal mode.", new RecordItemIndex(21));
-            Host.Local.RunApplication("C:\\JORO\\AUTOMATIONS\\GIT_Automations\\VERSION 3\\AutomationSpeedTest\\Reports\\ElapsedTimeTwo.PRT", "", "C:\\JORO\\AUTOMATIONS\\GIT_Automations\\VERSION 3\\AutomationSpeedTest\\Reports", false);
-            Thread.Sleep(100);
+            ActualResultRoutineTwo = "C:\\JORO\\AUTOMATIONS\\GIT_Automations\\VERSION 3\\AutomationSpeedTest\\Reports\\ElapsedTimeTwo.PRT";
+            HardcodedResultRoutineTwo = 25;
+            UtilityRun.RunEx(ActualResultRoutineTwo, HardcodedResultRoutineTwo);
+            Delay.Milliseconds(200);
 
-            Report.Log(ReportLevel.Info, "Invoke Action", "Invoking Maximize() on item 'ElapsedTimeTwoPRTNotepad'.", repo.ElapsedTimeTwoPRTNotepad.SelfInfo, new RecordItemIndex(22));
-            repo.ElapsedTimeTwoPRTNotepad.Self.Maximize();
-            Thread.Sleep(100);
-
-            iHardcodedTwo = 36;
-            string ResultRemeasureRoutineTwo = ((SpeedTests.SpeedTestsRepositoryFolders.ElapsedTimeTwoPRTNotepadAppFolder)repo.ElapsedTimeTwoPRTNotepad.SelfInfo.ParentFolder).Text15.TextValue;
-            UtilityRun.RunEx(iHardcodedTwo, ResultRemeasureRoutineTwo);
-            Thread.Sleep(100);
-
-
-            Report.Log(ReportLevel.Info, "Application", "Closing application containing item 'ElapsedTimeTwoPRTNotepad.Text15'.", repo.ElapsedTimeTwoPRTNotepad.Text15Info, new RecordItemIndex(24));
-            Host.Current.CloseApplication(repo.ElapsedTimeTwoPRTNotepad.Text15, new Duration(0));
-            
-            Thread.Sleep(5000);
+            Thread.Sleep(3000);
 
             Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'SnapXUntitled.Finish' at Center.", repo.SnapXUntitled.FinishInfo, new RecordItemIndex(26));
             repo.SnapXUntitled.Finish.Click();
-            
+
             Thread.Sleep(7000);
 
         }

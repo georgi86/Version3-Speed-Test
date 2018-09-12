@@ -168,29 +168,16 @@ namespace SpeedTests
             (!repo.SnapXUntitled.ReMeasure.Enabled);
 
 
-            Report.Log(ReportLevel.Info, "Application", "Run application 'C:\\JORO\\AUTOMATIONS\\GIT_Automations\\VERSION 3\\AutomationSpeedTest\\Reports\\ElapsedTimeOne.PRT' with arguments '' in normal mode.", new RecordItemIndex(14));
-            Host.Local.RunApplication("C:\\JORO\\AUTOMATIONS\\GIT_Automations\\VERSION 3\\AutomationSpeedTest\\Reports\\ElapsedTimeOne.PRT", "", "C:\\JORO\\AUTOMATIONS\\GIT_Automations\\VERSION 3\\AutomationSpeedTest\\Reports", false);
-            Thread.Sleep(200);
-
-            Report.Log(ReportLevel.Info, "Invoke Action", "Invoking Maximize() on item 'ElapsedTimeOnePRTNotepad'.", repo.ElapsedTimeOnePRTNotepad.SelfInfo, new RecordItemIndex(15));
-            repo.ElapsedTimeOnePRTNotepad.Self.Maximize();
-            Thread.Sleep(200);
-
-
-            ////////////Function///////////////
-
-            int iHardcodedOne = 22;
-            string ResultRoutineOne = ((SpeedTests.SpeedTestsRepositoryFolders.ElapsedTimeOnePRTNotepadAppFolder)repo.ElapsedTimeOnePRTNotepad.Text15Info.ParentFolder).Text15.TextValue;
-            UtilityRun.RunEx(iHardcodedOne, ResultRoutineOne);
-            Delay.Milliseconds(100);
-
-            ////////////////////////////////////
-
-
-            Report.Log(ReportLevel.Info, "Application", "Closing application containing item 'ElapsedTimeOnePRTNotepad.Text15'.", repo.ElapsedTimeOnePRTNotepad.Text15Info, new RecordItemIndex(17));
-            Host.Current.CloseApplication(repo.ElapsedTimeOnePRTNotepad.Text15, new Duration(0));            
-            Thread.Sleep(5000);            
                         
+            string ActualResultRoutineOne = "C:\\JORO\\AUTOMATIONS\\GIT_Automations\\VERSION 3\\AutomationSpeedTest\\Reports\\ElapsedTimeOne.PRT";
+            int HardcodedResultRoutineOne = 16;
+            UtilityRun.RunEx(ActualResultRoutineOne, HardcodedResultRoutineOne);
+            Delay.Milliseconds(200);
+
+
+
+            Thread.Sleep(3000);
+
             {
                 Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'SnapXUntitled.ReMeasure' at Center.", repo.SnapXUntitled.ReMeasureInfo, new RecordItemIndex(19));
                 repo.SnapXUntitled.ReMeasure.Click();
@@ -203,27 +190,17 @@ namespace SpeedTests
             }
             while (!repo.SnapXUntitled.Finish.Enabled);
 
-                      
-            Report.Log(ReportLevel.Info, "Application", "Run application 'C:\\JORO\\AUTOMATIONS\\GIT_Automations\\VERSION 3\\AutomationSpeedTest\\Reports\\ElapsedTimeOne.PRT' with arguments '' in normal mode.", new RecordItemIndex(14));
-            Host.Local.RunApplication("C:\\JORO\\AUTOMATIONS\\GIT_Automations\\VERSION 3\\AutomationSpeedTest\\Reports\\ElapsedTimeOne.PRT", "", "D:\\Joro\\GIT_Automations\\VERSION 3\\AutomationSpeedTest\\Reports", true);
-            Thread.Sleep(200);
-
-            Report.Log(ReportLevel.Info, "Invoke Action", "Invoking Maximize() on item 'ElapsedTimeOnePRTNotepad'.", repo.ElapsedTimeOnePRTNotepad.SelfInfo, new RecordItemIndex(22));
-            repo.ElapsedTimeOnePRTNotepad.Self.Maximize();
-            Thread.Sleep(200);
-
-            iHardcodedOne = 22;
-            string ResultRemeasureRoutineOne = ((SpeedTests.SpeedTestsRepositoryFolders.ElapsedTimeOnePRTNotepadAppFolder)repo.ElapsedTimeOnePRTNotepad.Text15Info.ParentFolder).Text15.TextValue;
-            UtilityRun.RunEx(iHardcodedOne, ResultRemeasureRoutineOne);
+                                    
+            ActualResultRoutineOne = "C:\\JORO\\AUTOMATIONS\\GIT_Automations\\VERSION 3\\AutomationSpeedTest\\Reports\\ElapsedTimeOne.PRT";
+            HardcodedResultRoutineOne = 16;
+            UtilityRun.RunEx(ActualResultRoutineOne, HardcodedResultRoutineOne);
             Thread.Sleep(100);
 
-            Report.Log(ReportLevel.Info, "Application", "Closing application containing item 'ElapsedTimeOnePRTNotepad.Text15'.", repo.ElapsedTimeOnePRTNotepad.Text15Info, new RecordItemIndex(24));
-            Host.Current.CloseApplication(repo.ElapsedTimeOnePRTNotepad.Text15, new Duration(0));         
-
-            Thread.Sleep(5000);
+           
+            Thread.Sleep(3000);
 
             Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'SnapXUntitled.Finish' at Center.", repo.SnapXUntitled.FinishInfo, new RecordItemIndex(26));
-            repo.SnapXUntitled.Finish.Click();            
+            repo.SnapXUntitled.Finish.Click();
 
             Thread.Sleep(7000);
 
