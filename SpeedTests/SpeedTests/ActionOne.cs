@@ -81,6 +81,8 @@ namespace SpeedTests
 
             Init();
 
+            /////say hello////////
+
             File.Delete("C:\\JORO\\AUTOMATIONS\\GIT_Automations\\VERSION 3\\AutomationSpeedTest\\Reports\\ElapsedTimeOne.PRT");
             File.Delete("C:\\JORO\\AUTOMATIONS\\GIT_Automations\\VERSION 3\\AutomationSpeedTest\\Reports\\ElapsedTimeTwo.PRT");
             File.Delete("C:\\JORO\\AUTOMATIONS\\GIT_Automations\\VERSION 3\\AutomationSpeedTest\\Reports\\ElapsedTimeThree.PRT");
